@@ -1,0 +1,195 @@
+.devops {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 4500px;
+  background-color: #EDF5FD;
+  z-index: -2;
+}
+/* 背景图一 */
+.devops .background_img_one {
+  width: 100%;
+  height: 650px;
+  z-index: -1;
+  background-image: url("//jy-info.qicp.vip/static/devops/devops_background_one.png");
+}
+
+/* 背景图二 */
+.devops .background_img_two {
+  position: relative;
+  top: 1700px;
+  width: 100%;
+  height: 1080px;
+  z-index: 0;
+  background-image: url("//jy-info.qicp.vip/static/devops/devops_background_two.png");
+}
+
+/* 第一张背景图上的按钮 */
+.devops .devops_one .scheme {
+  width: 381px;
+  height: 80px;
+  position: absolute;
+  top: 444px;
+  left: 260px;
+  border-radius: 40px;
+  font-size: 26px;
+  color: #FFFFFF;
+  background: linear-gradient(left, #FDAF8F, #FD7D82);
+  outline: none;
+}
+
+/* 服务内容 */
+.service_content {
+  position: relative;
+  text-align: center;
+  top: 121px;
+}
+.service_content .title_font {
+  width:163px;
+  height:40px;
+  font-size:40px;
+  font-family:Microsoft YaHei,serif;
+  font-weight: 500;
+  color:rgba(44,46,51,1);
+  margin: 0 auto;
+}
+.service_content .title_div {
+  width:140px;
+  height:4px;
+  background-color: #3D9CFD;
+  margin: 0 auto;
+}
+.service_content {
+  width: auto;
+  height: auto;
+}
+.service_content .row_one {
+  width: 1480px;
+  margin: 0 auto;
+}
+.service_content .row_one div:hover {
+  position: relative;
+  bottom: 30px;
+}
+.service_content .row_two {
+  width: 1100px;
+  margin: 0 auto;
+}
+.service_content .row_two div:hover {
+  position: relative;
+  bottom: 30px;
+}
+.service_content .content {
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  margin: 40px 20px;
+  text-align: center;
+  background-color: #FFFFFF;
+  box-shadow:0 10px 24px 0 rgba(29,36,85,0.1);
+}
+.service_content .content img {
+  width: 120px;
+  height: 120px;
+  display: table;
+  margin: 66px auto;
+}
+.service_content .content span {
+  font-size:26px;
+  font-family:Microsoft YaHei,serif;
+  color: rgba(44,46,51,1);
+}
+
+/* 10+经验行业案例 */
+.devops .industry {
+  position: relative;
+  text-align: center;
+  top: 126px;
+}
+.industry .title_font {
+  width:163px;
+  height:40px;
+  font-size:40px;
+  font-family:Microsoft YaHei,serif;
+  font-weight: 500;
+  color:#FFFFFF;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+}
+.industry .title_div {
+  width:140px;
+  height:4px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  top: 124px;
+}
+/* 案例 */
+.industry .industry_content {
+  display: inline-block;
+  float: left;
+  margin-top: 159px;
+}
+/* 案例左 */
+.industry .industry_content .industry_left {
+  float: left;
+  width:330px;
+  height:680px;
+  background:rgba(239,242,248,1);
+}
+/* 案例中 */
+.industry .industry_content .industry_center {
+  float: left;
+  width:1100px;
+  height:680px;
+  margin-left: 80px;
+  background:rgba(239,242,248,1);
+}
+/* 案例右 */
+.industry .industry_content .industry_right {
+  float: left;
+  width:330px;
+  height:680px;
+  margin-left: 63px;
+  background:rgba(239,242,248,1);
+}
+/* 查看更多案例按钮 */
+.industry .more_cases {
+  width:300px;
+  height:70px;
+  background:linear-gradient(-45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+  border-radius:35px;
+  font-size:26px;
+  font-family:Microsoft YaHei,serif;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  position: relative;
+  top: 56px;
+  outline: none;
+}
+
+.all_round .lbx img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+
+/* 底部 */
+.devops .devops_bottom {
+  position: absolute;
+  top: 4410px;
+  width:100%;
+  height:400px;
+  background-color: #111F35;
+}
+/* 底部ICP */
+.devops .devops_icp {
+  position: absolute;
+  top: 4810px;
+  width:100%;
+  height:120px;
+  background-color: #020202;
+}
