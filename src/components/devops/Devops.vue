@@ -47,12 +47,15 @@
     <!-- 全方位运维方案 -->
     <div class="all_round">
       <div class="lbx">
-        <img src="../../assets/images/jyinfo_logo.png" alt="">
-        <span>监控系统</span>
-        <span>监控主机故障</span>
-        <span>监控清洁保养</span>
-        <span>监控数据整理</span>
+        <div class="lbx_left">
+          <div class="lbx_right"></div>
+        </div>
       </div>
+      <img src="../../assets/images/jyinfo_logo.png" alt="">
+      <span>监控系统</span>
+      <span>监控主机故障</span>
+      <span>监控清洁保养</span>
+      <span>监控数据整理</span>
       <div class="lbx">
         <img src="../../assets/images/jyinfo_logo.png">
         <span>监控系统</span>
