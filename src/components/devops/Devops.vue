@@ -3,7 +3,7 @@
     <div class="devops_one background_img_one">
       <div id="navigation" class="navigation_bar" >
         <div class="navigation_left">
-          <img src="../../assets/images/jyinfo_logo.png" alt="甲悦信息" class="jylogo">
+          <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="甲悦信息" class="jylogo">
         </div>
         <div class="navigation_right">
           <button type="button" class="btn btn-default navbar-btn">首页</button>
@@ -46,37 +46,74 @@
     </div>
     <!-- 全方位运维方案 -->
     <div class="all_round">
-      <div class="lbx">
-        <div class="lbx_left">
-          <div class="lbx_right"></div>
+      <div class="title_font">全方位运维方案</div>
+      <div class="title_div"></div>
+      <div class="all_round_title"></div>
+      <div class="lbx_left">
+        <div class="lbx_right">
+          <div class="lbx">
+            <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">
+            <span>监控系统</span>
+            <span>监控主机故障</span>
+            <span>监控清洁保养</span>
+            <span>监控数据整理</span>
+          </div>
         </div>
       </div>
-      <img src="../../assets/images/jyinfo_logo.png" alt="">
-      <span>监控系统</span>
-      <span>监控主机故障</span>
-      <span>监控清洁保养</span>
-      <span>监控数据整理</span>
-      <div class="lbx">
-        <img src="../../assets/images/jyinfo_logo.png">
-        <span>监控系统</span>
-        <span>监控主机故障</span>
-        <span>监控清洁保养</span>
-        <span>监控数据整理</span>
+      <div class="lbx_left">
+        <div class="lbx_right">
+          <div class="lbx">
+            <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">
+            <span>监控系统</span>
+            <span>监控主机故障</span>
+            <span>监控清洁保养</span>
+            <span>监控数据整理</span>
+          </div>
+        </div>
       </div>
-      <div class="lbx">
-        <img src="../../assets/images/jyinfo_logo.png">
-        <span>监控系统</span>
-        <span>监控主机故障</span>
-        <span>监控清洁保养</span>
-        <span>监控数据整理</span>
+      <div class="lbx_left">
+        <div class="lbx_right">
+          <div class="lbx">
+            <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">
+            <span>监控系统</span>
+            <span>监控主机故障</span>
+            <span>监控清洁保养</span>
+            <span>监控数据整理</span>
+          </div>
+        </div>
       </div>
-      <div class="lbx">
-        <img src="../../assets/images/jyinfo_logo.png">
-        <span>监控系统</span>
-        <span>监控主机故障</span>
-        <span>监控清洁保养</span>
-        <span>监控数据整理</span>
+      <div class="lbx_left">
+        <div class="lbx_right">
+          <div class="lbx">
+            <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">
+            <span>监控系统</span>
+            <span>监控主机故障</span>
+            <span>监控清洁保养</span>
+            <span>监控数据整理</span>
+          </div>
+        </div>
       </div>
+<!--      <div class="lbx">-->
+<!--        <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">-->
+<!--        <span>监控系统</span>-->
+<!--        <span>监控主机故障</span>-->
+<!--        <span>监控清洁保养</span>-->
+<!--        <span>监控数据整理</span>-->
+<!--      </div>-->
+<!--      <div class="lbx">-->
+<!--        <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">-->
+<!--        <span>监控系统</span>-->
+<!--        <span>监控主机故障</span>-->
+<!--        <span>监控清洁保养</span>-->
+<!--        <span>监控数据整理</span>-->
+<!--      </div>-->
+<!--      <div class="lbx">-->
+<!--        <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="...">-->
+<!--        <span>监控系统</span>-->
+<!--        <span>监控主机故障</span>-->
+<!--        <span>监控清洁保养</span>-->
+<!--        <span>监控数据整理</span>-->
+<!--      </div>-->
     </div>
     <!-- 底部 -->
     <div class="devops_bottom"></div>
@@ -128,27 +165,27 @@ export default {
 .devops {
   padding: 0;
   margin: 0;
-  width: 1920px;
+  width: 100%;
   height: 4500px;
   background-color: #EDF5FD;
   z-index: -2;
 }
 /* 背景图一 */
 .devops .background_img_one {
-  width: 1920px;
+  width: 100%;
   height: 650px;
   z-index: -1;
-  background-image: url("../../assets/images/devops/devops_background_one.png");
+  background-image: url("//jy-info.qicp.vip/static/devops/devops_background_one.png");
 }
 
 /* 背景图二 */
 .devops .background_img_two {
   position: relative;
   top: 1700px;
-  width: 1920px;
+  width: 100%;
   height: 1080px;
   z-index: 0;
-  background-image: url("../../assets/images/devops/devops_background_two.png");
+  background-image: url("//jy-info.qicp.vip/static/devops/devops_background_two.png");
 }
 
 /* 导航栏 */
@@ -157,7 +194,7 @@ export default {
 }
 .devops .devops_one .navigation_bar {
   position: fixed;
-  width: 1920px;
+  width: 100%;
   height: 70px;
   top: 0;
   left: 0;
@@ -312,7 +349,7 @@ export default {
 /* 案例左 */
 .industry .industry_content .industry_left {
   float: left;
-  width:329px;
+  width:330px;
   height:680px;
   background:rgba(239,242,248,1);
 }
@@ -327,9 +364,9 @@ export default {
 /* 案例右 */
 .industry .industry_content .industry_right {
   float: left;
-  width:331px;
+  width:330px;
   height:680px;
-  margin-left: 80px;
+  margin-left: 63px;
   background:rgba(239,242,248,1);
 }
 /* 查看更多案例按钮 */
@@ -350,20 +387,54 @@ export default {
 /* 全方位运维方案 */
 .all_round {
   position: relative;
-  top: 376px;
-  display: flex;
+  text-align: center;
+  top: 250px;
+}
+.all_round .title_font {
+  width:286px;
+  height:40px;
+  font-size:40px;
+  font-family:Microsoft YaHei,serif;
+  font-weight: 500;
+  color:rgba(44,46,51,1);
+  margin: 20px auto;
+}
+.all_round .title_div {
+  width:140px;
+  height:4px;
+  background:rgba(61,156,253,1);
+  margin: 20px auto 0;
+}
+.all_round .lbx_left {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  transform: rotate(120deg);
+  display: inline-block;
+  margin: 60px 20px 0 20px;
+}
+.all_round .lbx_right {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(-60deg);
+  display: inline-block;
 }
 .all_round .lbx {
-  width:320px;
-  height:292px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(-60deg);
   background:rgba(255,255,255,1);
-  box-shadow:0px 10px 24px 0px rgba(29,36,85,0.1);
+  box-shadow:0 10px 24px 0 rgba(29,36,85,0.1);
   text-align: center;
   margin: 0 auto;
 }
+
 .all_round .lbx img {
   width: 80px;
   height: 80px;
+  text-align: center;
 }
 
 
@@ -371,7 +442,7 @@ export default {
 .devops .devops_bottom {
   position: absolute;
   top: 4410px;
-  width:1920px;
+  width:100%;
   height:400px;
   background-color: #111F35;
 }
@@ -379,7 +450,7 @@ export default {
 .devops .devops_icp {
   position: absolute;
   top: 4810px;
-  width:1920px;
+  width:100%;
   height:120px;
   background-color: #020202;
 }
