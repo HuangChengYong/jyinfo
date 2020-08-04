@@ -55,7 +55,7 @@ name: "MyHeader"
   border: none;
   outline: none;
   background-color: transparent;
-  font-weight: bold;
+  font-weight: 400;
   color: #FFFFFF;
   opacity: 0.6;
 }
