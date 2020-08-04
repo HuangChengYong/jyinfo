@@ -205,11 +205,14 @@ export default {
     handleScroll: function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       let navigation = document.getElementById('navigation');
+      let navigation_xbk = document.getElementById('xbk');
       // 判断背景色
       if (scrollTop === 0) {
-        navigation.setAttribute('style','background-color:transparent;border-bottom:1px solid #FFFFFF');
+        navigation.setAttribute('style','background-color:transparent;');
+        navigation_xbk.setAttribute('style','background:rgba(255,255,255,1);opacity:0.4;');
       } else {
-        navigation.setAttribute('style','background-color:#111F35;border-bottom:0px solid transparent');
+        navigation.setAttribute('style','background-color:#111F35;');
+        navigation_xbk.setAttribute('style','background-color: transparent;');
       }
     }
   },

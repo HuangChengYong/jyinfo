@@ -12,6 +12,7 @@
         <button type="button" class="btn btn-default navbar-btn">关于我们</button>
         <button type="button" class="btn btn-default navbar-btn">企业招聘</button>
       </div>
+      <div id="xbk"></div>
     </div>
   </div>
 </template>
@@ -30,7 +31,6 @@ name: "MyHeader"
   height: 70px;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #FFFFFF;
   z-index: 1;
 }
 
@@ -56,8 +56,9 @@ name: "MyHeader"
   outline: none;
   background-color: transparent;
   font-weight: 400;
-  color: #FFFFFF;
-  opacity: 0.6;
+  font-size:16px;
+  color:rgba(255,255,255,1);
+  opacity:0.6;
 }
 
 /* logo图 */
@@ -67,6 +68,14 @@ name: "MyHeader"
   position: absolute;
   top: 16px;
   left: 260px;
-  border-color: #F5F5F5;
+}
+
+.navigation_bar #xbk {
+  width:1920px;
+  height:2px;
+  position: relative;
+  top: 70px;
+  background-color: #FFFFFF;
+  opacity:0.4;
 }
 </style>
