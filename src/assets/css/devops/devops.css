@@ -60,8 +60,17 @@
   width: 1480px;
   margin: 0 auto;
 }
+.service_content .row_one div {
+  position:relative;
+  bottom:0;
+  transition:bottom 0.6s;
+  -moz-transition:bottom 0.6s; /* Firefox 4 */
+  -webkit-transition:bottom 0.6s; /* Safari and Chrome */
+  -o-transition:bottom 0.6s; /* Opera */
+}
+
 .service_content .row_one div:hover {
-  position: relative;
+  position:relative;
   bottom: 30px;
 }
 .service_content .row_one .content {
@@ -70,6 +79,14 @@
 .service_content .row_two {
   width: 1100px;
   margin: 0 auto;
+}
+.service_content .row_two div {
+  position:relative;
+  bottom:0;
+  transition:bottom 0.6s;
+  -moz-transition:bottom 0.6s; /* Firefox 4 */
+  -webkit-transition:bottom 0.6s; /* Safari and Chrome */
+  -o-transition:bottom 0.6s; /* Opera */
 }
 .service_content .row_two div:hover {
   position: relative;
