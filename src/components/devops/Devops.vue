@@ -38,111 +38,23 @@
       <div class="title_div"></div>
       <div class="all_round_content">
         <!-- 监控系统 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 空调系统 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="空调系统">
-            <span class="hexagon_title">空调系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
+        <Hexagon :allRound="allRoundList[0]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[1]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[2]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[3]"/>
       </div>
       <div class="all_round_content">
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
-        <!-- 六边形 -->
-        <div class="hexagon">
-          <div class="hexagon_left"></div>
-          <div class="hexagon_center"></div>
-          <div class="hexagon_right"></div>
-          <div class="hexagon_content">
-            <img src="//jy-info.qicp.vip/static/devops/monitoring_system.png" alt="监控系统">
-            <span class="hexagon_title">监控系统</span>
-            <span>监控主机检测</span>
-            <span>监控清洁保养</span>
-            <span>监控数据整理</span>
-          </div>
-        </div>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[4]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[5]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[6]"/>
+        <!-- 监控系统 -->
+        <Hexagon :allRound="allRoundList[7]"/>
       </div>
     </div>
     <!-- 这些企业选择了甲悦 -->
@@ -187,45 +99,26 @@
 </template>
 
 <script>
-import dataSource from '../../assets/utils/data.js';
+import dataSource from '../../assets/utils/devops-data.js';
 import MyHeader from "../MyHeader";
+import Hexagon from "../Hexagon";
 export default {
   name: "Devops",
   components: {
-    MyHeader
+    MyHeader,
+    Hexagon
   },
   data() {
     return {
       serviceContentOne: [],
-      serviceContentTwo: []
-    }
-  },
-  methods: {
-    // 保存滚动值，这是兼容的写法
-    handleScroll: function () {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      let navigation = document.getElementById('navigation');
-      let navigation_xbk = document.getElementById('xbk');
-      // 判断背景色
-      if (scrollTop === 0) {
-        navigation.setAttribute('style','background-color:transparent;');
-        navigation_xbk.setAttribute('style','background:rgba(255,255,255,1);opacity:0.4;');
-      } else {
-        navigation.setAttribute('style','background-color:#111F35;');
-        navigation_xbk.setAttribute('style','background-color: transparent;');
-      }
+      serviceContentTwo: [],
+      allRoundList: [],
     }
   },
   created() {
     this.serviceContentOne = dataSource.serviceContentOne;
     this.serviceContentTwo = dataSource.serviceContentTwo;
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll, true)
-  },
-  destroyed() {
-    // 离开该页面需要移除这个监听的事件，不然会报错
-    window.removeEventListener('scroll', this.handleScroll)
+    this.allRoundList = dataSource.allRoundList;
   }
 }
 </script>

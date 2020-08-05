@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
@@ -8,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'WeakCurrent',
+      component: () => import('../components/weakcurrent/WeakCurrent')
     },
     {
       path: '/devops',
@@ -17,9 +16,9 @@ export default new Router({
       component: () => import('../components/devops/Devops')
     },
     {
-      path: '/hexagon',
-      name: 'Hexagon',
-      component: () => import('../components/Hexagon')
+      path: '/weak_current',
+      name: 'WeakCurrent',
+      component: () => import('../components/weakcurrent/WeakCurrent')
     }
   ]
 })

@@ -18,8 +18,33 @@
 </template>
 
 <script>
+import dataSource from "../assets/utils/devops-data";
+
 export default {
-name: "MyHeader"
+  name: "MyHeader",
+  methods: {
+    // 保存滚动值，这是兼容的写法
+    handleScroll: function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      let navigation = document.getElementById('navigation');
+      let navigation_xbk = document.getElementById('xbk');
+      // 判断背景色
+      if (scrollTop === 0) {
+        navigation.setAttribute('style','background-color:transparent;');
+        navigation_xbk.setAttribute('style','background:rgba(255,255,255,1);opacity:0.4;');
+      } else {
+        navigation.setAttribute('style','background-color:#111F35;');
+        navigation_xbk.setAttribute('style','background-color: transparent;');
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  destroyed() {
+    // 离开该页面需要移除这个监听的事件，不然会报错
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
 
