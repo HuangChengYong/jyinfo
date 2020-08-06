@@ -1,7 +1,7 @@
 <template>
   <div class="devops">
     <div class="devops_one background_img_one">
-      <my-header/>
+      <jy-header/>
       <button class="scheme">马上获取项目报价及方案</button>
     </div>
     <!-- 服务内容 -->
@@ -38,23 +38,23 @@
       <div class="title_div"></div>
       <div class="all_round_content">
         <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[0]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[1]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[2]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[3]"/>
+        <hexagon :allRound="allRoundList[0]"/>
+        <!-- 空调系统 -->
+        <hexagon :allRound="allRoundList[1]"/>
+        <!-- 大屏显示系统 -->
+        <hexagon :allRound="allRoundList[2]"/>
+        <!-- UPS系统 -->
+        <hexagon :allRound="allRoundList[3]"/>
       </div>
       <div class="all_round_content">
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[4]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[5]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[6]"/>
-        <!-- 监控系统 -->
-        <Hexagon :allRound="allRoundList[7]"/>
+        <!-- 综合布线系统 -->
+        <hexagon :allRound="allRoundList[4]"/>
+        <!-- 门禁考勤系统 -->
+        <hexagon :allRound="allRoundList[5]"/>
+        <!-- 会议系统 -->
+        <hexagon :allRound="allRoundList[6]"/>
+        <!-- 会议保障 -->
+        <hexagon :allRound="allRoundList[7]"/>
       </div>
     </div>
     <!-- 这些企业选择了甲悦 -->
@@ -100,12 +100,12 @@
 
 <script>
 import dataSource from '../../assets/utils/devops-data.js';
-import MyHeader from "../MyHeader";
+import JyHeader from "../JyHeader";
 import Hexagon from "../Hexagon";
 export default {
   name: "Devops",
   components: {
-    MyHeader,
+    JyHeader,
     Hexagon
   },
   data() {

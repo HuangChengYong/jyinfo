@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'WeakCurrent',
-      component: () => import('../components/weakcurrent/WeakCurrent')
+      name: 'JyHeader',
+      component: () => import('../components/JyHeader')
     },
     {
       path: '/devops',

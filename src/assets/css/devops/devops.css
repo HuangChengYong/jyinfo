@@ -38,8 +38,9 @@
 /* 服务内容 */
 .service_content {
   text-align: center;
-  height: 1057px;
+  height: auto;
   padding-top: 111px;
+  padding-bottom: 126px;
 }
 .service_content .title_font {
   width:163px;
@@ -56,10 +57,9 @@
   background-color: #3D9CFD;
   margin: 26px auto 0 auto;
 }
-.service_content .row_one {
-  width: 1480px;
-  margin: 0 auto;
-}
+/*.service_content .row_one {*/
+/*  margin: 0 auto;*/
+/*}*/
 .service_content .row_one div {
   position:relative;
   bottom:0;
@@ -68,7 +68,6 @@
   -webkit-transition:bottom 0.6s; /* Safari and Chrome */
   -o-transition:bottom 0.6s; /* Opera */
 }
-
 .service_content .row_one div:hover {
   position:relative;
   bottom: 30px;
@@ -76,10 +75,9 @@
 .service_content .row_one .content {
   margin-top: 60px;
 }
-.service_content .row_two {
-  width: 1100px;
-  margin: 0 auto;
-}
+/*.service_content .row_two {*/
+/*  margin: 0 auto;*/
+/*}*/
 .service_content .row_two div {
   position:relative;
   bottom:0;
@@ -100,7 +98,6 @@
   height: 320px;
   display: inline-block;
   margin: 0 20px;
-  text-align: center;
   background-color: #FFFFFF;
   box-shadow:0 10px 24px 0 rgba(29,36,85,0.1);
 }
@@ -166,7 +163,7 @@
   float: left;
   width:330px;
   height:680px;
-  margin-left: 57px;
+  margin-left: 63px;
   background:rgba(239,242,248,1);
 }
 /* 查看更多案例按钮 */
@@ -188,37 +185,41 @@
 /* 全方位运维方案 */
 .all_round {
   text-align: center;
-  height: 1013px;
-  padding-top: 111px;
+  height: auto;
+  padding-top: 121px;
+  padding-bottom: 666px;
+  margin: 0 auto;
 }
 .all_round .title_font {
-  width:286px;
-  height:40px;
   font-size:40px;
   font-family:Microsoft YaHei,serif;
   font-weight: 500;
   color:rgba(44,46,51,1);
-  margin: 0 auto;
 }
 .all_round .title_div {
   width:140px;
   height:4px;
   background:rgba(61,156,253,1);
-  margin: 25px auto 0;
+  margin: 20px auto 30px;
 }
 .all_round .all_round_content {
-  display: inline-block;
-  margin-top: 60px;
+  width: 1450px;
+  margin: 0 auto 40px;
+}
+.all_round .hexagon {
+  margin: 30px 20px;
 }
 
 /* 这些企业选择了甲悦 */
 .choose_jy {
   width: 100%;
-  height: 610px;
+  height: auto;
+  margin-top: 119px;
+  padding-bottom: 170px;
 }
 .choose_jy .title_font {
   width:370px;
-  height:40px;
+  height: auto;
   font-size:40px;
   font-family:Microsoft YaHei,serif;
   font-weight:400;
@@ -255,16 +256,12 @@
 
 /* 底部 */
 .devops .devops_bottom {
-  position: absolute;
-  top: 4410px;
   width:100%;
   height:400px;
   background-color: #111F35;
 }
 /* 底部ICP */
 .devops .devops_icp {
-  position: absolute;
-  top: 4810px;
   width:100%;
   height:120px;
   background-color: #020202;
