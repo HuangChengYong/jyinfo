@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import $ from 'jquery'
 import 'assets/js/bootstrap.min.js'
 import 'assets/css/bootstrap.min.css'
 import 'lib-flexible/flexible'

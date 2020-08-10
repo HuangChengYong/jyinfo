@@ -1,8 +1,9 @@
 <template>
   <div class="devops">
-    <div class="devops_one background_img_one">
+    <div class="devops_one">
       <jy-header/>
-      <button class="scheme">马上获取项目报价及方案</button>
+      <img src="//jy-info.qicp.vip/static/devops/devops_background_one.png" alt="background_img_one" />
+      <button>马上获取项目报价及方案</button>
     </div>
     <!-- 服务内容 -->
     <div class="service_content">
