@@ -77,23 +77,23 @@ export default {
 /* 导航栏 logo部分 */
 .navbar .jy_nav_logo {
   text-align: center;
-  line-height: 70px;
+  line-height: 0.7rem;
 }
 .navbar .jy_nav_logo img {
-  width: 146px;
-  height: 38px;
+  width: 1.46rem;
+  height: 0.38rem;
 }
 /* 导航栏 列表部分 */
 .navbar .jy_nav_list{
-  line-height: 70px;
+  line-height: 0.7rem;
 }
 .jy_nav_list ul li a {
-  font-size: 18px;
+  font-size: 0.18rem;
   font-family: Microsoft YaHei,serif;
   font-weight: 400;
   text-align: center;
-  line-height: 36px;
-  padding: 17px 30px;
+  line-height: 0.36rem;
+  padding: 0.17rem 0.3rem;
   color: #ffffff;
   opacity:0.6;
 }
@@ -113,9 +113,9 @@ export default {
 }
 
 #xbk {
-  height:2px;
+  height: 0.02rem;
   position: relative;
-  top: 70px;
+  top: 0.7rem;
   opacity:0.4;
   background-color: #FFFFFF;
 }

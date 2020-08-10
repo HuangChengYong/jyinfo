@@ -4,23 +4,27 @@
   width: 100%;
   background-color: #EDF5FD;
 }
+.devops .devops_one {
+  width: 100%;
+  height: 6.5rem;
+}
 /* 背景图一 */
 .devops .background_img_one {
   width: 100%;
-  height: 650px;
+  height: 6.5rem;
   z-index: -1;
   background-image: url("//jy-info.qicp.vip/static/devops/devops_background_one.png");
 }
 /* 第一张背景图上的按钮 */
 .devops .devops_one .scheme {
-  width: 381px;
-  height: 80px;
+  width: 3.81rem;
+  height: 0.8rem;
   position: absolute;
-  top: 444px;
-  left: 260px;
-  border-radius: 40px;
+  top: 4.44rem;
+  left: 2.6rem;
+  border-radius: 0.4rem;
   border: none;
-  font-size: 26px;
+  font-size: 0.26rem;
   color: #FFFFFF;
   background: linear-gradient(left, #FDAF8F, #FD7D82);
   outline: none;
@@ -29,8 +33,8 @@
 /* 背景图二 */
 .devops .background_img_two {
   position: relative;
-  width: 100%;
-  height: 1080px;
+  width: 19.0rem;
+  height: 10.8rem;
   z-index: 0;
   background-image: url("//jy-info.qicp.vip/static/devops/devops_background_two.png");
 }
@@ -39,23 +43,23 @@
 .service_content {
   text-align: center;
   height: auto;
-  padding-top: 111px;
-  padding-bottom: 126px;
+  padding-top: 1.11rem;
+  padding-bottom: 1.26rem;
 }
 .service_content .title_font {
-  width:163px;
-  height:40px;
-  font-size:40px;
+  width:1.63rem;
+  height:0.4rem;
+  font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
   font-weight: 400;
   color:rgba(44,46,51,1);
   margin: 0 auto;
 }
 .service_content .title_div {
-  width:140px;
-  height:4px;
+  width:1.4rem;
+  height:0.04rem;
   background-color: #3D9CFD;
-  margin: 26px auto 0 auto;
+  margin: 0.26rem auto 0 auto;
 }
 /*.service_content .row_one {*/
 /*  margin: 0 auto;*/
@@ -70,10 +74,10 @@
 }
 .service_content .row_one div:hover {
   position:relative;
-  bottom: 30px;
+  bottom: 0.3rem;
 }
 .service_content .row_one .content {
-  margin-top: 60px;
+  margin-top: 0.6rem;
 }
 /*.service_content .row_two {*/
 /*  margin: 0 auto;*/
@@ -88,27 +92,27 @@
 }
 .service_content .row_two div:hover {
   position: relative;
-  bottom: 30px;
+  bottom: 0.3rem;
 }
 .service_content .row_two .content {
-  margin-top: 40px;
+  margin-top: 0.4rem;
 }
 .service_content .content {
-  width: 320px;
-  height: 320px;
+  width: 3.2rem;
+  height: 3.2rem;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 0.2rem;
   background-color: #FFFFFF;
-  box-shadow:0 10px 24px 0 rgba(29,36,85,0.1);
+  box-shadow:0 0.1rem 0.24rem 0 rgba(29,36,85,0.1);
 }
 .service_content .content img {
-  width: 120px;
-  height: 120px;
+  width: 1.2rem;
+  height: 1.2rem;
   display: table;
-  margin: 66px auto 39px;
+  margin: 0.66rem auto 0.39rem;
 }
 .service_content .content span {
-  font-size:26px;
+  font-size:0.26rem;
   font-family:Microsoft YaHei,serif;
   color: rgba(44,46,51,1);
   font-weight: 500;
@@ -118,66 +122,66 @@
 .industry {
   position: relative;
   text-align: center;
-  height: 1080px;
-  padding-top: 90px;
+  height: 10.8rem;
+  padding-top: 0.9rem;
 }
 .industry .title_font {
-  width:163px;
-  height:40px;
-  font-size:40px;
+  width:1.63rem;
+  height:0.4rem;
+  font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
   font-weight: 400;
   color:#FFFFFF;
   margin: 0 auto;
 }
 .industry .title_div {
-  width:140px;
-  height:4px;
+  width:1.4rem;
+  height:0.04rem;
   background-color: #FFFFFF;
-  margin: 15px auto 0;
+  margin: 0.15rem auto 0;
   z-index: 1;
 }
 /* 案例 */
 .industry .industry_content {
   display: inline-block;
   float: left;
-  margin-top: 50px;
+  margin-top: 0.5rem;
 }
 /* 案例左 */
 .industry .industry_content .industry_left {
   float: left;
-  width:330px;
-  height:680px;
+  width:3.3rem;
+  height:6.8rem;
   background:rgba(239,242,248,1);
 }
 /* 案例中 */
 .industry .industry_content .industry_center {
   float: left;
-  width:1100px;
-  height:680px;
-  margin-left: 80px;
+  width:11rem;
+  height:6.8rem;
+  margin-left: 0.8rem;
   background:rgba(239,242,248,1);
 }
 /* 案例右 */
 .industry .industry_content .industry_right {
   float: left;
-  width:330px;
-  height:680px;
-  margin-left: 63px;
+  width:3.3rem;
+  height:6.8rem;
+  margin-left: 0.6rem;
   background:rgba(239,242,248,1);
 }
 /* 查看更多案例按钮 */
 .industry .more_cases {
-  width:300px;
-  height:70px;
+  width:3rem;
+  height:0.7rem;
   background:linear-gradient(-45deg,rgba(253,175,143,1),rgba(253,125,130,1));
-  border-radius:35px;
-  font-size:26px;
+  border-radius:0.35rem;
+  font-size:0.26rem;
   font-family:Microsoft YaHei,serif;
   font-weight:400;
   color:rgba(255,255,255,1);
   position: relative;
-  top: 56px;
+  top: 0.56rem;
   outline: none;
   border: none;
 }
@@ -186,83 +190,83 @@
 .all_round {
   text-align: center;
   height: auto;
-  padding-top: 121px;
-  padding-bottom: 666px;
+  padding-top: 1.21rem;
+  padding-bottom: 6.66rem;
   margin: 0 auto;
 }
 .all_round .title_font {
-  font-size:40px;
+  font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
   font-weight: 500;
   color:rgba(44,46,51,1);
 }
 .all_round .title_div {
-  width:140px;
-  height:4px;
+  width:1.4rem;
+  height:0.04rem;
   background:rgba(61,156,253,1);
-  margin: 20px auto 30px;
+  margin: 0.2rem auto 0.3rem;
 }
 .all_round .all_round_content {
-  width: 1450px;
-  margin: 0 auto 40px;
+  width: 14.5rem;
+  margin: 0 auto 0.4rem;
 }
 .all_round .hexagon {
-  margin: 30px 20px;
+  margin: 0.3rem 0.2rem;
 }
 
 /* 这些企业选择了甲悦 */
 .choose_jy {
   width: 100%;
   height: auto;
-  margin-top: 119px;
-  padding-bottom: 170px;
+  margin-top: 1.19rem;
+  padding-bottom: 1.7rem;
 }
 .choose_jy .title_font {
-  width:370px;
+  width:3.7rem;
   height: auto;
-  font-size:40px;
+  font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
   font-weight:400;
   color:rgba(44,46,51,1);
   margin: 0 auto;
 }
 .choose_jy .title_div {
-  width:140px;
-  height:4px;
+  width:1.4rem;
+  height:0.04rem;
   background:rgba(61,156,253,1);
-  margin: 30px auto 40px;
+  margin: 0.3rem auto 0.4rem;
 }
 .choose_jy .enterprise_icon {
-  width: 1452px;
+  width: 14.52rem;
   margin: 0 auto;
 }
 .choose_jy .icon_border {
-  width:320px;
-  height:120px;
+  width:3.2rem;
+  height:1.2rem;
   background:rgba(255,255,255,1);
-  box-shadow:0 10px 24px 0 rgba(29,36,85,0.1);
+  box-shadow:0 0.1rem 0.24rem 0 rgba(29,36,85,0.1);
   display: inline-block;
-  margin: 20px;
+  margin: 0.2rem;
 }
 .choose_jy .icon_border img {
-  width: 240px;
-  height: 106px;
+  width: 2.4rem;
+  height: 1.06rem;
   position: relative;
   top: 50%;
   left: 50%;
-  margin-left: -120px;
-  margin-top: -53px;
+  margin-left: -1.2rem;
+  margin-top: -0.53rem;
 }
 
 /* 底部 */
 .devops .devops_bottom {
   width:100%;
-  height:400px;
+  height:4rem;
   background-color: #111F35;
 }
 /* 底部ICP */
 .devops .devops_icp {
   width:100%;
-  height:120px;
+  height:1.2rem;
   background-color: #020202;
 }
