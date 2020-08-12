@@ -19,6 +19,11 @@ export default new Router({
       path: '/weak_current',
       name: 'WeakCurrent',
       component: () => import('../components/weakcurrent/WeakCurrent')
+    },
+    {
+      path: '/soft',
+      name: 'Soft',
+      component: () => import('../components/soft/Software')
     }
   ]
 })

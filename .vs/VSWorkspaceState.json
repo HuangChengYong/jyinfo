@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\css",
+    "\\src\\assets\\utils",
+    "\\src\\components",
+    "\\src\\components\\devops",
+    "\\src\\components\\public",
+    "\\src\\components\\soft"
+  ],
+  "SelectedNode": "\\src\\components\\soft\\Software.vue",
+  "PreviewInSolutionExplorer": false
+}
