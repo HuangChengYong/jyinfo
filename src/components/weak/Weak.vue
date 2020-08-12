@@ -10,7 +10,7 @@
       <!-- 介绍 -->
       <div class="introduction">
         <div class="images_div">
-          <img class="introduction_images" src="//jy-info.qicp.vip/static/weakcurrent/introduction_images.png" alt="介绍图片"/>
+          <img class="introduction_images" src="//jy-info.qicp.vip/static/weak/introduction_images.png" alt="介绍图片"/>
         </div>
         <div class="content_div">
           <div class="introduction_title">甲悦，专业的一站式弱电工程服务商</div>
@@ -33,6 +33,23 @@
             <span>{{ item.weakName }}</span>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- 10+经验行业案例 -->
+    <div class="industry_case">
+      <span class="title_font">10+经验行业案例</span>
+      <div class="title_div"></div>
+      <div class="case_content">
+        <div class="case_content_left">
+          <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
+        </div>
+        <div class="case_content_center"></div>
+        <div class="case_content_right">
+          <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
+        </div>
+      </div>
+      <div class="more_button">
+        <button class="button">更多案例>></button>
       </div>
     </div>
   </div>
@@ -69,7 +86,7 @@ export default {
 .background_images_one {
   width: 100%;
   height: 6.5rem;
-  background: url("//jy-info.qicp.vip/static/weakcurrent/background_images_one.png");
+  background: url("//jy-info.qicp.vip/static/weak/background_images_one.png");
   color: #FFFFFF;
 }
 .background_images_one .headline {
@@ -94,7 +111,6 @@ export default {
 /* 弱电介绍和全方位的服务内容 */
 .introduction_service {
   width: 100%;
-  height: 16.43rem;
   background-color: #EDF5FD;
   padding-top: 1.2rem;
 }
@@ -203,5 +219,89 @@ export default {
   font-family:Microsoft YaHei,serif;
   color: rgba(44,46,51,1);
   font-weight: 500;
+}
+
+/* 10+经验行业案例 */
+.industry_case {
+  text-align: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  background: url("//jy-info.qicp.vip/static/weak/background_images_two.png");
+  width: 19.2rem;
+  height: 10.8rem;
+}
+.industry_case .title_font {
+  width:1.63rem;
+  height:0.4rem;
+  font-size:0.4rem;
+  font-family:Microsoft YaHei,serif;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.industry_case .title_div {
+  width:1.4rem;
+  height:0.04rem;
+  background: #ffffff;
+  margin: 0.26rem auto 0.5rem auto;
+}
+.industry_case .case_content {
+  width: 100%;
+  height: 6.8rem;
+}
+.industry_case .case_content .case_content_left {
+  width: 3.3rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  float: left;
+  display: inline-block;
+}
+.industry_case .case_content .case_content_center {
+  width: 11rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  display: inline-block;
+}
+.industry_case .case_content .case_content_right {
+  width: 3.3rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  display: inline-block;
+  float: right;
+}
+.industry_case .case_content .case_content_left .left_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  top: 3rem;
+  left: 0.8rem;
+}
+.industry_case .case_content .case_content_right .right_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  top: 3rem;
+  right: 0.8rem;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
+}
+.industry_case .more_button {
+  width: 100%;
+  margin: 0.56rem auto 0.55rem;
+}
+.industry_case .more_button .button {
+  width: 3rem;
+  height: 0.70rem;
+  background:linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+  border-radius: 0.35rem;
+
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei,serif;
+  font-weight: 400;
+  color: rgba(255,255,255,1)
+
 }
 </style>

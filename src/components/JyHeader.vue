@@ -21,7 +21,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">核心业务 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">软件</a></li>
+              <li><a href="#"><router-link :to="{name: 'Soft'}">软件</router-link></a></li>
               <li><a href="#"><router-link :to="{name: 'Weak'}">弱电</router-link></a></li>
               <li><a href="#"><router-link :to="{name: 'Devops'}">运维</router-link></a></li>
               <li role="separator" class="divider"></li>
@@ -115,7 +115,6 @@ export default {
   color: #ffffff;
   opacity:0.6;
 }
-
 
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
   color: black;
