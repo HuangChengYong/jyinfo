@@ -33,6 +33,10 @@ let weakServiceContentTwo = [
   {
     weakImg: path + 'ups.png',
     weakName: 'UPS系统'
+  },
+  {
+    weakImg: path + 'ups.png',
+    weakName: 'UPS系统'
   }
 ];
 

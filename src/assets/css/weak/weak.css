@@ -12,21 +12,20 @@
 }
 .background_images_one .headline {
   width: 5.67rem;
-  height: 0.76rem;
   font-size: 0.8rem;
   font-weight: bold;
   position: relative;
-  top: 2.51rem;
-  left: 2.64rem;
+  top: 2.5rem;
+  left: 1.5rem;
+  line-height: 1rem;
 }
 .background_images_one .subhead {
   width: 4.81rem;
-  height: 0.29rem;
   font-size: 0.3rem;
-  font-weight: 300;
+  font-weight: 400;
   position: relative;
-  top: 3.1rem;
-  left: 2.62rem;
+  top: 2.8rem;
+  left: 1.5rem;
 }
 
 /* 弱电介绍和全方位的服务内容 */

@@ -72,6 +72,7 @@ export default {
   padding: 0;
   background: transparent;
   border: none;
+  font-size: 0.16rem;
 }
 /* 导航栏 logo部分 */
 .navbar .jy_nav_logo {
@@ -81,19 +82,20 @@ export default {
 .navbar .jy_nav_logo img {
   width: 1.46rem;
   height: 0.38rem;
+  margin-left: 0.3rem;
 }
 /* 导航栏 列表部分 */
 .navbar .jy_nav_list{
   line-height: 0.7rem;
 }
+.jy_nav_list ul li{
+  text-align: center;
+}
 .jy_nav_list ul li a {
-  font-size: 0.18rem;
   font-family: Microsoft YaHei,serif;
   font-weight: 400;
-  text-align: center;
-  line-height: 0.36rem;
-  padding: 0.17rem 0.3rem;
   color: #ffffff;
+  line-height: 0.38rem;
   opacity:0.6;
 }
 /*鼠标划过(停留)的链接*/
@@ -115,9 +117,20 @@ export default {
   color: #ffffff;
   opacity:0.6;
 }
+.jy_nav_list ul li a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
   color: black;
+}
+
+.jy_nav_list ul li {
+  width: 1.46rem;
+}
+.jy_nav_list .navbar-nav ul li {
+  width: 1.46rem;
 }
 
 #xbk {

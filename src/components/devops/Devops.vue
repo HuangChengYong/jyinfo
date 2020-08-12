@@ -39,7 +39,7 @@
       <div class="title_div"></div>
       <div class="all_round_content">
         <!-- 监控系统 -->
-        <hexagon :allRound="allRoundList[0]"/>
+        <hexagon class="hexagon" :allRound="allRoundList[0]"/>
         <!-- 空调系统 -->
         <hexagon :allRound="allRoundList[1]"/>
         <!-- 大屏显示系统 -->
