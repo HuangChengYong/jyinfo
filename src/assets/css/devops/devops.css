@@ -30,6 +30,7 @@
 .devops .background_images_two {
   width: 100%;
   background-image: url("//jy-info.qicp.vip/static/devops/devops_background_two.png");
+  background-size: cover;
 }
 
 /* 服务内容 */
