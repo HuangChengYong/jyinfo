@@ -19,6 +19,11 @@ export default new Router({
       path: '/weak',
       name: 'Weak',
       component: () => import('../components/weak/Weak')
+    },
+    {
+      path: '/soft',
+      name: 'Soft',
+      component: () => import('../components/soft/Software')
     }
   ]
 })
