@@ -3,36 +3,36 @@ let path = "http://jy-info.qicp.vip/static/devops/";
 /* 服务内容第一行数据 */
 let devopsServiceContentOne = [
   {
-    desopsImg: path + 'air-condition.png',
-    desopsName: '空调系统'
+    devopsImg: path + 'air-condition.png',
+    devopsName: '空调系统'
   },
   {
-    desopsImg: path + 'generic-cabling.png',
-    desopsName: '综合布线系统'
+    devopsImg: path + 'generic-cabling.png',
+    devopsName: '综合布线系统'
   },
   {
-    desopsImg: path + 'security-monitoring.png',
-    desopsName: '安防监控系统'
+    devopsImg: path + 'security-monitoring.png',
+    devopsName: '安防监控系统'
   },
   {
-    desopsImg: path + 'multi-media-conference.png',
-    desopsName: '多媒体会议系统'
+    devopsImg: path + 'multi-media-conference.png',
+    devopsName: '多媒体会议系统'
   }
 ];
 
 /* 服务内容第二行数据 */
 let devopsServiceContentTwo = [
   {
-    desopsImg: path + 'access-control-attendance.png',
-    desopsName: '门禁考勤系统'
+    devopsImg: path + 'access-control-attendance.png',
+    devopsName: '门禁考勤系统'
   },
   {
-    desopsImg: path + 'large-screen-display.png',
-    desopsName: '大屏显示'
+    devopsImg: path + 'large-screen-display.png',
+    devopsName: '大屏显示'
   },
   {
-    desopsImg: path + 'ups.png',
-    desopsName: 'UPS系统'
+    devopsImg: path + 'ups.png',
+    devopsName: 'UPS系统'
   }
 ];
 

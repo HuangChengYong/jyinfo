@@ -12,9 +12,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">产品 1</a></li>
+              <li><a href="#">产品 2</a></li>
+              <li><a href="#">产品 3</a></li>
               <li role="separator" class="divider"></li>
             </ul>
           </li>
@@ -22,7 +22,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">核心业务 <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">软件</a></li>
-              <li><a href="#">弱电</a></li>
+              <li><a href="#"><router-link :to="{name: 'Weak'}">弱电</router-link></a></li>
               <li><a href="#"><router-link :to="{name: 'Devops'}">运维</router-link></a></li>
               <li role="separator" class="divider"></li>
             </ul>
@@ -41,7 +41,6 @@
 export default {
   name: "JyHeader",
   methods: {
-    // 保存滚动值，这是兼容的写法
     handleScroll: function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       let navigation = document.getElementById('jy_nav');
@@ -106,8 +105,18 @@ export default {
 /* 正在点击的链接*/
 .jy_nav_list ul li a:active {
   text-decoration: none;
+  background: transparent;
+  color: #ffffff;
   opacity: 1;
 }
+/* 设置已访问的链接的样式 */
+.jy_nav_list ul li a:visited{
+  text-decoration: none;
+  color: #ffffff;
+  opacity:0.6;
+}
+
+
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
   color: black;
 }

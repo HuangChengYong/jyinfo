@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    window.onresize = () => {
+      window.location.reload()
+    };
+  }
+
 }
 </script>
 
