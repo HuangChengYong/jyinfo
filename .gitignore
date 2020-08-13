@@ -2,6 +2,7 @@
 node_modules/
 src/assets/images/
 /dist/
+/.vs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

@@ -10,7 +10,7 @@
         <span class="content_index04_top">您是否曾被这种问题困扰</span>
         <div class="content_index04_bottomline"></div>
       </div>
-      <div class="content_index02">
+      <div class="content_index02">   
         <div class="content_index02_content">
           <div class="content_index03_content">
             <p class="link-left" /><p class="link-right">现用软件适用性差</p><br />

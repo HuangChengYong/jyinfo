@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\soft"
+    "\\src\\assets",
+    "\\src\\assets\\css",
+    "\\src\\assets\\css\\develops",
+    "\\src\\components"
   ],
+  "SelectedNode": "\\src\\assets\\css\\devops",
   "PreviewInSolutionExplorer": false
 }
