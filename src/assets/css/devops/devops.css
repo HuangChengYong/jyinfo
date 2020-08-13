@@ -106,73 +106,92 @@
 }
 
 /* 10+经验行业案例 */
-.industry {
-  position: relative;
+.industry_case {
+  line-height: 1;
   text-align: center;
+  padding-top: 1rem;
+  background: url("//jy-info.qicp.vip/static/devops/devops_background_two.png");
+  background-size: cover;
+  width: 19.2rem;
   height: 10.8rem;
-  padding-top: 0.9rem;
-  padding-bottom: 1.14rem;
 }
-.industry .title_font {
+.industry_case .title_font {
   width:1.63rem;
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: 400;
-  color:#FFFFFF;
+  font-weight: bold;
+  color: #ffffff;
   margin: 0 auto;
 }
-.industry .title_div {
+.industry_case .title_div {
   width:1.4rem;
   height:0.04rem;
-  background-color: #FFFFFF;
-  margin: 0.15rem auto 0;
-  z-index: 1;
+  background: #ffffff;
+  margin: 0.25rem auto 0.5rem auto;
 }
-/* 案例 */
-.industry .industry_content {
+.industry_case .case_content {
+  width: 100%;
+  height: 6.8rem;
+}
+.industry_case .case_content .case_content_left {
+  width: 3.3rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  float: left;
   display: inline-block;
-  float: left;
-  margin-top: 0.5rem;
 }
-/* 案例左 */
-.industry .industry_content .industry_left {
-  float: left;
-  width:3.3rem;
-  height:6.8rem;
-  background:rgba(239,242,248,1);
+.industry_case .case_content .case_content_center {
+  width: 11rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  display: inline-block;
 }
-/* 案例中 */
-.industry .industry_content .industry_center {
-  float: left;
-  width:11rem;
-  height:6.8rem;
-  margin-left: 0.8rem;
-  background:rgba(239,242,248,1);
+.industry_case .case_content .case_content_right {
+  width: 3.3rem;
+  height: 6.8rem;
+  background: #EFF2F8;
+  display: inline-block;
+  float: right;
 }
-/* 案例右 */
-.industry .industry_content .industry_right {
-  float: left;
-  width:3.3rem;
-  height:6.8rem;
-  margin-left: 0.8rem;
-  background:rgba(239,242,248,1);
-}
-/* 查看更多案例按钮 */
-.industry .more_cases {
-  width:3rem;
-  height:0.7rem;
-  background:linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
-  border-radius:0.35rem;
-  font-size:0.26rem;
-  font-family:Microsoft YaHei,serif;
-  font-weight:400;
-  color:rgba(255,255,255,1);
+.industry_case .case_content .case_content_left .left_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
   position: relative;
-  top: 0.56rem;
+  top: 3rem;
+  left: 0.8rem;
+  cursor: pointer;
+}
+.industry_case .case_content .case_content_right .right_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  top: 3rem;
+  right: 0.8rem;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* degFirefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
+  cursor: pointer;
+}
+.industry_case .more_button {
+  width: 100%;
+  margin: 0.56rem auto 0;
+}
+.industry_case .more_button .button {
+  width: 3rem;
+  height: 0.70rem;
+  background: linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
+  border-radius: 0.35rem;
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei,serif;
+  font-weight: 400;
+  color: rgba(255,255,255,1);
   outline: none;
   border: none;
 }
+
 
 /* 全方位运维方案 */
 .all_round {

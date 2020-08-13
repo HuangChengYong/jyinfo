@@ -23,15 +23,21 @@
       </div>
     </div>
     <!-- 10+经验行业案例 -->
-    <div class="industry background_images_two">
+    <div class="industry_case">
       <span class="title_font">10+经验行业案例</span>
       <div class="title_div"></div>
-      <div class="row industry_content">
-        <div class="hidden-xs industry_left"></div>
-        <div class="col-xs-12 industry_center"></div>
-        <div class="hidden-xs industry_right"></div>
+      <div class="case_content">
+        <div class="case_content_left">
+          <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
+        </div>
+        <div class="case_content_center"></div>
+        <div class="case_content_right">
+          <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
+        </div>
       </div>
-      <button class="more_cases">更多案例>></button>
+      <div class="more_button">
+        <button class="button">更多案例>></button>
+      </div>
     </div>
     <!-- 全方位运维方案 -->
     <div class="all_round">

@@ -221,7 +221,7 @@
 .industry_case .more_button .button {
   width: 3rem;
   height: 0.70rem;
-  background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+  background: linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
   border-radius: 0.35rem;
   font-size: 0.26rem;
   font-family: Microsoft YaHei,serif;
