@@ -21,9 +21,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">核心业务 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#"><router-link :to="{name: 'Soft'}">软件</router-link></a></li>
-              <li><a href="#"><router-link :to="{name: 'Weak'}">弱电</router-link></a></li>
-              <li><a href="#"><router-link :to="{name: 'Devops'}">运维</router-link></a></li>
+              <li><a href="#"><router-link to="/soft">软件</router-link></a></li>
+              <li><a href="#"><router-link to="/weak">弱电</router-link></a></li>
+              <li><a href="#"><router-link to="/">运维</router-link></a></li>
             </ul>
           </li>
           <li><a href="#">成功案例</a></li>

@@ -10,7 +10,7 @@
         <span class="content_index04_top">您是否曾被这种问题困扰</span>
         <div class="content_index04_bottomline"></div>
       </div>
-      <div class="content_index02">   
+      <div class="content_index02">
         <div class="content_index02_content">
           <div class="content_index03_content">
             <p class="link-left" /><p class="link-right">现用软件适用性差</p><br />
@@ -156,20 +156,6 @@ export default {
     }
   },
   methods: {
-    // 保存滚动值，这是兼容的写法
-    handleScroll: function () {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      let navigation = document.getElementById('navigation');
-      // 判断背景色
-      if (scrollTop === 0) {
-        navigation.setAttribute('style','background-color:transparent');
-        navigation.setAttribute('style','border-bottom:1px solid #FFFFFF');
-      } else {
-        navigation.setAttribute('style','border-bottom:transparent');
-        navigation.setAttribute('style','background-color:#111F35');
-      }
-    },
-
     onSubmit() {
       let data = {
         name: this.form.name,
@@ -201,13 +187,6 @@ export default {
     this.softServiceContentTwo = software.softServiceContentTwo;
     this.softServiceContentThree = software.softServiceContentThree;
     this.softServiceContentFour = software.softServiceContentFour;
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll, true)
-  },
-  destroyed() {
-    // 离开该页面需要移除这个监听的事件，不然会报错
-    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
