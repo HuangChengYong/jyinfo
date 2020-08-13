@@ -1,21 +1,21 @@
-let path = "http://jy-info.qicp.vip/static/devops/";
+let path = "http://jy-info.qicp.vip/static/weak/";
 
 /* 服务内容第一行数据 */
 let weakServiceContentOne = [
   {
-    weakImg: path + 'air-condition.png',
-    weakName: '空调系统'
+    weakImg: path + 'server_content_1.png',
+    weakName: '机房建设系统'
   },
   {
-    weakImg: path + 'generic-cabling.png',
+    weakImg: path + 'server_content_2.png',
     weakName: '综合布线系统'
   },
   {
-    weakImg: path + 'security-monitoring.png',
+    weakImg: path + 'server_content_3.png',
     weakName: '安防监控系统'
   },
   {
-    weakImg: path + 'multi-media-conference.png',
+    weakImg: path + 'server_content_4.png',
     weakName: '多媒体会议系统'
   }
 ];
@@ -23,20 +23,20 @@ let weakServiceContentOne = [
 /* 服务内容第二行数据 */
 let weakServiceContentTwo = [
   {
-    weakImg: path + 'access-control-attendance.png',
-    weakName: '门禁考勤系统'
+    weakImg: path + 'server_content_5.png',
+    weakName: '计算机网络系统'
   },
   {
-    weakImg: path + 'large-screen-display.png',
-    weakName: '大屏显示'
+    weakImg: path + 'server_content_6.png',
+    weakName: '一卡通门禁系统'
   },
   {
-    weakImg: path + 'ups.png',
-    weakName: 'UPS系统'
+    weakImg: path + 'server_content_7.png',
+    weakName: '照明控制系统'
   },
   {
-    weakImg: path + 'ups.png',
-    weakName: 'UPS系统'
+    weakImg: path + 'server_content_8.png',
+    weakName: '防盗报警系统'
   }
 ];
 

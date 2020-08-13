@@ -109,32 +109,32 @@
     <div class="choose_jy">
       <div class="title_font">这些企业选择了甲悦</div>
       <div class="title_div"></div>
-      <div class="row enterprise_icon">
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/generic-cabling.png" alt="多媒体">
+      <div class="enterprise_icon">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose1.png" alt="国泰君安证券">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose2.png" alt="水利部太湖流域管理局">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose3.png" alt="Techcode太库">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose4.png" alt="农业部东海区渔政局">
         </div>
       </div>
-      <div class="row enterprise_icon">
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+      <div class="enterprise_icon">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose5.png" alt="十月妈咪">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose6.png" alt="上海检察">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose7.png" alt="武警第八支队">
         </div>
-        <div class="col-xs-6 icon_border">
-          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        <div class="icon_border">
+          <img src="//jy-info.qicp.vip/static/weak/choose8.png" alt="上海临港软件园">
         </div>
       </div>
     </div>

@@ -10,11 +10,11 @@ export default new Router({
       name: 'Devops',
       component: () => import('../components/devops/Devops')
     },
-    {
-      path: '/devops',
-      name: 'Devops',
-      component: () => import('../components/devops/Devops')
-    },
+    // {
+    //   path: '/devops',
+    //   name: 'Devops',
+    //   component: () => import('../components/devops/Devops')
+    // },
     {
       path: '/weak',
       name: 'Weak',
