@@ -1,5 +1,6 @@
 <template>
   <div class="weak">
+    <!-- 头部 -->
     <div class="background_images_one">
       <jy-header/>
       <span class="headline">弱电与系统集成</span><br/>
@@ -52,6 +53,95 @@
         <button class="button">更多案例>></button>
       </div>
     </div>
+    <!-- 解决方案 -->
+    <div class="solution">
+      <span class="title_font">解决方案</span>
+      <div class="title_div"></div>
+      <div class="solution_content">
+        <div class="building">
+          <div class="solution_content_div">
+            <img src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
+            <div class="content_div">智慧楼宇解决方案</div>
+            <div class="more_details">
+              <div>更多详情</div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel">
+          <div class="solution_content_div">
+            <img src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
+            <div class="content_div">智慧酒店解决方案</div>
+            <div class="more_details">
+              <div>更多详情</div>
+            </div>
+          </div>
+        </div>
+        <div class="hospital">
+          <div class="solution_content_div">
+            <img src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
+            <div class="content_div">智慧医院解决方案</div>
+            <div class="more_details">
+              <div>更多详情</div>
+            </div>
+          </div>
+        </div>
+        <div class="community">
+          <div class="solution_content_div">
+            <img src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
+            <div class="content_div">智慧社区解决方案</div>
+            <div class="more_details">
+              <div>更多详情</div>
+            </div>
+          </div>
+        </div>
+        <div class="park">
+          <div class="solution_content_div">
+            <img src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
+            <div class="content_div">智慧园区解决方案</div>
+            <div class="more_details">
+              <div>更多详情</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 这些企业选择了甲悦 -->
+    <div class="choose_jy">
+      <div class="title_font">这些企业选择了甲悦</div>
+      <div class="title_div"></div>
+      <div class="row enterprise_icon">
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/generic-cabling.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+      </div>
+      <div class="row enterprise_icon">
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+        <div class="col-xs-6 icon_border">
+          <img src="//jy-info.qicp.vip/static/devops/multi-media-conference.png" alt="多媒体">
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="weak_bottom"></div>
+    <!-- ICP -->
+    <div class="weak_icp"></div>
   </div>
 </template>
 
