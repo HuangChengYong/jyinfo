@@ -71,6 +71,7 @@
 }
 /* 全方位的服务内容 */
 .service {
+  line-height: 1;
   text-align: center;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
@@ -80,7 +81,7 @@
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: 400;
+  font-weight: bold;
   color:rgba(44,46,51,1);
   margin: 0 auto;
 }
@@ -101,6 +102,7 @@
 .service .row_one div:hover {
   position:relative;
   bottom: 0.3rem;
+  cursor: pointer;
 }
 .service .row_one .content {
   margin-top: 0.6rem;
@@ -116,6 +118,7 @@
 .service .row_two div:hover {
   position: relative;
   bottom: 0.3rem;
+  cursor: pointer;
 }
 .service .row_two .content {
   margin-top: 0.4rem;
@@ -143,9 +146,9 @@
 
 /* 10+经验行业案例 */
 .industry_case {
+  line-height: 1;
   text-align: center;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  padding-top: 1rem;
   background: url("//jy-info.qicp.vip/static/weak/background_images_two.png");
   background-size: cover;
   width: 19.2rem;
@@ -156,7 +159,7 @@
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: 400;
+  font-weight: bold;
   color: #ffffff;
   margin: 0 auto;
 }
@@ -164,7 +167,7 @@
   width:1.4rem;
   height:0.04rem;
   background: #ffffff;
-  margin: 0.26rem auto 0.5rem auto;
+  margin: 0.25rem auto 0.5rem auto;
 }
 .industry_case .case_content {
   width: 100%;
@@ -196,6 +199,7 @@
   position: relative;
   top: 3rem;
   left: 0.8rem;
+  cursor: pointer;
 }
 .industry_case .case_content .case_content_right .right_arrow {
   width: 0.8rem;
@@ -208,20 +212,211 @@
   -moz-transform: rotate(180deg); /* Firefox */
   -webkit-transform: rotate(180deg); /* Safari and Chrome */
   -o-transform: rotate(180deg); /* Opera */
+  cursor: pointer;
 }
 .industry_case .more_button {
   width: 100%;
-  margin: 0.56rem auto 0.55rem;
+  margin: 0.56rem auto 0;
 }
 .industry_case .more_button .button {
   width: 3rem;
   height: 0.70rem;
   background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
   border-radius: 0.35rem;
-
   font-size: 0.26rem;
   font-family: Microsoft YaHei,serif;
   font-weight: 400;
-  color: rgba(255,255,255,1)
+  color: rgba(255,255,255,1);
+  outline: none;
+  border: none;
+}
 
+/* 解决方案 */
+.solution {
+  line-height: 1;
+  width: 19.2rem;
+  height: 8.51rem;
+  background-color: #EDF5FD;
+  text-align: center;
+}
+.solution .title_font {
+  width: 1.64rem;
+  height: 0.4rem;
+  font-size:0.4rem;
+  font-family:Microsoft YaHei,serif;
+  font-weight: bold;
+  color:rgba(44,46,51,1);
+  display:inline-block;
+  margin: 1.21rem auto 0;
+}
+.solution .title_div {
+  width:1.4rem;
+  height:0.04rem;
+  background-color: #3D9CFD;
+  margin: 0.26rem auto 0.6rem;
+}
+.solution .solution_content {
+  width: 14rem;
+  height: 6rem;
+  margin: 0 auto;
+}
+.solution .solution_content div {
+  cursor: pointer;
+}
+/* 楼宇 building */
+.solution .solution_content .building {
+  width: 4.2rem;
+  height: 6rem;
+  background-image: url("//jy-info.qicp.vip/static/weak/building.png");
+  background-size: cover;
+  float: left;
+  display: table;
+}
+/* 酒店 hotel */
+.solution .solution_content .hotel {
+  width: 4.5rem;
+  height: 2.8rem;
+  background-image: url("//jy-info.qicp.vip/static/weak/hotel.png");
+  background-size: cover;
+  float: left;
+  display: table;
+  margin-left: 0.4rem;
+}
+/* 医院 hospital */
+.solution .solution_content .hospital {
+  width: 4.5rem;
+  height: 2.8rem;
+  background-image: url("//jy-info.qicp.vip/static/weak/hospital.png");
+  background-size: cover;
+  float: left;
+  display: table;
+  margin-left: 0.4rem;
+}
+/* 社区 community */
+.solution .solution_content .community {
+  width: 4.5rem;
+  height: 2.8rem;
+  background-image: url("//jy-info.qicp.vip/static/weak/community.png");
+  background-size: cover;
+  float: left;
+  display: table;
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
+}
+/* 园区 park */
+.solution .solution_content .park {
+  width: 4.5rem;
+  height: 2.8rem;
+  background-image: url("//jy-info.qicp.vip/static/weak/park.png");
+  background-size: cover;
+  float: left;
+  display: table;
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
+}
+.solution .solution_content .solution_content_div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.solution .solution_content img {
+  width: 0.84rem;
+  height: 0.84rem;
+  margin-bottom: 0.23rem;
+}
+.solution .solution_content .content_div {
+  font-size: 0.3rem;
+  font-family: Microsoft YaHei, serif;
+  font-weight: 600;
+  color: rgba(255,255,255,1);
+}
+.solution .solution_content .more_details {
+  display: none;
+}
+.solution .solution_content div:hover .more_details {
+  width: 1.5rem;
+  height: 0.46rem;
+  border: 0.02rem solid #FFFFFF;
+  display: block;
+  margin: 0.29rem auto 0;
+}
+.solution .solution_content div:hover .more_details div {
+  height: 0.23rem;
+  font-size: 0.22rem;
+  font-family: Microsoft YaHei, serif;
+  font-weight: 400;
+  line-height: 0.42rem;
+  color:rgba(255,255,255,1);
+ }
+.solution .solution_content .building:hover .more_details {
+  width: 1.5rem;
+  height: 0.46rem;
+  border: 0.02rem solid #FFFFFF;
+  display: block;
+  margin: 0.29rem auto 0;
+}
+.solution .solution_content .more_details:hover {
+  width: 1.5rem;
+  height: 0.46rem;
+  border: 0.02rem solid #3D9CFD;
+  background-color: #3D9CFD;
+  display: block;
+  margin: 0.29rem auto 0;
+}
+
+
+
+/* 这些企业选择了甲悦 */
+.choose_jy {
+  width: 100%;
+  margin-top: 1.19rem;
+  padding-bottom: 2rem;
+}
+.choose_jy .title_font {
+  width:3.7rem;
+  height: auto;
+  font-size:0.4rem;
+  font-family:Microsoft YaHei,serif;
+  font-weight:400;
+  color:rgba(44,46,51,1);
+  margin: 0 auto;
+}
+.choose_jy .title_div {
+  width:1.4rem;
+  height:0.04rem;
+  background:rgba(61,156,253,1);
+  margin: 0.3rem auto 0.4rem;
+}
+.choose_jy .enterprise_icon {
+  width: 14.6rem;
+  margin: 0 auto;
+}
+.choose_jy .icon_border {
+  width: 3.2rem;
+  height: 1.2rem;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 0.1rem 0.24rem 0 rgba(29,36,85,0.1);
+  display: inline-block;
+  margin: 0.2rem;
+}
+.choose_jy .icon_border img {
+  width: 2.4rem;
+  height: 1.06rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -1.2rem;
+  margin-top: -0.53rem;
+}
+
+/* 底部 */
+.weak .weak_bottom {
+  width: 100%;
+  height: 4rem;
+  background-color: #111F35;
+}
+/* 底部ICP */
+.weak .weak_icp {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #020202;
 }

@@ -345,6 +345,7 @@ export default {
     top: 8.29rem;
     position: absolute;
     background-image: url("//jy-info.qicp.vip/static/software/soft_Second.png");
+    background-size: cover;
   }
 
   .content_index04 {
@@ -509,6 +510,7 @@ export default {
     height: 6.80rem;
     overflow: hidden;
     background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-size: cover;
   }
 
     .project_case_middle {
@@ -523,6 +525,7 @@ export default {
     height: 6.80rem;
     overflow: hidden;
     background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-size: cover;
   }
 
   .project_case_right {
@@ -538,6 +541,7 @@ export default {
     height: 6.80rem;
     overflow: hidden;
     background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-size: cover;
   }
 
   .transfrom_left {
