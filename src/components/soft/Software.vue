@@ -426,7 +426,7 @@ export default {
     font-family: Microsoft YaHei;
     padding:0rem 0rem;
     vertical-align:middle;
-    font-weight: 300;
+    font-weight: 400;
     color: rgba(44,46,51,1);
 
   }
@@ -476,10 +476,9 @@ export default {
   }
 
   .project_case_left {
-
     background: rgba(255,255,255,1);
     float: left;
-    margin-right: 0.72rem;
+    margin-right: 3.6%;
     padding: 0rem 0rem;
   }
 
@@ -507,10 +506,9 @@ export default {
   }
 
   .project_case_right {
-
     background: rgba(255,255,255,1);
     box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
-    margin-left: 0.73rem;
+    margin-left: 3.6%;
     float: right;
   }
 
