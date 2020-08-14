@@ -538,7 +538,7 @@ export default {
     border-radius: 50%;
     background-image: url("//jy-info.qicp.vip/static/software/arrow-left.png");
     background-size: cover;
-    transform: rotateY(180deg); /* 垂直镜像翻转 */
+    transform: rotateY(180deg); /* 垂直镜像翻转 */  
     top: 28.55rem;
     right: 2.5rem;
     position: absolute;
