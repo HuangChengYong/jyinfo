@@ -478,7 +478,7 @@ export default {
   .project_case_left {
     background: rgba(255,255,255,1);
     float: left;
-    margin-right: 3.6%;
+    margin-right: 3.5%;
     padding: 0rem 0rem;
   }
 
