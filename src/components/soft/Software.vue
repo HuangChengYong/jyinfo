@@ -1,7 +1,8 @@
 <template>
   <div class="soft">
+    <jy-header class="jyHeader" />
     <div class="head_Top">
-      <jy-header />
+
       <button class="scheme">马上获取项目报价及方案</button>
     </div>
     <div class="content_body">
@@ -93,7 +94,7 @@
         </div>
       </div>
       <!--立即提交您的软件开发需求-->
-      <div class="submit_report" >
+      <div class="submit_report">
         <div class="form_title">
           <p class="submit_report_title_first">立即提交您的软件开发需求</p>
           <p class="submit_report_title_second">马上提交需求，我们会在24小时内联系您，并提供产品咨询和项目报价</p>
@@ -128,7 +129,7 @@
 </template>
 
 <script>
-  import JyHeader from "../JyHeader";
+  import JyHeader from '../JyHeader';
   import SoftwareFooter from '../public/footer';
   import Grapic from '../public/grapic';
   import software from '../../assets/js/software.js';
@@ -149,6 +150,9 @@ export default {
         budget:'',
         description: ''
       },
+      timer: false,
+      screenWidth: document.body.clientWidth,
+      screenHeight: '',
       softServiceContentOne: [],
       softServiceContentTwo: [],
       softServiceContentThree: [],
@@ -170,7 +174,7 @@ export default {
           if (res.status === '0') {
             this.$message({
               type: 'success',
-              message: res.status === '0' ? '上传完成' : '上传失败'
+              message: res.status === '0' ? '提交完成' : '提交失败'
             })
           } else {
             this.$message({
@@ -181,38 +185,74 @@ export default {
         });
 
     }
-  },
+
+      
+    },
+    watch: {
+      screenWidth(val) {
+        if (!this.timer) {
+          location.reload()
+          this.screenWidth = val
+          this.timer = true
+          let that = this
+          setTimeout(function () {
+            //that.screenWidth = that.$store.state.canvasWidth 
+            console.log(that.screenWidth)
+            that.timer = false
+            
+          }, 60)
+        }
+      } 
+      
+    },
+    mounted() {
+      const that = this
+      window.onresize = () => {
+        return (() => {
+          window.screenWidth = document.body.clientWidth
+          that.screenWidth = window.screenWidth
+          console.log(that.screenWidth)
+          if (that.screenWidth <1200) {
+            window.screenWidth=1200
+          } else {
+            this.$forceUpdate()
+          }
+        })()
+      }
+    },
+
   created() {
     this.softServiceContentOne = software.softServiceContentOne;
     this.softServiceContentTwo = software.softServiceContentTwo;
     this.softServiceContentThree = software.softServiceContentThree;
     this.softServiceContentFour = software.softServiceContentFour;
-  }
+    }
+
+
 }
 </script>
 
 <style scoped>
-
         .soft {
           padding: 0;
-          margin: 0;
-          width: 100%;
+          margin: auto auto;
+          width:100%;
           background-color: #EDF5FD;
         }
-          .soft .head_Top {
-            width: 100%;
-            height: 6.50rem;
-            background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
-            background-size: cover;
-          }
+  .head_Top {
+    width: 100%;
+    height: 6.50rem;
+    background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-size: cover;
+  }
 
       /* 第一张背景图上的按钮 */
           .soft > .head_Top > .scheme {
-            width: 3.81rem;
+            width: 19.8%;
             height: 0.80rem;
             position: absolute;
             top: 5.0rem;
-            left: 1.30rem;
+            left: 6.8%;
             border-radius: 0.40rem;
             font-size: 0.26rem;
             color: #FFFFFF;
@@ -302,20 +342,38 @@ export default {
 
   }
 
-  .query {
-    width: 2.40rem;
-    height: 0.60rem;
-    margin-top: 2.84rem;
-    margin-left:0.80rem;
-    font-size: 0.26rem;
-    font-family: Microsoft YaHei;
-    font-weight: 300;
-    color: rgba(255,255,255,1);
-    background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
-    border-radius: 0.30rem;
-    border: none;
+  /* @media (min-width: 1200px) and (max-width: 979px)*/
+  @media (min-width: 1200px) {
+    .query {
+      width: 2.40rem;
+      height: 0.60rem;
+      margin-top: 2.84rem;
+      margin-left: 0.80rem;
+      font-size: 0.26rem;
+      font-family: Microsoft YaHei;
+      font-weight: 500;
+      color: rgba(255,255,255,1);
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+      border-radius: 0.30rem;
+      border: none;
+    }
   }
 
+  @media (max-width: 1200px) {
+    .query {
+      width: 2.40rem;
+      height: 0.60rem;
+      margin-top: 2.84rem;
+      margin-left: 0.80rem;
+      font-size: 0.26rem;
+      font-family: Microsoft YaHei;
+      font-weight: 500;
+      color: rgba(255,255,255,1);
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+      border-radius: 0.30rem;
+      border: none;
+    }
+  }
   .erroricon {
     width: 4.04rem;
     height: 3.92rem;
@@ -471,52 +529,55 @@ export default {
   }
   .project_case {
     width: 100%;
-    margin-top:0.6rem;
+    margin-top: 0.6rem;
     height: 8.10rem;
+    flex-wrap: nowrap;
+    justify-content:space-between;
   }
 
   .project_case_left {
+    width: 16.6%;
     background: rgba(255,255,255,1);
     float: left;
-    margin-right: 3.5%;
     padding: 0rem 0rem;
   }
 
   .project_case_left_inner {
-    width: 3.27rem;
+    width: 100%;
     height: 6.80rem;
     overflow: hidden;
     background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
     background-size: cover;
   }
 
-    .project_case_middle {
-
-      background: rgba(255,255,255,1);
-      box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
-      float: left;
-    }
+  .project_case_middle {
+    width: 57.3%;
+    margin-left: 3.65%;
+    background: rgba(255,255,255,1);
+    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
+    float: left;
+  }
 
   .project_case_middle_inner {
-    width: 11.00rem;
+    width: 100%;
     height: 6.80rem;
-    overflow: hidden;
-    background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-image: url("//jy-info.qicp.vip/static/software/soft_Top_copy1.png");
     background-size: cover;
   }
 
   .project_case_right {
+    width: 16.6%;
     background: rgba(255,255,255,1);
     box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
-    margin-left: 3.6%;
+    margin-left: 3.60%;
     float: right;
   }
 
   .project_case_right_inner {
-    width: 3.30rem;
+    width: 100%;
     height: 6.80rem;
     overflow: hidden;
-    background-image: url("//jy-info.qicp.vip/static/software/soft_Top.png");
+    background-image: url("//jy-info.qicp.vip/static/software/soft_Top_copy2.png");
     background-size: cover;
   }
 
@@ -527,7 +588,7 @@ export default {
     background-image: url("//jy-info.qicp.vip/static/software/arrow-left.png");
     background-size: cover;
     top: 28.55rem;
-    left: 2.47rem;
+    left: 12.5%;
     border: none;
     position: absolute;
   }
@@ -540,7 +601,7 @@ export default {
     background-size: cover;
     transform: rotateY(180deg); /* 垂直镜像翻转 */  
     top: 28.55rem;
-    right: 2.5rem;
+    left: 83.4%;
     position: absolute;
     border: none;
   }
@@ -561,13 +622,14 @@ export default {
   }
 
   .soft_service {
+     width:100%;
      height:3.80rem;
      margin-left:2.60rem;
      margin-top:0.60rem;
   }
 
   .soft_design {
-    width: 3.20rem;
+    width: 16.667%;
     height: 3.80rem;
     background: rgba(255,255,255,1);
     box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
@@ -645,7 +707,7 @@ export default {
   }
 
   .submit_report {
-    width: 14.00rem;
+    width: 72.92%;
     height: 7.70rem;
     padding: 0rem 0.6rem;
     top: 7.65rem;
@@ -730,20 +792,21 @@ export default {
 
   .submit_report_button {
     position: relative;
-    margin: 0.49rem  auto 0.19rem;
+    margin: 0.49rem auto 0.19rem;
     width: 3.90rem;
     height: 0.60rem;
     margin-left: 34%;
     background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
     border-radius: 0.30rem;
-    font-size: 0.22rem;
+    font-size: 0.26rem;
     font-family: Microsoft YaHei;
-    font-weight: 300;
-    color: rgba(133,138,153,1);
+    font-weight: 500;
+    color: rgba(255,255,255,1);
     border: none;
   }
 
   .grapic  /deep/ .hexagon_despo_content {
     line-height:0.23rem;
   }
+
 </style>

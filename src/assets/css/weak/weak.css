@@ -201,19 +201,22 @@
   left: 0.8rem;
   cursor: pointer;
 }
-.industry_case .case_content .case_content_right .right_arrow {
-  width: 0.8rem;
-  height: 0.8rem;
-  position: relative;
-  top: 3rem;
-  right: 0.8rem;
-  transform: rotate(180deg);
-  -ms-transform: rotate(180deg); /* IE 9 */
-  -moz-transform: rotate(180deg); /* Firefox */
-  -webkit-transform: rotate(180deg); /* Safari and Chrome */
-  -o-transform: rotate(180deg); /* Opera */
-  cursor: pointer;
-}
+  .industry_case .case_content .case_content_right .right_arrow {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: relative;
+    top: 3rem;
+    right: 0.8rem;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -moz-transform: rotate(180deg); /* Firefox */
+    -webkit-transform: rotate(180deg); /* Safari and Chrome */
+    -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: rotate(180deg); /* Opera */
+    cursor: pointer;
+  }
 .industry_case .more_button {
   width: 100%;
   margin: 0.56rem auto 0;
