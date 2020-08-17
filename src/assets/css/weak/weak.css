@@ -280,7 +280,7 @@
   height: 6rem;
   margin: 0 auto;
 }
-.solution .solution_content div {
+.solution .solution_content .div_solution {
   cursor: pointer;
 }
 /* 楼宇 building */
@@ -352,14 +352,14 @@
 .solution .solution_content .more_details {
   display: none;
 }
-.solution .solution_content div:hover .more_details {
+.solution .solution_content .div_solution:hover .more_details {
   width: 1.5rem;
   height: 0.46rem;
   border: 0.02rem solid #FFFFFF;
   display: block;
   margin: 0.29rem auto 0;
 }
-.solution .solution_content div:hover .more_details div {
+.solution .solution_content .div_solution:hover .more_details div {
   height: 0.23rem;
   font-size: 0.22rem;
   font-family: Microsoft YaHei, serif;
@@ -367,9 +367,21 @@
   line-height: 0.42rem;
   color:rgba(255,255,255,1);
  }
-.solution .solution_content div .more_details:hover {
+.solution .solution_content .div_solution .more_details:hover {
   border: 0.02rem solid #3D9CFD;
 }
+.solution .solution_content .div_solution:hover {
+  opacity: 0.6;
+  background-color: #000;
+  z-index: 10;
+}
+
+.solution .solution_content .div_solution:hover .solution_content_div {
+  opacity: 1;
+  z-index: 11;
+  color: rgba(255,255,255,1);
+}
+
 .solution .solution_content .building:hover .more_details {
   width: 1.5rem;
   height: 0.46rem;

@@ -15,7 +15,7 @@
               <li><a href="#">产品 1</a></li>
               <li><a href="#">产品 2</a></li>
               <li><a href="#">产品 3</a></li>
-              <li role="separator" class="divider"></li>
+<!--              <li role="separator" class="divider"></li>-->
             </ul>
           </li>
           <li class="dropdown">
@@ -120,15 +120,25 @@ export default {
   text-decoration: none;
   color: #ffffff;
 }
+.jy_nav_list .navbar-nav .dropdown .dropdown-menu {
+  width: 1.26rem;
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
 
+.jy_nav_list .navbar-nav .dropdown .dropdown-menu:hover {
+  color: #ffffff;
+}
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
+  width: 1.46rem;
+  opacity: 1;
   color: black;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
 .jy_nav_list ul li {
-  width: 1.46rem;
-}
-.jy_nav_list .navbar-nav ul li {
   width: 1.46rem;
 }
 
