@@ -5,7 +5,7 @@
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 jy_nav_logo">
         <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="logo">
       </div>
-      <div class="col-xs-6 col-sm-9 col-md-1 col-lg-2 "></div>
+      <div class="col-xs-6 col-sm-9 col-md-1 col-lg-2"></div>
       <div class="hidden-xs hidden-sm col-md-8 col-lg-7 jy_nav_list container">
         <ul class="nav navbar-nav">
           <li><a href="#">首页</a></li>

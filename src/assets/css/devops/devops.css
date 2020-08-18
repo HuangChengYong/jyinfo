@@ -120,7 +120,7 @@
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: bold;
+  font-weight: 500;
   color: #ffffff;
   margin: 0 auto;
 }
@@ -159,7 +159,7 @@
   height: 0.8rem;
   position: relative;
   top: 3rem;
-  left: 0.8rem;
+  left: 0.47rem;
   cursor: pointer;
 }
 .industry_case .case_content .case_content_right .right_arrow {
@@ -167,7 +167,7 @@
   height: 0.8rem;
   position: relative;
   top: 3rem;
-  right: 0.8rem;
+  right: 0.47rem;
   transform: rotate(180deg);
   -ms-transform: rotate(180deg); /* IE 9 */
   -moz-transform: rotate(180deg); /* degFirefox */

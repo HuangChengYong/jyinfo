@@ -44,7 +44,12 @@
         <div class="case_content_left">
           <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
         </div>
-        <div class="case_content_center"></div>
+        <div class="case_content_center">
+          <div class="case_image"></div>
+          <div class="case_title">
+            <div class="case_title_content">徐州国泰太平洋酒店</div>
+          </div>
+        </div>
         <div class="case_content_right">
           <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
         </div>

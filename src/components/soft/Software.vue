@@ -1,131 +1,137 @@
 <template>
-  <div class="soft">
+  <div id="soft_root">
     <jy-header class="jyHeader" />
-    <div class="head_Top">
+    <div class="soft">
 
-      <button class="scheme">马上获取项目报价及方案</button>
+      <div class="head_Top">
+
+        <button class="scheme">马上获取项目报价及方案</button>
+      </div>
+      <div class="content_body">
+        <!--您是否曾被这种问题困扰-->
+        <div class="content_index04">
+          <span class="content_index04_top">您是否曾被这种问题困扰</span>
+          <div class="content_index04_bottomline"></div>
+        </div>
+        <div class="content_index02">
+          <div class="content_index02_content">
+            <div class="content_index03_content">
+              <p class="link-left" /><p class="link-right">现用软件适用性差</p><br />
+              <p class="link-left" /><p class="link-right">很难解决实际工作难题</p><br />
+              <p class="link-left" /><p class="link-right">无法有效提高工作效率</p>
+            </div>
+            <div class="content_index03_content">
+              <p class="link-left" /><p class="link-right">模板软件功能呆板</p><br />
+              <p class="link-left" /><p class="link-right">多系统数据无法同步</p><br />
+              <p class="link-left" /><p class="link-right">软件无法后续迭代升级</p>
+            </div>
+          </div>
+          <button class="query">立即咨询</button>
+        </div>
+
+        <div class="erroricon"></div>
+
+        <div class="content_index04">
+          <span class="content_index05_top">纯定制化开发帮您解决所有开发难题</span>
+          <div class="content_index04_bottomline"></div>
+        </div>
+        <div class="develop">
+          <div class="develop_issue" v-for="(item, index) in softServiceContentOne" :key="index">
+            <img :src="item.desopsImg" :alt="item.desopsName" />
+            <span class="develop_issue_name">{{ item.desopsName }}</span><br />
+            <span class="develop_issue_content">{{ item.desopsContent }}</span>
+          </div>
+
+        </div>
+        <div class="content_index04">
+          <span class="content_index06_top"> 优秀行业开发经验 50+成功案例</span>
+          <div class="content_index04_bottomline"></div>
+        </div>
+
+        <div class="project_case">
+
+          <div class="project_case_left">
+            <div class="project_case_left_inner"></div>
+            <button class="transfrom_left"></button>
+          </div>
+          <div class="project_case_middle">
+            <div class="project_case_middle_inner"></div>
+          </div>
+          <div class="project_case_right">
+            <div class="project_case_right_inner"></div>
+            <button class="transfrom_right"></button>
+          </div>
+          <button class="cases">更多案例>></button>
+        </div>
+
+        <div class="content_index04">
+          <span class="content_index07_top"> 为企业量身定制高效软件 满足企业不同阶段要求</span>
+          <div class="content_index04_bottomline"></div>
+        </div>
+        <div class="soft_service">
+          <div class="soft_design" v-for="(item, index) in softServiceContentTwo" :key="index">
+            <img :src="item.desopsImg" :alt="item.desopsName" />
+            <span class="soft_design_name">{{ item.desopsName }}</span><br />
+            <span class="soft_design_content" v-for=" (item, index) in item.desopsContent" :key="index">{{ item }}</span>
+            <!--<span class="soft_design_content">{{ item.desopsContent }}</span>-->
+          </div>
+        </div>
+
+        <div class="content_index04">
+          <span class="content_index08_top">严控流程 高质量服务</span>
+          <div class="content_index04_bottomline"></div>
+        </div>
+        <div class="process_content">
+          <div class="process_top_outline">
+            <div class="process_top" v-for="(item, index) in softServiceContentThree" :key="index">
+
+              <grapic class="grapic" :allRound="softServiceContentThree[index]" />
+
+            </div>
+          </div>
+          <div class="process_below_outline">
+            <div class="process_below" v-for="(item, index) in softServiceContentFour" :key="index">
+              <grapic class="grapic" :allRound="softServiceContentFour[index]" />
+            </div>
+          </div>
+        </div>
+        <!--立即提交您的软件开发需求-->
+        <div class="submit_report">
+          <div class="form_title">
+            <p class="submit_report_title_first">立即提交您的软件开发需求</p>
+            <p class="submit_report_title_second">马上提交需求，我们会在24小时内联系您，并提供产品咨询和项目报价</p>
+          </div>
+          <div class="form_content">
+            <form ref="form" :model="form" label-width="0.80rem" @submit.prevent="onSubmit">
+
+              <input class="form_name" v-model="form.name" placeholder="姓名">
+
+              <input class="form_name" v-model="form.mobile" placeholder="手机号">
+
+
+              <input class="form_uint" v-model="form.uint" placeholder="公司名称">
+
+
+              <input class="form_uint" v-model="form.budget" placeholder="开发预算" />
+
+
+              <input class="form_description" v-model="form.description" placeholder="示例：我们是电商公司，想开发一款企业内部采购管理软件">
+
+
+              <button class="submit_report_button" type="submit" @click="onSubmit">立即提交你的需求</button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+      <!-- 底部 -->
+      <software-footer></software-footer>
     </div>
-    <div class="content_body">
-      <!--您是否曾被这种问题困扰-->
-      <div class="content_index04">
-        <span class="content_index04_top">您是否曾被这种问题困扰</span>
-        <div class="content_index04_bottomline"></div>
-      </div>
-      <div class="content_index02">
-        <div class="content_index02_content">
-          <div class="content_index03_content">
-            <p class="link-left" /><p class="link-right">现用软件适用性差</p><br />
-            <p class="link-left" /><p class="link-right">很难解决实际工作难题</p><br />
-            <p class="link-left" /><p class="link-right">无法有效提高工作效率</p>
-          </div>
-          <div class="content_index03_content">
-            <p class="link-left" /><p class="link-right">模板软件功能呆板</p><br />
-            <p class="link-left" /><p class="link-right">多系统数据无法同步</p><br />
-            <p class="link-left" /><p class="link-right">软件无法后续迭代升级</p>
-          </div>
-        </div>
-        <button class="query">立即咨询</button>
-      </div>
 
-      <div class="erroricon"></div>
-
-      <div class="content_index04">
-        <span class="content_index05_top">纯定制化开发帮您解决所有开发难题</span>
-        <div class="content_index04_bottomline"></div>
-      </div>
-      <div class="develop">
-        <div class="develop_issue" v-for="(item, index) in softServiceContentOne" :key="index">
-          <img :src="item.desopsImg" :alt="item.desopsName" />
-          <span class="develop_issue_name">{{ item.desopsName }}</span><br />
-          <span class="develop_issue_content">{{ item.desopsContent }}</span>
-        </div>
-
-      </div>
-      <div class="content_index04">
-        <span class="content_index06_top"> 优秀行业开发经验 50+成功案例</span>
-        <div class="content_index04_bottomline"></div>
-      </div>
-
-      <div class="project_case">
-
-        <div class="project_case_left">
-          <div class="project_case_left_inner"></div>
-          <button class="transfrom_left"></button>
-        </div>
-        <div class="project_case_middle">
-          <div class="project_case_middle_inner"></div>
-        </div>
-        <div class="project_case_right">
-          <div class="project_case_right_inner"></div>
-          <button class="transfrom_right"></button>
-        </div>
-        <button class="cases">更多案例>></button>
-      </div>
-
-      <div class="content_index04">
-        <span class="content_index07_top"> 为企业量身定制高效软件 满足企业不同阶段要求</span>
-        <div class="content_index04_bottomline"></div>
-      </div>
-      <div class="soft_service">
-        <div class="soft_design" v-for="(item, index) in softServiceContentTwo" :key="index">
-          <img :src="item.desopsImg" :alt="item.desopsName" />
-          <span class="soft_design_name">{{ item.desopsName }}</span><br />
-          <span class="soft_design_content" v-for=" (item, index) in item.desopsContent" :key="index">{{ item }}</span>
-          <!--<span class="soft_design_content">{{ item.desopsContent }}</span>-->
-        </div>
-      </div>
-
-      <div class="content_index04">
-        <span class="content_index08_top">严控流程 高质量服务</span>
-        <div class="content_index04_bottomline"></div>
-      </div>
-      <div class="process_content">
-        <div class="process_top_outline">
-          <div class="process_top" v-for="(item, index) in softServiceContentThree" :key="index">
-
-            <grapic class="grapic" :allRound="softServiceContentThree[index]" />
-
-          </div>
-        </div>
-        <div class="process_below_outline">
-          <div class="process_below" v-for="(item, index) in softServiceContentFour" :key="index">
-            <grapic class="grapic" :allRound="softServiceContentFour[index]" />
-          </div>
-        </div>
-      </div>
-      <!--立即提交您的软件开发需求-->
-      <div class="submit_report">
-        <div class="form_title">
-          <p class="submit_report_title_first">立即提交您的软件开发需求</p>
-          <p class="submit_report_title_second">马上提交需求，我们会在24小时内联系您，并提供产品咨询和项目报价</p>
-        </div>
-        <div class="form_content">
-          <form ref="form" :model="form" label-width="0.80rem" @submit.prevent="onSubmit">
-
-            <input class="form_name" v-model="form.name" placeholder="姓名">
-
-            <input class="form_name" v-model="form.mobile" placeholder="手机号">
-
-
-            <input class="form_uint" v-model="form.uint" placeholder="公司名称">
-
-
-            <input class="form_uint" v-model="form.budget" placeholder="开发预算" />
-
-
-            <input class="form_description" v-model="form.description" placeholder="示例：我们是电商公司，想开发一款企业内部采购管理软件">
-
-
-            <button class="submit_report_button" type="submit" @click="onSubmit">立即提交你的需求</button>
-
-          </form>
-        </div>
-      </div>
-
-    </div>
-    <!-- 底部 -->
-    <software-footer></software-footer>
   </div>
+  
+ 
 </template>
 
 <script>
@@ -233,12 +239,18 @@ export default {
 </script>
 
 <style scoped>
-        .soft {
-          padding: 0;
-          margin: auto auto;
-          width:100%;
-          background-color: #EDF5FD;
-        }
+  #soft_root {
+    padding: 0;
+    margin: auto auto;
+    width:19.2rem;
+    background-color:blue;
+  }
+  .soft {
+    padding: 0;
+    margin: auto auto;
+    width: 100%;
+    background-color: #EDF5FD;
+  }
   .head_Top {
     width: 100%;
     height: 6.50rem;
@@ -622,19 +634,19 @@ export default {
   }
 
   .soft_service {
-     width:100%;
-     height:3.80rem;
-     margin-left:2.60rem;
-     margin-top:0.60rem;
+    width: 72.92%;
+    height: 3.80rem;
+    margin-left: 2.60rem;
+    margin-top: 0.60rem;
   }
 
   .soft_design {
-    width: 16.667%;
+    width: 22.86%;
     height: 3.80rem;
     background: rgba(255,255,255,1);
     box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
     float: left;
-    margin-right: 0.41rem;
+    margin-right: 0.29rem;
   }
 
   .soft_design > img {
@@ -707,12 +719,13 @@ export default {
   }
 
   .submit_report {
-    width: 72.92%;
+    width: 72.91%;
     height: 7.70rem;
     padding: 0rem 0.6rem;
     top: 7.65rem;
     left: 13.5%;
     background: rgba(255,255,255,1);
+
     box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
     position: relative;
   }
@@ -720,7 +733,7 @@ export default {
   .form_title {
     top: 0.42rem;
     vertical-align: central;
-    width: 100%;
+    width: 95%;
 
     position: absolute;
     font-size: 0.26rem;
