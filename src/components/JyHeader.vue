@@ -121,7 +121,7 @@ export default {
   color: #ffffff;
 }
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu {
-  width: 1.26rem;
+  width: 0;
   margin: 0;
   padding: 0;
   background-color: yellow;
