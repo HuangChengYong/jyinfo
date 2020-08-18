@@ -30,7 +30,10 @@
         <div class="case_content_left">
           <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
         </div>
-        <div class="case_content_center"></div>
+        <div class="case_content_center">
+          <img class="center_left" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
+          <img class="center_right" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
+        </div>
         <div class="case_content_right">
           <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
         </div>
@@ -47,21 +50,21 @@
         <!-- 监控系统 -->
         <hexagon class="hexagon" :allRound="allRoundList[0]"/>
         <!-- 空调系统 -->
-        <hexagon :allRound="allRoundList[1]"/>
+        <hexagon class="hexagon" :allRound="allRoundList[1]"/>
         <!-- 大屏显示系统 -->
-        <hexagon :allRound="allRoundList[2]"/>
+        <hexagon class="hexagon" :allRound="allRoundList[2]"/>
         <!-- UPS系统 -->
-        <hexagon :allRound="allRoundList[3]"/>
+        <hexagon class="hexagon" :allRound="allRoundList[3]"/>
       </div>
       <div class="all_round_content">
         <!-- 综合布线系统 -->
-        <hexagon :allRound="allRoundList[4]"/>
+        <hexagon class="hexagon hexagon_one" :allRound="allRoundList[4]"/>
         <!-- 门禁考勤系统 -->
-        <hexagon :allRound="allRoundList[5]"/>
+        <hexagon class="hexagon hexagon_one" :allRound="allRoundList[5]"/>
         <!-- 会议系统 -->
-        <hexagon :allRound="allRoundList[6]"/>
+        <hexagon class="hexagon hexagon_two" :allRound="allRoundList[6]"/>
         <!-- 会议保障 -->
-        <hexagon :allRound="allRoundList[7]"/>
+        <hexagon class="hexagon" :allRound="allRoundList[7]"/>
       </div>
     </div>
     <!-- 这些企业选择了甲悦 -->
@@ -130,5 +133,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../../assets/css/devops/devops.css";
+@import "../../assets/css/devops/xs-devops.css";
+@import "../../assets/css/devops/lg-devops.css";
+@import "../../assets/css/devops/md-devops.css";
 </style>

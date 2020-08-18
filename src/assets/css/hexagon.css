@@ -52,3 +52,7 @@
   font-size: 0.2rem;
   font-weight: 300;
 }
+
+.hexagon .hexagon_content .hexagon_span {
+  margin: 0.06rem;
+}

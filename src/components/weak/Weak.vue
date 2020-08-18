@@ -63,7 +63,7 @@
       <span class="title_font">解决方案</span>
       <div class="title_div"></div>
       <div class="solution_content">
-        <div class="building">
+        <div class="building div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
             <div class="content_div">智慧楼宇解决方案</div>
@@ -72,7 +72,7 @@
             </div>
           </div>
         </div>
-        <div class="hotel">
+        <div class="hotel div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
             <div class="content_div">智慧酒店解决方案</div>
@@ -81,7 +81,7 @@
             </div>
           </div>
         </div>
-        <div class="hospital">
+        <div class="hospital div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
             <div class="content_div">智慧医院解决方案</div>
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="community">
+        <div class="community div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
             <div class="content_div">智慧社区解决方案</div>
@@ -99,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="park">
+        <div class="park div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
             <div class="content_div">智慧园区解决方案</div>
@@ -159,8 +159,12 @@ export default {
   data() {
     return {
       serviceContentOne: [],
-      serviceContentTwo: []
+      serviceContentTwo: [],
+      industryCaseList: [1, 3, 9]
     }
+  },
+  methods: {
+
   },
   components: {
     JyHeader

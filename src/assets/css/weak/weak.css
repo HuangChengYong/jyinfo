@@ -81,7 +81,7 @@
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: bold;
+  font-weight: 400;
   color:rgba(44,46,51,1);
   margin: 0 auto;
 }
@@ -159,7 +159,7 @@
   height:0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: bold;
+  font-weight: 400;
   color: #ffffff;
   margin: 0 auto;
 }
@@ -186,6 +186,26 @@
   background: #EFF2F8;
   display: inline-block;
 }
+.industry_case .case_content .case_image {
+  width: 9.44rem;
+  height: 5.02rem;
+  background-color: gray;
+  margin: 0.6rem auto 0;
+}
+.industry_case .case_content .case_title {
+  width: 100%;
+  height: 1.18rem;
+  display: table;
+}
+.industry_case .case_content .case_title .case_title_content{
+  line-height: 1;
+  font-size: 0.32rem;
+  font-family: Microsoft YaHei, serif;
+  font-weight: 400;
+  color: #2C2E33;
+  display: table-cell;
+  vertical-align: middle;
+}
 .industry_case .case_content .case_content_right {
   width: 3.3rem;
   height: 6.8rem;
@@ -198,25 +218,22 @@
   height: 0.8rem;
   position: relative;
   top: 3rem;
-  left: 0.8rem;
+  left: 0.47rem;
   cursor: pointer;
 }
-  .industry_case .case_content .case_content_right .right_arrow {
-    width: 0.8rem;
-    height: 0.8rem;
-    position: relative;
-    top: 3rem;
-    right: 0.8rem;
-    transform: rotate(180deg);
-    -ms-transform: rotate(180deg); /* IE 9 */
-    -moz-transform: rotate(180deg); /* Firefox */
-    -webkit-transform: rotate(180deg); /* Safari and Chrome */
-    -webkit-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -o-transform: rotate(180deg); /* Opera */
-    cursor: pointer;
-  }
+.industry_case .case_content .case_content_right .right_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  top: 3rem;
+  right: 0.47rem;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
+  cursor: pointer;
+}
 .industry_case .more_button {
   width: 100%;
   margin: 0.56rem auto 0;
@@ -247,7 +264,7 @@
   height: 0.4rem;
   font-size:0.4rem;
   font-family:Microsoft YaHei,serif;
-  font-weight: bold;
+  font-weight: 400;
   color:rgba(44,46,51,1);
   display:inline-block;
   margin: 1.21rem auto 0;
@@ -263,7 +280,7 @@
   height: 6rem;
   margin: 0 auto;
 }
-.solution .solution_content div {
+.solution .solution_content .div_solution {
   cursor: pointer;
 }
 /* 楼宇 building */
@@ -329,20 +346,20 @@
 .solution .solution_content .content_div {
   font-size: 0.3rem;
   font-family: Microsoft YaHei, serif;
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(255,255,255,1);
 }
 .solution .solution_content .more_details {
   display: none;
 }
-.solution .solution_content div:hover .more_details {
+.solution .solution_content .div_solution:hover .more_details {
   width: 1.5rem;
   height: 0.46rem;
   border: 0.02rem solid #FFFFFF;
   display: block;
   margin: 0.29rem auto 0;
 }
-.solution .solution_content div:hover .more_details div {
+.solution .solution_content .div_solution:hover .more_details div {
   height: 0.23rem;
   font-size: 0.22rem;
   font-family: Microsoft YaHei, serif;
@@ -350,20 +367,35 @@
   line-height: 0.42rem;
   color:rgba(255,255,255,1);
  }
+.solution .solution_content .div_solution .more_details:hover {
+  border: 0.02rem solid #3D9CFD;
+}
+.solution .solution_content .div_solution:hover {
+  opacity: 0.6;
+  background-color: #000;
+  z-index: 10;
+}
+
+.solution .solution_content .div_solution:hover .solution_content_div {
+  opacity: 1;
+  z-index: 11;
+  color: rgba(255,255,255,1);
+}
+
 .solution .solution_content .building:hover .more_details {
   width: 1.5rem;
   height: 0.46rem;
   border: 0.02rem solid #FFFFFF;
   display: block;
-  margin: 0.29rem auto 0;
+  margin: 0.59rem auto 0;
 }
 .solution .solution_content .more_details:hover {
-  width: 1.5rem;
-  height: 0.46rem;
   border: 0.02rem solid #3D9CFD;
   background-color: #3D9CFD;
-  display: block;
-  margin: 0.29rem auto 0;
+}
+.solution .solution_content .building .more_details:hover {
+  border: 0.02rem solid #3D9CFD;
+  background-color: #3D9CFD;
 }
 
 /* 这些企业选择了甲悦 */

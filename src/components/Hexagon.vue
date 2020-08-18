@@ -6,7 +6,7 @@
     <div class="hexagon_content">
       <img :src="allRound.image" :alt="allRound.title">
       <span class="hexagon_title">{{ allRound.title }}</span>
-      <span v-for=" (item, index) in allRound.content" :key="index">{{ item }}</span>
+      <span class="hexagon_span" v-for=" (item, index) in allRound.content" :key="index">{{ item }}</span>
     </div>
   </div>
 </template>
