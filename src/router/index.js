@@ -14,17 +14,42 @@ var router = new Router({
     //   path: '/devops',
     //   name: 'Devops',
     //   component: () => import('../components/devops/Devops')
-    // },
+    // },/* 运维 */
     {
       path: '/weak',
       name: 'Weak',
       component: () => import('../components/weak/Weak')
-    },
+    },/* 弱电 */
     {
       path: '/soft',
       name: 'Soft',
       component: () => import('../components/soft/Software')
-    }
+    },/* 软件 */
+    {
+      path: '/hotel',
+      name: 'Hotel',
+      component: () => import('../components/solution/Hotel')
+    },/* 智慧酒店解决方案 */
+    {
+      path: '/building',
+      name: 'Building',
+      component: () => import('../components/solution/Building')
+    },/* 智慧楼宇解决问题 */
+    {
+      path: '/community',
+      name: 'Community',
+      component: () => import('../components/solution/Community')
+    },/* 智慧社区解决方案 */
+    {
+      path: '/hospital',
+      name: 'Hospital',
+      component: () => import('../components/solution/Hospital')
+    },/* 智慧医院解决方案 */
+    {
+      path: '/park',
+      name: 'Park',
+      component: () => import('../components/solution/Park')
+    }/* 智慧园区解决方案 */
   ]
 })
 

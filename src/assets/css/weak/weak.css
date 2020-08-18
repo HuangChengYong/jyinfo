@@ -338,10 +338,11 @@
   display: table-cell;
   vertical-align: middle;
 }
-.solution .solution_content img {
+.solution .solution_content .solution_content_div img {
   width: 0.84rem;
   height: 0.84rem;
   margin-bottom: 0.23rem;
+  transition: transform 0.1s;
 }
 .solution .solution_content .content_div {
   font-size: 0.3rem;
@@ -380,6 +381,9 @@
   opacity: 1;
   z-index: 11;
   color: rgba(255,255,255,1);
+}
+.solution .solution_content .div_solution:hover .solution_content_div img {
+  /*transform: scale(1.1)*/
 }
 
 .solution .solution_content .building:hover .more_details {
@@ -435,7 +439,10 @@
   width: 100%;
   height: 100%;
 }
-
+/* 清除 移动到router-link标签上出现的下划线 */
+a {
+  text-decoration: none;
+}
 
 /* 底部 */
 .weak .weak_bottom {
