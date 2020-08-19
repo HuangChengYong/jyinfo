@@ -130,8 +130,8 @@
     </div>
 
   </div>
-  
- 
+
+
 </template>
 
 <script>
@@ -192,7 +192,7 @@ export default {
 
     }
 
-      
+
     },
     watch: {
       screenWidth(val) {
@@ -202,14 +202,14 @@ export default {
           this.timer = true
           let that = this
           setTimeout(function () {
-            //that.screenWidth = that.$store.state.canvasWidth 
+            //that.screenWidth = that.$store.state.canvasWidth
             console.log(that.screenWidth)
             that.timer = false
-            
+
           }, 60)
         }
-      } 
-      
+      }
+
     },
     mounted() {
       const that = this
@@ -611,7 +611,7 @@ export default {
     border-radius: 50%;
     background-image: url("//jy-info.qicp.vip/static/software/arrow-left.png");
     background-size: cover;
-    transform: rotateY(180deg); /* 垂直镜像翻转 */  
+    transform: rotateY(180deg); /* 垂直镜像翻转 */
     top: 28.55rem;
     left: 83.4%;
     position: absolute;

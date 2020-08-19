@@ -8,7 +8,10 @@
     <div class="content">
       <!-- 面包屑导航 -->
       <div class="nav_content">
-        弱电工程与系统集成 > 智慧酒店解决方案
+        <ol class="breadcrumb">
+          <li><a href="#"><router-link to="/weak">弱电工程与系统集成</router-link></a></li>
+          <li class="active">智慧酒店解决方案</li>
+        </ol>
       </div>
       <!-- 标题 -->
       <div class="title_content">
@@ -126,5 +129,25 @@ export default {
   width: 100%;
   height: 1.2rem;
   background-color: #020202;
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+  background:none;
+}
+.breadcrumb > .active {
+  color: #3D9CFD;
+}
+.breadcrumb > li + li:before {
+  color: #5A5E66;
+  content: ">";
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: #5A5E66;
+}
+.breadcrumb a:hover {
+  text-decoration: none;
+  color: #5A5E66;
 }
 </style>

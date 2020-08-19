@@ -23,7 +23,7 @@
             <ul class="dropdown-menu">
               <li><a href="#"><router-link to="/soft">软件</router-link></a></li>
               <li><a href="#"><router-link to="/weak">弱电</router-link></a></li>
-              <li><a href="#"><router-link to="/">运维</router-link></a></li>
+              <li><a href="#"><router-link to="/devops">运维</router-link></a></li>
             </ul>
           </li>
           <li><a href="#">成功案例</a></li>

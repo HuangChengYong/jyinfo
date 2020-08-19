@@ -3,18 +3,18 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-var router = new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
+      name: 'Weak',
+      component: () => import('../components/weak/Weak')
+    },
+    {
+      path: '/devops',
       name: 'Devops',
       component: () => import('../components/devops/Devops')
-    },
-    // {
-    //   path: '/devops',
-    //   name: 'Devops',
-    //   component: () => import('../components/devops/Devops')
-    // },/* 运维 */
+    },/* 运维 */
     {
       path: '/weak',
       name: 'Weak',
@@ -53,9 +53,10 @@ var router = new Router({
   ]
 })
 
+
+/* 路由跳转之后，重置x和y轴的滚动条为0 */
 router.afterEach((to, from, next) => {
   window.scrollTo(0, 0)
-
 })
 
 export default router;
