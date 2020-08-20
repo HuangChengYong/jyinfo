@@ -67,45 +67,55 @@
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
             <div class="content_div">智慧楼宇解决方案</div>
-            <div class="more_details">
-              <div>更多详情</div>
-            </div>
+            <router-link to="/building" >
+              <div class="more_details">
+                <div>更多详情</div>
+              </div>
+            </router-link>
           </div>
         </div>
         <div class="hotel div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
             <div class="content_div">智慧酒店解决方案</div>
-            <div class="more_details">
-              <div>更多详情</div>
-            </div>
+            <router-link to="/hotel" >
+              <div class="more_details">
+                <div>更多详情</div>
+              </div>
+            </router-link>
           </div>
         </div>
         <div class="hospital div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
             <div class="content_div">智慧医院解决方案</div>
-            <div class="more_details">
-              <div>更多详情</div>
-            </div>
+            <router-link to="/hospital" >
+              <div class="more_details">
+                <div>更多详情</div>
+              </div>
+            </router-link>
           </div>
         </div>
         <div class="community div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
             <div class="content_div">智慧社区解决方案</div>
-            <div class="more_details">
-              <div>更多详情</div>
-            </div>
+            <router-link to="/community" >
+              <div class="more_details">
+                <div>更多详情</div>
+              </div>
+            </router-link>
           </div>
         </div>
         <div class="park div_solution">
           <div class="solution_content_div">
             <img src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
             <div class="content_div">智慧园区解决方案</div>
-            <div class="more_details">
-              <div>更多详情</div>
-            </div>
+            <router-link to="/park" >
+              <div class="more_details">
+                <div>更多详情</div>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>

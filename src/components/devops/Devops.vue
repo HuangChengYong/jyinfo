@@ -129,6 +129,7 @@ export default {
     this.serviceContentTwo = dataSource.serviceContentTwo;
     this.allRoundList = dataSource.allRoundList;
   }
+
 }
 </script>
 
