@@ -25,6 +25,12 @@ const router = new Router({
       name: 'Soft',
       component: () => import('../components/soft/Software')
     },/* 软件 */
+    /* 招聘 */
+    {
+      path: '/recruitment',
+      name: 'Recruitment',
+      component: () => import('../components/soft/recruitment')
+    },
     {
       path: '/hotel',
       name: 'Hotel',

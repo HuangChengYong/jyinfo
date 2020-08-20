@@ -7,10 +7,11 @@
   }
   .devops .devops_one {
     width: 100%;
+    height: 6.5rem;
   }
   .devops .devops_one img {
     width: 100%;
-    height: 6rem;
+    height: 100%;
   }
   /* 第一张背景图上的按钮 */
   .devops .devops_one button {
