@@ -89,14 +89,11 @@ export default {
 }
 .jy_nav_list ul li{
   text-align: center;
-
 }
 .jy_nav_list ul li a {
   font-family: Microsoft YaHei,serif;
   font-weight: 400;
   color: #ffffff;
-  width:1.58rem;
-
   line-height: 0.38rem;
   opacity:0.6;
 }
@@ -125,21 +122,21 @@ export default {
 }
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu {
   width: 1.26rem;
+  margin: 0;
   padding: 0;
-
+  background-color: yellow;
 }
 
 .jy_nav_list .navbar-nav .dropdown .dropdown-menu:hover {
   color: #ffffff;
 }
-  .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
-    width: 1.26rem;
-    opacity: 1;
-    color: black;
-    background-color: #ffffff;
-    padding:0;
-    overflow: hidden;
-  }
+.jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
+  width: 1.46rem;
+  opacity: 1;
+  color: black;
+  background-color: #ffffff;
+  overflow: hidden;
+}
 
 .jy_nav_list ul li {
   width: 1.46rem;
