@@ -127,6 +127,7 @@
 
   .jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
     color: black;
+    
   }
 
   .jy_nav_list ul li {

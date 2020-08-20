@@ -94,10 +94,70 @@ let ProcessServiceBelow = [
   }
 ];
 
+let Recruitment_groups_Desc = [
+  {
+    position: '会议系统驻场运维',
+    condition: '(经验不限)',
+    workplcae: ['职能类型：技术类', '所属部门：运维部', '工作地点：上海市']
+  },
+  {
+    position: '弱电工程师',
+    condition: '',
+    workplcae: ['职能类型：技术类', '所属部门：弱电部', '工作地点：上海市']
+  },
+  {
+    position: '财务会计人员',
+    condition: '',
+    workplcae: ['职能类型：会计类', '所属部门：财务部', '工作地点：上海市']
+  },
+  {
+    position: 'UI设计师',
+    condition: '',
+    workplcae: ['职能类型：设计类', '所属部门：软件部', '工作地点：上海市']
+  },
+  {
+    position: '前端工程师',
+    condition: '',
+    workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
+  },
+  {
+    position: 'ios开发工程师',
+    condition: '',
+    workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
+  },
+  {
+    position: '安卓开发工程师',
+    condition: '',
+    workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
+  }
+];
+
+let Recruitment_groups_responsibilities = [
+  {
+    title: '岗位职责',
+    desc: ['网络系统、程控交换机系统、会议系统、电子门禁等智能化系统安装、调试、维护工作',
+      '认真负责、诚实可靠、踏实刻苦',
+      '主要对于会议系统设备了解',
+      '弱电相关设备的维护、检修工作']
+  }
+]
+
+let Recruitment_groups_capability = [
+  {
+    title: '任职要求',
+    desc: ['学习能力强、具有较强的责任心和良好的沟通能力，工作认真、耐心、踏实，有较强团队合作精神',
+          '具备良好的服务意识，能合理解决各种工作中的问题'
+    ]
+  }
+]
+  
+
 export default {
   softServiceContentOne: SolutionService,
   softServiceContentTwo: DevelopService,
   softServiceContentThree: ProcessServiceTop,
-  softServiceContentFour: ProcessServiceBelow
-
+  softServiceContentFour: ProcessServiceBelow,
+  recruitment_groups_Desc: Recruitment_groups_Desc,
+  recruitment_groups_responsibilities:Recruitment_groups_responsibilities,
+  recruitment_groups_capability:Recruitment_groups_capability,
 }

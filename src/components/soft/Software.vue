@@ -52,14 +52,14 @@
 
           <div class="project_case_left">
             <div class="project_case_left_inner"></div>
-            <button class="transfrom_left"></button>
+            <button class="transfrom_left" @click="transfromcases('left')"></button>
           </div>
           <div class="project_case_middle">
             <div class="project_case_middle_inner"></div>
           </div>
           <div class="project_case_right">
             <div class="project_case_right_inner"></div>
-            <button class="transfrom_right"></button>
+            <button class="transfrom_right" @click="transfromcases('right')"></button>
           </div>
           <button class="cases">更多案例>></button>
         </div>
@@ -190,7 +190,20 @@ export default {
           }
         });
 
+    },
+
+    transfromcases(DrictionTag) {
+      var elemmleft = document.getElementsByClassName("project_case_left_inner")[0];
+      if (DrictionTag === 'left') { //案例向左侧滚动
+        alert("====================" + DrictionTag);
+      
+      }
+      if (DrictionTag === 'right') { //案例向右侧滚动
+        alert("====================" + DrictionTag)
+      }
     }
+
+    
 
       
     },
@@ -469,7 +482,7 @@ export default {
   }
 
   .develop {
-    width: 14.00rem;
+    width: 72.92%;
     height: 7.20rem;
     background: rgba(255,255,255,1);
     margin: 0.90rem auto 0 auto;

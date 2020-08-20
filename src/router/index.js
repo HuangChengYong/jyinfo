@@ -24,6 +24,11 @@ var router = new Router({
       path: '/soft',
       name: 'Soft',
       component: () => import('../components/soft/Software')
+    },
+    {
+      path: '/recruitment',
+      name: 'Recruitment',
+      component: () => import('../components/soft/recruitment')
     }
   ]
 })
