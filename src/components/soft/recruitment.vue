@@ -22,8 +22,8 @@
           <div class="recruitment_groups_details_content" data-bind="recruitment_groups_responsibilities" >
 
             <span class="recruitment_groups_details_title">{{ recruitment_groups_responsibilities.title}}</span>
-            
-            <div class="recruitment_groups_details_desc" v-for=" (item, index_three) in recruitment_groups_responsibilities.desc" :key="index_second">
+
+            <div class="recruitment_groups_details_desc" v-for=" (item, index_three) in recruitment_groups_responsibilities.desc" :key="index_three">
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
             <!--任职要求-->
@@ -32,7 +32,7 @@
           <div class="recruitment_groups_details_content" data-bind="recruitment_groups_capability">
 
             <span class="recruitment_groups_details_title">{{ recruitment_groups_capability.title }}</span>
-            
+
             <div class="recruitment_groups_details_desc" v-for=" (item, index_four) in recruitment_groups_capability.desc" :key="index_four">
 
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
@@ -70,7 +70,7 @@
         } else {
           document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(360deg);');
           this.direction_tag = false
-           
+
         }
       },
       employee() {

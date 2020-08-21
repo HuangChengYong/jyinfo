@@ -1,49 +1,45 @@
 <template>
-  <div>
-    <nav id="jy_nav" class="row navbar navbar-default navbar-fixed-top">
-      <div class="col-md-1 col-lg-1 "></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 jy_nav_logo">
-        <img src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="logo">
-      </div>
-      <div class="col-xs-6 col-sm-9 col-md-1 col-lg-2"></div>
-      <div class="hidden-xs hidden-sm col-md-8 col-lg-7 jy_nav_list container">
-        <ul class="nav navbar-nav">
-          <li><a href="#">首页</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">产品 1</a></li>
-              <li><a href="#">产品 2</a></li>
-              <li><a href="#">产品 3</a></li>
-<!--              <li role="separator" class="divider"></li>-->
+  <div class="nav">
+    <div class="jy_nav">
+      <div class="jy_nav_content">
+        <div class="jy_nav_logo">
+          <img class="logo_img" src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="logo">
+        </div>
+        <div class="jy_nav_menu">
+          <div class="menu-md">
+            <ul>
+              <li><a href="#">首页</a></li>
+              <li>
+                <a href="#">产品</a>
+                <span class="glyphicon glyphicon-menu-down btn-xs" aria-hidden="true" />
+              </li>
+              <li>
+                <a href="#" class="dropdown-toggle">核心业务</a>
+                <span class="glyphicon glyphicon-menu-down btn-xs" aria-hidden="true" />
+              </li>
+              <li><a href="#">成功案例</a></li>
+              <li><a href="#">关于我们</a></li>
+              <li><a href="#">企业招聘</a></li>
             </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">核心业务 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#"><router-link to="/soft">软件</router-link></a></li>
-              <li><a href="#"><router-link to="/weak">弱电</router-link></a></li>
-              <li><a href="#"><router-link to="/devops">运维</router-link></a></li>
-            </ul>
-          </li>
-          <li><a href="#">成功案例</a></li>
-          <li><a href="#">关于我们</a></li>
-          <li><a href="#">企业招聘</a></li>
-        </ul>
+          </div>
+          <div class="menu-xs">
+            <span class="glyphicon glyphicon-menu-hamburger btn-lg" aria-hidden="true" />
+          </div>
+        </div>
       </div>
-    </nav>
-    <div id="xbk"></div>
+    </div>
+    <div class="xbk"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "JyHeader",
+  name: "Header",
   methods: {
     handleScroll: function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      let navigation = document.getElementById('jy_nav');
-      let navigation_xbk = document.getElementById('xbk');
+      let navigation = document.getElementsByClassName('jy_nav')[0];
+      let navigation_xbk = document.getElementsByClassName('xbk')[0];
       // 判断背景色
       if (scrollTop === 0) {
         navigation.setAttribute('style','background-color:transparent;');
@@ -65,88 +61,127 @@ export default {
 </script>
 
 <style scoped>
-/* 导航栏 */
-.navbar {
+div, span,
+ul, li,
+a{
   margin: 0;
   padding: 0;
-  background: transparent;
-  border: none;
-  font-size: 0.16rem;
 }
-/* 导航栏 logo部分 */
-.navbar .jy_nav_logo {
-  text-align: center;
-  line-height: 0.7rem;
+img {
+  width: 100%;
+  height: 100%;
 }
-.navbar .jy_nav_logo img {
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,li {
+  list-style: none;
+}
+
+/* 导航栏 */
+.jy_nav {
+  width: 19.2rem;
+  height: 0.7rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+/* 导航栏内容部分 */
+.jy_nav .jy_nav_content {
+  width: 14rem;
+  height: 0.7rem;
+  margin: 0 auto;
+  display: flex;
+}
+/* 导航栏——logo部分 */
+.jy_nav .jy_nav_logo {
+  width: 1.46rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.jy_nav .jy_nav_logo .logo_img {
   width: 1.46rem;
   height: 0.38rem;
-  margin-left: 0.3rem;
 }
-/* 导航栏 列表部分 */
-.navbar .jy_nav_list{
-  line-height: 0.7rem;
-}
-.jy_nav_list ul li{
+
+/* 导航栏——菜单部分 */
+.jy_nav .jy_nav_menu {
+  width: 8.76rem;
+  height: 0.7rem;
+  margin-left: 3.78rem;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
-.jy_nav_list ul li a {
-  font-family: Microsoft YaHei,serif;
+.jy_nav_menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.jy_nav_menu ul li {
+  height: 0.7rem;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.jy_nav_menu ul li a {
+  width: 0.75rem;
+  height: 0.16rem;
+  font-size: 0.16rem;
+  font-family: Microsoft YaHei,sans-serif;
   font-weight: 400;
   color: #ffffff;
-  line-height: 0.38rem;
   opacity:0.6;
 }
-/*鼠标划过(停留)的链接*/
-.jy_nav_list ul li a:hover {
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 1;
-}
-/* 正在点击的链接*/
-.jy_nav_list ul li a:active {
-  text-decoration: none;
-  background: transparent;
-  color: #ffffff;
-  opacity: 1;
-}
-/* 设置已访问的链接的样式 */
-.jy_nav_list ul li a:visited{
-  text-decoration: none;
+.jy_nav_menu ul li span {
+  font-size: 0.16rem;
   color: #ffffff;
   opacity:0.6;
-}
-.jy_nav_list ul li a:link {
-  text-decoration: none;
-  color: #ffffff;
-}
-.jy_nav_list .navbar-nav .dropdown .dropdown-menu {
-  width: 0;
-  margin: 0;
-  padding: 0;
-  background-color: yellow;
-}
-
-.jy_nav_list .navbar-nav .dropdown .dropdown-menu:hover {
-  color: #ffffff;
-}
-.jy_nav_list .navbar-nav .dropdown .dropdown-menu li a {
-  width: 1.46rem;
-  opacity: 1;
-  color: black;
-  background-color: #ffffff;
-  overflow: hidden;
-}
-
-.jy_nav_list ul li {
-  width: 1.46rem;
-}
-
-#xbk {
-  height: 0.02rem;
   position: relative;
-  top: 0.7rem;
-  opacity:0.4;
-  background-color: #FFFFFF;
+  left: -0.01rem ;
 }
+.jy_nav_menu ul li:hover {
+  border-bottom: 0.02rem solid #ffffff;
+}
+.jy_nav_menu ul li:hover a {
+  opacity: 1;
+}
+.jy_nav_menu ul li:hover span {
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .menu-md {
+    display: block;
+    width: 100%;
+  }
+  .menu-xs {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jy_nav {
+    height: 0.7rem;
+  }
+  .menu-md {
+    display: none;
+  }
+  .menu-xs {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  .menu-xs span {
+    margin: 0 0.5rem;
+    color: white;
+  }
+}
+
 </style>
