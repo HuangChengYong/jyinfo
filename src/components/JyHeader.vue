@@ -28,7 +28,7 @@
           </li>
           <li><a href="#">成功案例</a></li>
           <li><a href="#">关于我们</a></li>
-          <li><a href="#">企业招聘</a></li>
+          <li><a href="#"><router-link to="/recruitment">企业招聘</router-link></a></li>
         </ul>
       </div>
     </nav>
