@@ -9,13 +9,27 @@
           <div class="menu-md">
             <ul>
               <li><a href="#">首页</a></li>
-              <li>
+              <li v-on:mouseover="updateMenuDown($event)" v-on:mouseout="updateMenuUp($event)">
                 <a href="#">产品</a>
-                <span class="glyphicon glyphicon-menu-down btn-xs" aria-hidden="true" />
+                <div class="glyphicon glyphicon-menu-down menu_icon" aria-hidden="true" />
+                <div class="dropdownMenu jy_hidden">
+                  <ul>
+                    <li><a href="#">产品 a</a></li>
+                    <li><a href="#">产品 b</a></li>
+                    <li><a href="#">产品 c</a></li>
+                  </ul>
+                </div>
               </li>
-              <li>
+              <li v-on:mouseover="updateMenuDown($event)" v-on:mouseout="updateMenuUp($event)">
                 <a href="#" class="dropdown-toggle">核心业务</a>
-                <span class="glyphicon glyphicon-menu-down btn-xs" aria-hidden="true" />
+                <div class="glyphicon glyphicon-menu-down menu_icon" aria-hidden="true" />
+                <div class="dropdownMenu jy_hidden">
+                  <ul>
+                    <li><router-link to="/soft"><a href="#">软件</a></router-link></li>
+                    <li><router-link to="/weak"><a href="#">弱电</a></router-link></li>
+                    <li><router-link to="/devops"><a href="#">运维</a></router-link></li>
+                  </ul>
+                </div>
               </li>
               <li><a href="#">成功案例</a></li>
               <li><a href="#">关于我们</a></li>
@@ -23,10 +37,18 @@
             </ul>
           </div>
           <div class="menu-xs">
-            <span class="glyphicon glyphicon-menu-hamburger btn-lg" aria-hidden="true" />
+            <div @click="showMenu" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" />
           </div>
         </div>
       </div>
+    </div>
+    <div class="phone-menu" v-show="menuShow">
+      <div><a href="#">首页</a></div>
+      <div><a href="#">产品</a></div>
+      <div><a href="#">核心业务</a></div>
+      <div><a href="#">成功案例</a></div>
+      <div><a href="#">关于我们</a></div>
+      <div><a href="#">企业招聘</a></div>
     </div>
     <div class="xbk"></div>
   </div>
@@ -35,6 +57,11 @@
 <script>
 export default {
   name: "Header",
+  data () {
+    return {
+      menuShow: false,
+    }
+  },
   methods: {
     handleScroll: function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
@@ -48,6 +75,17 @@ export default {
         navigation.setAttribute('style','background-color:#111F35;');
         navigation_xbk.setAttribute('style','background-color: transparent;');
       }
+    },
+    showMenu () {
+      this.menuShow = this.menuShow !== true;
+    },
+    updateMenuDown ($event) {
+      $event.currentTarget.firstElementChild.nextElementSibling.className = "glyphicon glyphicon-menu-up";
+      $event.currentTarget.lastElementChild.className = "dropdownMenu jy_show";
+    },
+    updateMenuUp ($event) {
+      $event.currentTarget.firstElementChild.nextElementSibling.className = "glyphicon glyphicon-menu-down";
+      $event.currentTarget.lastElementChild.className = "dropdownMenu jy_hidden";
     }
   },
   mounted() {
@@ -71,24 +109,36 @@ img {
   width: 100%;
   height: 100%;
 }
+ol, ul, li {
+  list-style: none;
+}
 a {
   text-decoration: none;
+  outline: none;
   font-weight: 400;
 }
 a:hover {
   text-decoration: none;
 }
-ul,li {
-  list-style: none;
+
+.jy_hidden {
+  display: none;
+}
+.jy_show {
+  display: block;
 }
 
 /* 导航栏 */
-.jy_nav {
-  width: 19.2rem;
+.nav {
   height: 0.7rem;
   position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.nav:hover {
+  background-color: #111F35;
 }
 
 /* 导航栏内容部分 */
@@ -119,19 +169,19 @@ ul,li {
   display: flex;
   align-items: center;
 }
-.jy_nav_menu ul {
+.jy_nav_menu > .menu-md > ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.jy_nav_menu ul li {
+.jy_nav_menu > .menu-md > ul > li {
   height: 0.7rem;
   float: left;
   display: flex;
   align-items: center;
 }
-.jy_nav_menu ul li a {
-  width: 0.75rem;
+.jy_nav_menu > .menu-md > ul > li > a {
+  width: 0.9rem;
   height: 0.16rem;
   font-size: 0.16rem;
   font-family: Microsoft YaHei,sans-serif;
@@ -139,22 +189,61 @@ ul,li {
   color: #ffffff;
   opacity:0.6;
 }
-.jy_nav_menu ul li span {
+.jy_nav_menu > .menu-md > ul > li > .menu_icon {
   font-size: 0.16rem;
   color: #ffffff;
   opacity:0.6;
-  position: relative;
-  left: -0.01rem ;
 }
-.jy_nav_menu ul li:hover {
+.jy_nav_menu > .menu-md > ul > li:hover {
   border-bottom: 0.02rem solid #ffffff;
 }
-.jy_nav_menu ul li:hover a {
+.jy_nav_menu > .menu-md > ul > li:hover > a {
   opacity: 1;
 }
-.jy_nav_menu ul li:hover span {
-  opacity: 1;
+
+.jy_nav_menu .menu-md .dropdownMenu {
+  width: 1.7rem;
+  position: absolute;
+  top: 0.69rem;
+  background-color: #111F35;
 }
+.jy_nav_menu .menu-md .dropdownMenu ul {
+
+}
+.jy_nav_menu .menu-md .dropdownMenu ul li {
+  height: 0.5rem;
+}
+.jy_nav_menu .menu-md .dropdownMenu ul li:hover {
+  background-color: #8c8c8c;
+}
+
+.jy_nav_menu .menu-md .dropdownMenu ul li a {
+  line-height: 0.5rem;
+  color: #ffffff;
+}
+
+
+/* 手机菜单 */
+.phone-menu {
+  z-index: 100;
+  color: #ffffff;
+  background-color: #111F35;
+
+}
+.phone-menu div {
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+.phone-menu div a{
+  margin: 0 auto;
+  color: white;
+}
+.phone-menu div:hover {
+  background-color: #8c8c8c;
+}
+
+
 
 
 @media screen and (min-width: 768px) {
@@ -167,19 +256,27 @@ ul,li {
   }
 }
 @media screen and (max-width: 768px) {
+  .nav {
+    background-color: #111F35;
+  }
   .jy_nav {
-    height: 0.7rem;
+    width: 8rem;
+    margin: 0 auto;
+  }
+  .jy_nav_logo {
+    width: 100%;
+    text-align: left;
   }
   .menu-md {
     display: none;
   }
   .menu-xs {
+    margin-left: 2.4rem;
+    float: right;
     display: block;
-    width: 100%;
-    text-align: right;
   }
-  .menu-xs span {
-    margin: 0 0.5rem;
+
+  .menu-xs div {
     color: white;
   }
 }

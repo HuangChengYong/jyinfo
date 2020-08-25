@@ -381,9 +381,10 @@
   opacity: 1;
   z-index: 11;
   color: rgba(255,255,255,1);
+  transition: 1s  all;
 }
 .solution .solution_content .div_solution:hover .solution_content_div img {
-  /*transform: scale(1.1)*/
+  transition: 1s  all;
 }
 
 .solution .solution_content .building:hover .more_details {

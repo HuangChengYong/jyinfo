@@ -169,8 +169,7 @@ export default {
   data() {
     return {
       serviceContentOne: [],
-      serviceContentTwo: [],
-      industryCaseList: [1, 3, 9]
+      serviceContentTwo: []
     }
   },
   methods: {
