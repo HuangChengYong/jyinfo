@@ -141,6 +141,24 @@ let Recruitment_groups_responsibilities = [
       '认真负责、诚实可靠、踏实刻苦',
       '主要对于会议系统设备了解',
       '后台逻辑梳理 弱电相关设备的维护、检修工作']
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
   }
 
 ];
@@ -151,6 +169,24 @@ let Recruitment_groups_capability = [
     title: '任职要求',
     desc: ['学习能力强、具有较强的责任心和良好的沟通能力，工作认真、耐心、踏实，有较强团队合作精神',
            '具备良好的服务意识，能合理解决各种工作中的问题']
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
+  }, {
+    title: '',
+    desc: []
   }
   
 ];
