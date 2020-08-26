@@ -22,7 +22,7 @@
           <div class="recruitment_groups_details_content" data-bind="recruitment_groups_responsibilities" >
 
             <span class="recruitment_groups_details_title">{{ recruitment_groups_responsibilities.title}}</span>
-            
+
             <div class="recruitment_groups_details_desc" v-for=" (item, index_three) in recruitment_groups_responsibilities.desc" :key="index_three">
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
@@ -32,7 +32,7 @@
           <div class="recruitment_groups_details_content" data-bind="recruitment_groups_capability">
 
             <span class="recruitment_groups_details_title">{{ recruitment_groups_capability.title }}</span>
-            
+
             <div class="recruitment_groups_details_desc" v-for=" (item, index_four) in recruitment_groups_capability.desc" :key="index_four">
 
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
@@ -66,7 +66,7 @@
           if (i != index_first) {
             this.direction_tag[i] = false
           }
-          
+
         }
         if (!this.direction_tag[index_first]) {
           this.direction_tag[index_first] = true
@@ -74,7 +74,7 @@
               this.recruitment_groups_capability = software.recruitment_groups_capability[index_first];
           document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(180deg);');
         } else {
-          
+
           this.direction_tag[index_first] = false
           document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(360deg);');
         }
@@ -110,7 +110,7 @@
     width: 72.92%;
     height: 1.20rem;
     background: rgba(255,255,255,1);
-    box-shadow: 0px 10px 24px 0px rgba(29,36,85,0.1);
+    box-shadow: 0 0.10px 0.24rem 0 rgba(29,36,85,0.1);
     top: 5.9rem;
     position: absolute;
     padding: 0.3rem 0 0.3rem 0.5rem ;
@@ -237,7 +237,7 @@
     width: 90%;
     height: 0.01rem;
     background: rgba(175,176,179,1);
-    margin-top: auto auto;
+    margin: auto auto;
   }
 
   .recruitment_groups_details_content {
@@ -304,7 +304,7 @@
       font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
       font-weight: 400;
       border:none;
-      font: rgba(255,255,255,1);
+      color: rgba(255,255,255,1);
       margin: 0.68rem 5.1rem 0.70rem;
       background: linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
       -webkit-text-fill-color: white
