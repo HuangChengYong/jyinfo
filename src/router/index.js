@@ -31,6 +31,12 @@ const router = new Router({
       name: 'Recruitment',
       component: () => import('../components/soft/recruitment')
     },
+    /* 简历 */
+    {
+      path: '/apply/:index_first',
+      name: 'Apply',
+      component: () => import('../components/soft/apply')
+    },
     {
       path: '/hotel',
       name: 'Hotel',

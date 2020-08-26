@@ -33,7 +33,7 @@
               </li>
               <li><a href="#">成功案例</a></li>
               <li><a href="#">关于我们</a></li>
-              <li><a href="#">企业招聘</a></li>
+              <li><router-link to="/recruitment"><a href="#">企业招聘</a></router-link></li>
             </ul>
           </div>
           <div class="menu-xs">
@@ -48,7 +48,7 @@
       <div><a href="#">核心业务</a></div>
       <div><a href="#">成功案例</a></div>
       <div><a href="#">关于我们</a></div>
-      <div><a href="#">企业招聘</a></div>
+      <div><router-link to="/recruitment"><a href="#">企业招聘</a></router-link></div>
     </div>
     <div class="xbk"></div>
   </div>

@@ -38,7 +38,7 @@
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
           </div>
-          <button class="position_apply" @click="employee()">立即申请</button>
+          <button class="position_apply" ><router-link :to="'/apply/'+index_first">立即申请</router-link></button>
         </div>
       </div>
     </div>
@@ -98,6 +98,10 @@
     margin: 0;
     padding: 0;
     border: none;
+  }
+
+  a{
+    text-decoration: none;
   }
 
   .recruitment_head_backBoard {
