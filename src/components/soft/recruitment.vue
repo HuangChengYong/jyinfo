@@ -114,7 +114,7 @@
     width: 72.92%;
     height: 1.20rem;
     background: rgba(255,255,255,1);
-    box-shadow: 0 0.10px 0.24rem 0 rgba(29,36,85,0.1);
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     top: 5.9rem;
     position: absolute;
     padding: 0.3rem 0 0.3rem 0.5rem ;
