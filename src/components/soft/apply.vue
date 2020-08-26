@@ -111,9 +111,6 @@
       },
       form_submit(){
         let formValue=this.form_Value;
-        alert(formValue.apply_fName+formValue.apply_fPhone+formValue.apply_fMailbox+"==========================")
-        alert(formValue.file_CV+"====11111")
-        alert(formValue.file_attach[0].name+"====222222")
         axios.post('http://localhost:8082/upload', this.formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
