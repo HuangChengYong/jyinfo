@@ -4,7 +4,7 @@
 
      <div class="apply_desc">
         <span class="apply_enterprise_title">甲悦信息科技发展（上海）有限公司</span>
-       <div class="apply_enterprise_position"><div>[优先]</div>{{item.position }}</div>
+       <div class="apply_enterprise_position"><div>【优先】</div>{{item.position }}</div>
        <!--<div class="recruitment_groups_condition">{{ item.condition }}</div>-->
        <div class="apply_enterprise_details_bar">
          <div class="apply_enterprise_bar_content"  v-for=" (item, index_second) in item.workplcae" :key="index_second">{{ item }}</div>
@@ -16,9 +16,10 @@
                   <div class="apply_enterprise_title">上传资料</div>
                   <div class="apply_form_content">
                        <div class="apply_form_content_attr_title apply_form_content_attr_CV">上传简历<span>*</span></div>
-                        <div class="apply_form_content_file">
+                        <div class="apply_form_content_file" v-on:mouseover="changeBackColor(0)" v-on:mouseout="recoverBackColor(0)" >
                           <el-upload
                             ref="upload"
+
                             class="upload_file1"
                             name="fileCV"
                             action="https://jsonplaceholder.typicode.com/posts/"
@@ -29,14 +30,14 @@
                             :limit="1"
                             :on-exceed="handleExceed"
                             :file-list="form_Value.file_CV" />
-                           <div class="fileCV_span">上传简历</div>
+                           <div class="fileCV_span" >上传简历</div>
 
                         </div>
                        <div class="apply_for_upload_attach_format">支持pdf、doc、xls、ppt、docx、pptx、jpg、jpeg、png、txt等简历格式</div>
                   </div>
                   <div class="apply_form_content">
                         <div class="apply_form_content_attr_title">上传附件</div>
-                        <div class="apply_form_content_file">
+                        <div class="apply_form_content_file" v-on:mouseover="changeBackColor(1)" v-on:mouseout="recoverBackColor(1)">
                           <el-upload
                             ref="upload"
                             class="upload_file2"
@@ -111,6 +112,7 @@
       },
       form_submit(){
         let formValue=this.form_Value;
+        alert(formValue.file_CV+"=========="+formValue.file_attach)
         axios.post('http://localhost:8082/upload', this.formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -121,6 +123,12 @@
         }).catch(err => {
           console.log(err)
         })
+      },
+      changeBackColor(val){
+        document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(200,201,204,1);');
+      },
+      recoverBackColor(val){
+        document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(225,227,230,1);');
       }
     },
     mounted() {
@@ -184,6 +192,7 @@
     height:0.26rem;
     font-size:0.26rem;
     font-family:Microsoft YaHei;
+    margin-left: -0.13rem;
     text-align: left;
     line-height: 0.26rem;
     font-weight:400;
@@ -279,15 +288,12 @@
 
   }
 
-
-
   .fileCV_span{
     width: 3.2rem;
     height:0.5rem;
     font-size:0.18rem;
     text-align: center;
     line-height: 0.5rem;
-    z-index: 100;
     background:rgba(225,227,230,1);
   }
 
@@ -297,8 +303,6 @@
     font-size:0.18rem;
     text-align: center;
     line-height: 0.5rem;
-    z-index: 100;
-    background:rgba(200,201,204,1);
   }
 
   .upload_file1, .upload_file2{
@@ -307,6 +311,12 @@
     position: absolute;
     margin: 0;
     opacity:0;filter:alpha(opacity=0);
+  }
+
+  .upload_file1 >>>  input[type='file'],
+  .upload_file2 >>>  input[type='file']{
+    width: 3.2rem;
+    height:0.5rem;
   }
 
 
