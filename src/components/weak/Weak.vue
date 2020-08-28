@@ -63,9 +63,12 @@
       <span class="title_font">解决方案</span>
       <div class="title_div"></div>
       <div class="solution_content">
-        <div class="building div_solution">
+        <div class="building">
+          <div class="div_solution">
+            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/building.png" alt="building">
+          </div>
           <div class="solution_content_div">
-            <img src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
             <div class="content_div">智慧楼宇解决方案</div>
             <router-link to="/building" >
               <div class="more_details">
@@ -73,10 +76,14 @@
               </div>
             </router-link>
           </div>
+          <div class="mask"></div>
         </div>
-        <div class="hotel div_solution">
+        <div class="hotel">
+          <div class="div_solution">
+            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/hotel.png" alt="hotel">
+          </div>
           <div class="solution_content_div">
-            <img src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
             <div class="content_div">智慧酒店解决方案</div>
             <router-link to="/hotel" >
               <div class="more_details">
@@ -84,10 +91,14 @@
               </div>
             </router-link>
           </div>
+          <div class="mask"></div>
         </div>
-        <div class="hospital div_solution">
+        <div class="hospital">
+          <div class="div_solution">
+            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/hospital.png" alt="hospital">
+          </div>
           <div class="solution_content_div">
-            <img src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
             <div class="content_div">智慧医院解决方案</div>
             <router-link to="/hospital" >
               <div class="more_details">
@@ -95,10 +106,14 @@
               </div>
             </router-link>
           </div>
+          <div class="mask"></div>
         </div>
-        <div class="community div_solution">
+        <div class="community">
+          <div class="div_solution">
+            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/community.png" alt="community">
+          </div>
           <div class="solution_content_div">
-            <img src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
             <div class="content_div">智慧社区解决方案</div>
             <router-link to="/community" >
               <div class="more_details">
@@ -106,10 +121,14 @@
               </div>
             </router-link>
           </div>
+          <div class="mask"></div>
         </div>
-        <div class="park div_solution">
+        <div class="park">
+          <div class="div_solution">
+            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/park.png" alt="park">
+          </div>
           <div class="solution_content_div">
-            <img src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
             <div class="content_div">智慧园区解决方案</div>
             <router-link to="/park" >
               <div class="more_details">
@@ -117,6 +136,7 @@
               </div>
             </router-link>
           </div>
+          <div class="mask"></div>
         </div>
       </div>
     </div>
@@ -173,7 +193,6 @@ export default {
     }
   },
   methods: {
-
   },
   components: {
     JyHeader
@@ -181,6 +200,9 @@ export default {
   created() {
     this.serviceContentOne = dataSource.weakServiceContentOne;
     this.serviceContentTwo = dataSource.weakServiceContentTwo;
+
+  },
+  mounted() {
   }
 }
 </script>

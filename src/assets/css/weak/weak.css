@@ -8,7 +8,6 @@
   background: url("//jy-info.qicp.vip/static/weak/background_images_one.png");
   background-size: cover;
   color: #FFFFFF;
-  margin-top: -0.2rem;
 }
 .background_images_one .headline {
   width: 5.67rem;
@@ -172,6 +171,13 @@
 .industry_case .case_content {
   width: 100%;
   height: 6.8rem;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .industry_case .case_content .case_content_left {
   width: 3.3rem;
@@ -282,44 +288,52 @@
 }
 .solution .solution_content .div_solution {
   cursor: pointer;
+  overflow: hidden;
+}
+.solution .solution_content .div_solution .solution_image {
+  width: 4.5rem;
+  height: 2.8rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+}
+.solution .solution_content > div:hover .solution_image {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.solution .solution_content .building .solution_image {
+  width: 4.2rem;
+  height: 6rem;
 }
 /* 楼宇 building */
 .solution .solution_content .building {
   width: 4.2rem;
   height: 6rem;
-  background-image: url("//jy-info.qicp.vip/static/weak/building.png");
-  background-size: cover;
   float: left;
-  display: table;
 }
 /* 酒店 hotel */
 .solution .solution_content .hotel {
   width: 4.5rem;
   height: 2.8rem;
-  background-image: url("//jy-info.qicp.vip/static/weak/hotel.png");
-  background-size: cover;
   float: left;
-  display: table;
   margin-left: 0.4rem;
 }
 /* 医院 hospital */
 .solution .solution_content .hospital {
   width: 4.5rem;
   height: 2.8rem;
-  background-image: url("//jy-info.qicp.vip/static/weak/hospital.png");
-  background-size: cover;
   float: left;
-  display: table;
   margin-left: 0.4rem;
 }
 /* 社区 community */
 .solution .solution_content .community {
   width: 4.5rem;
   height: 2.8rem;
-  background-image: url("//jy-info.qicp.vip/static/weak/community.png");
-  background-size: cover;
   float: left;
-  display: table;
   margin-left: 0.4rem;
   margin-top: 0.4rem;
 }
@@ -327,40 +341,89 @@
 .solution .solution_content .park {
   width: 4.5rem;
   height: 2.8rem;
-  background-image: url("//jy-info.qicp.vip/static/weak/park.png");
-  background-size: cover;
   float: left;
-  display: table;
   margin-left: 0.4rem;
   margin-top: 0.4rem;
 }
-.solution .solution_content .solution_content_div {
-  display: table-cell;
-  vertical-align: middle;
+.solution .solution_content .div_solution {
+  position: absolute;
+  z-index: 1;
 }
-.solution .solution_content .solution_content_div img {
+.solution .solution_content .solution_content_div {
+  position: absolute;
+  width: 2.5rem;
+  z-index: 3;
+}
+
+/* 解决方案——遮罩层 */
+.solution .solution_content .mask {
+  position: absolute;
+  width: 4.5rem;
+  height: 2.8rem;
+  z-index: 2;
+  background-color: black;
+  opacity: 0.4;
+  display: none;
+}
+.solution .solution_content > div:hover .mask {
+  display: block;
+}
+.solution .solution_content .building .mask {
+  width: 4.2rem;
+  height: 6rem;
+}
+.solution .solution_content > div .solution_content_div {
+  width: 2.5rem;
+  height: 1.5rem;
+  margin: 0.67rem 0 0 1rem;
+  transition: margin 0.8s;
+  -moz-transition: margin 0.8s;	/* Firefox 4 */
+  -webkit-transition: margin 0.8s;	/* Safari 和 Chrome */
+  -o-transition: margin 0.8s;	/* Opera */
+}
+.solution .solution_content > div:hover .solution_content_div {
+  height: 2.5rem;
+  margin-top: 0.27rem;
+}
+.solution .solution_content > .building .solution_content_div {
+  margin: 2.28rem 0 0 0.85rem;
+}
+.solution .solution_content > .building:hover .solution_content_div {
+  margin-top: 1.68rem;
+}
+
+/* 解决方案——icon */
+.solution .solution_content .solution_content_div .solution_icon {
   width: 0.84rem;
   height: 0.84rem;
   margin-bottom: 0.23rem;
-  transition: transform 0.1s;
 }
+/* 解决方案——文字描述 */
 .solution .solution_content .content_div {
   font-size: 0.3rem;
   font-family: Microsoft YaHei, serif;
   font-weight: 400;
   color: rgba(255,255,255,1);
 }
-.solution .solution_content .more_details {
-  display: none;
-}
-.solution .solution_content .div_solution:hover .more_details {
+/* 解决方案——更多详情 */
+.solution .solution_content > div .more_details {
   width: 1.5rem;
   height: 0.46rem;
   border: 0.02rem solid #FFFFFF;
-  display: block;
   margin: 0.29rem auto 0;
+  transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;	/* Firefox 4 */
+  -webkit-transition: opacity 1.2s;	/* Safari 和 Chrome */
+  -o-transition: opacity 1.2s;	/* Opera */
+  opacity: 0;
 }
-.solution .solution_content .div_solution:hover .more_details div {
+.solution .solution_content > div:hover .more_details{
+  opacity: 1;
+}
+.solution .solution_content .building .more_details {
+  margin: 0.59rem auto 0;
+}
+.solution .solution_content > div .more_details div {
   height: 0.23rem;
   font-size: 0.22rem;
   font-family: Microsoft YaHei, serif;
@@ -368,37 +431,8 @@
   line-height: 0.42rem;
   color:rgba(255,255,255,1);
  }
-.solution .solution_content .div_solution .more_details:hover {
-  border: 0.02rem solid #3D9CFD;
-}
-.solution .solution_content .div_solution:hover {
-  opacity: 0.6;
-  background-color: #000;
-  z-index: 10;
-}
-
-.solution .solution_content .div_solution:hover .solution_content_div {
-  opacity: 1;
-  z-index: 11;
-  color: rgba(255,255,255,1);
-  transition: 1s  all;
-}
-.solution .solution_content .div_solution:hover .solution_content_div img {
-  transition: 1s  all;
-}
-
-.solution .solution_content .building:hover .more_details {
-  width: 1.5rem;
-  height: 0.46rem;
-  border: 0.02rem solid #FFFFFF;
-  display: block;
-  margin: 0.59rem auto 0;
-}
-.solution .solution_content .more_details:hover {
-  border: 0.02rem solid #3D9CFD;
-  background-color: #3D9CFD;
-}
-.solution .solution_content .building .more_details:hover {
+.solution .solution_content > div .more_details:hover,
+.solution .solution_content .building .more_details:hover{
   border: 0.02rem solid #3D9CFD;
   background-color: #3D9CFD;
 }
@@ -440,12 +474,6 @@
   width: 100%;
   height: 100%;
 }
-/* 清除 移动到router-link标签上出现的下划线 */
-a {
-  text-decoration: none;
-  outline: none;
-}
-
 /* 底部 */
 .weak .weak_bottom {
   width: 100%;

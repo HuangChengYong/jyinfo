@@ -108,6 +108,7 @@ export default {
 /* 导航栏 */
 .nav {
   width: 19.2rem;
+  margin-top: -0.2rem;
 }
 .nav:hover {
   background-color: #111F35;
