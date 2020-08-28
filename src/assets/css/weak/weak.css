@@ -1,6 +1,5 @@
 .weak {
-  margin: 0;
-  padding: 0;
+  width: 19.2rem;
   background-color: #EDF5FD;
 }
 .background_images_one {
@@ -9,6 +8,7 @@
   background: url("//jy-info.qicp.vip/static/weak/background_images_one.png");
   background-size: cover;
   color: #FFFFFF;
+  margin-top: -0.2rem;
 }
 .background_images_one .headline {
   width: 5.67rem;
@@ -443,6 +443,7 @@
 /* 清除 移动到router-link标签上出现的下划线 */
 a {
   text-decoration: none;
+  outline: none;
 }
 
 /* 底部 */

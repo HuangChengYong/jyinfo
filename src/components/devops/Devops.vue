@@ -31,8 +31,8 @@
           <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
         </div>
         <div class="case_content_center">
-          <img class="center_left" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
-          <img class="center_right" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
+          <img class="center_left" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="center_left_arrow">
+          <img class="center_right" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="center_right_arrow">
         </div>
         <div class="case_content_right">
           <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
@@ -134,7 +134,6 @@ export default {
 </script>
 
 <style scoped>
+@import "../../assets/css/devops/devops.css";
 @import "../../assets/css/devops/xs-devops.css";
-@import "../../assets/css/devops/lg-devops.css";
-@import "../../assets/css/devops/md-devops.css";
 </style>
