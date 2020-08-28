@@ -38,7 +38,7 @@
               <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
           </div>
-          <button class="position_apply" ><router-link :to="'/apply/'+index_first">立即申请</router-link></button>
+          <button class="position_apply" ><span class="position_apply_link"><router-link :to="'/apply/'+index_first">立即申请</router-link></span></button>
         </div>
       </div>
     </div>
@@ -62,22 +62,41 @@
     },
     methods: {
       recruitment_details(index_first) {
-        for (var i = 0; i < software.recruitment_groups_Desc.length; i++) {
-          if (i != index_first) {
-            this.direction_tag[i] = false
+
+        for (var index = 0; index < software.recruitment_groups_Desc.length; index++) {
+          if (index != index_first) {
+            this.direction_tag[index] = false
+            document.getElementsByClassName("recruitment_groups_view")[index].setAttribute('style', 'transform: rotateX(360deg);');
+          }else{
+            if(!this.direction_tag[index_first]){
+              this.direction_tag[index_first]=true
+              this.recruitment_groups_responsibilities = software.recruitment_groups_responsibilities[index_first],
+                this.recruitment_groups_capability = software.recruitment_groups_capability[index_first];
+              document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(180deg);');
+            }else{
+              this.direction_tag[index_first]=false
+              this.recruitment_groups_responsibilities =[],
+                this.recruitment_groups_capability = [];
+              document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(360deg);');
+            }
           }
+          /*if (index != index_first) {
+            this.direction_tag[index] = false
+          }else{
+            console.log(current_direction)
+            current_direction=true
 
+          }*/
+         /* if (this.direction_tag[index]) {
+            this.direction_tag[index]=true
+            this.recruitment_groups_responsibilities = software.recruitment_groups_responsibilities[index],
+              this.recruitment_groups_capability = software.recruitment_groups_capability[index];
+            document.getElementsByClassName("recruitment_groups_view")[index].setAttribute('style', 'transform: rotateX(180deg);');
+          } else {
+            document.getElementsByClassName("recruitment_groups_view")[index].setAttribute('style', 'transform: rotateX(360deg);');
+          }*/
         }
-        if (!this.direction_tag[index_first]) {
-          this.direction_tag[index_first] = true
-            this.recruitment_groups_responsibilities = software.recruitment_groups_responsibilities[index_first],
-              this.recruitment_groups_capability = software.recruitment_groups_capability[index_first];
-          document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(180deg);');
-        } else {
 
-          this.direction_tag[index_first] = false
-          document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(360deg);');
-        }
       },
       employee() {
         alert("该职位暂未开放，请耐心等待")
@@ -287,19 +306,29 @@
   .position_apply {
     width: 2.40rem;
     height: 0.70rem;
-    border: 0.02rem solid rgba(227,90,104,1);
     border-radius: 0.35rem;
-    font-size: 0.26rem;
-    font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: rgba(90,94,102,1);
     margin: 0.68rem 5.1rem 0.70rem;
-    background: linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    border:0.02rem solid rgba(227,90,104,1);
+    background:linear-gradient(-45deg,rgba(253,126,130,1),rgba(253,176,144,1));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
   }
 
-    .position_apply:hover {
+  .position_apply .position_apply_link{
+    width:1.07rem;
+    height:0.26rem;
+    font-size:0.26rem;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(90,94,102,1);
+    background:linear-gradient(-45deg, rgba(253,126,130,1) 0%,rgba(253,176,144,1) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+
+
+    .position_apply:hover  {
       width: 2.40rem;
       height: 0.70rem;
       border: 0.02rem solid rgba(227,90,104,1);
@@ -308,9 +337,11 @@
       font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
       font-weight: 400;
       border:none;
-      color: rgba(255,255,255,1);
       margin: 0.68rem 5.1rem 0.70rem;
-      background: linear-gradient(-45deg,rgba(253,125,130,1),rgba(253,175,143,1));
-      -webkit-text-fill-color: white
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
     }
+
+  .position_apply:hover a{
+    -webkit-text-fill-color: white;
+  }
 </style>

@@ -1,80 +1,83 @@
 <template>
   <div class="apply_outline">
-  <div class="apply">
+    <div class="apply">
 
-     <div class="apply_desc">
-        <span class="apply_enterprise_title">甲悦信息科技发展（上海）有限公司</span>
-       <div class="apply_enterprise_position"><div>【优先】</div>{{item.position }}</div>
-       <!--<div class="recruitment_groups_condition">{{ item.condition }}</div>-->
-       <div class="apply_enterprise_details_bar">
-         <div class="apply_enterprise_bar_content"  v-for=" (item, index_second) in item.workplcae" :key="index_second">{{ item }}</div>
-       </div>
-       <div class="apply_cutline"></div><!--分割线-->
-     </div>
-     <div class="apply_form_outline">
-       <form class="apply_form" >
-                  <div class="apply_enterprise_title">上传资料</div>
-                  <div class="apply_form_content">
-                       <div class="apply_form_content_attr_title apply_form_content_attr_CV">上传简历<span>*</span></div>
-                        <div class="apply_form_content_file" v-on:mouseover="changeBackColor(0)" v-on:mouseout="recoverBackColor(0)" >
-                          <el-upload
-                            ref="upload"
+      <div class="apply_desc">
+        <span class="apply_enterprise_title ">甲悦信息科技发展（上海）有限公司</span>
+        <div class="apply_enterprise_position apply_enterprise_Name"><div>【优先】</div>{{item.position }}</div>
+        <!--<div class="recruitment_groups_condition">{{ item.condition }}</div>-->
+        <div class="apply_enterprise_details_bar">
+          <div class="apply_enterprise_bar_content"  v-for=" (item, index_second) in item.workplcae" :key="index_second">{{ item }}</div>
+        </div>
+        <div class="apply_cutline"></div><!--分割线-->
+      </div>
+      <div class="apply_form_outline">
+        <form class="apply_form" >
+          <div class="apply_enterprise_title">上传资料</div>
+          <div class="apply_form_content">
+            <div class="apply_form_content_attr_title apply_form_content_attr_CV">上传简历<span>*</span></div>
+            <div class="apply_form_content_file" v-on:mouseover="changeBackColor(0)" v-on:mouseout="recoverBackColor(0)" >
+              <el-upload
+                ref="upload"
+                style="display: none"
+                class="upload_file1"
+                name="fileCV"
+                action="https://jsonplaceholder.typicode.com/posts"
+                :on-success="handleSuccess"
+                :on-error="handlefaild"
+                multiple
+                :on-exceed="handleExceed"
+                :file-list="form_Value.file_CV" >
+                <el-button slot="trigger" size="small" type="primary" id="fileCV_span1">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success">上传到服务器</el-button>
+                <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+              </el-upload>
+              <div class="fileCV_span"  @click="upload_CV('fileCV_span1')" >上传简历</div>
 
-                            class="upload_file1"
-                            name="fileCV"
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            :on-preview="handlePreview"
-                            :on-remove="handleRemove"
-                            :before-remove="beforeRemove"
-                            multiple
-                            :limit="1"
-                            :on-exceed="handleExceed"
-                            :file-list="form_Value.file_CV" />
-                           <div class="fileCV_span" >上传简历</div>
+            </div>
+            <div class="apply_for_upload_attach_format">支持pdf、doc、xls、ppt、docx、pptx、jpg、jpeg、png、txt等简历格式</div>
+          </div>
+          <div class="apply_form_content">
+            <div class="apply_form_content_attr_title">上传附件</div>
+            <div class="apply_form_content_file" v-on:mouseover="changeBackColor(1)" v-on:mouseout="recoverBackColor(1)">
+              <el-upload
+                ref="upload"
+                class="upload_file2"
+                style="display: none"
+                name="fileAttach"
+                action="https://jsonplaceholder.typicode.com/posts"
+                :on-success="handleSuccess"
+                :on-error="handlefaild"
+                multiple
+                :on-exceed="handleExceed"
+                :file-list="form_Value.file_attach">
+                <el-button slot="trigger" size="small" id="fileCV_span2" type="primary"></el-button>
+              </el-upload>
+              <div class="fileCV_span"  @click="upload_CV('fileCV_span2')" >上传附件</div>
+            </div>
+            <div class="apply_for_upload_attach_format">支持文档、图片、压缩包、视频、音频等格式文件，所有附件大小总和不超过50MB</div>
+          </div>
+          <div class="apply_enterprise_title apply_form_content_attr_file">个人信息</div>
+          <div class="apply_cutline"></div><!--分割线-->
+          <div class="apply_form_input">
+            <div class="apply_form_Name">
+              <div class="apply_form_content_attr_title">姓名<span>*</span></div>
+              <div class="apply_form_content_attr"><input id="apply_fName"  name="apply_fName" v-model="form_Value.apply_fName" placeholder="请输入您的姓名" /> </div>
+            </div>
+            <div  class="apply_form_Name">
+              <div class="apply_form_content_attr_title">手机号码<span>*</span></div>
+              <div class="apply_form_content_attr"><input id="apply_fPhone"  name="apply_fPhone" v-model="form_Value.apply_fPhone" placeholder="请输入您的手机号码" /></div>
+            </div>
+            <div  class="apply_form_Name">
+              <div class="apply_form_content_attr_title">邮箱<span>*</span></div>
+              <div class="apply_form_content_attr"><input id="apply_fMailbox"  name="apply_fMailbox" v-model="form_Value.apply_fMailbox" placeholder="请输入您的邮箱" /></div>
+            </div>
+          </div>
+          <button class="apply_submit_buttons"  type="button" @click.prevent="form_submit()">提交</button>
+        </form>
+      </div>
 
-                        </div>
-                       <div class="apply_for_upload_attach_format">支持pdf、doc、xls、ppt、docx、pptx、jpg、jpeg、png、txt等简历格式</div>
-                  </div>
-                  <div class="apply_form_content">
-                        <div class="apply_form_content_attr_title">上传附件</div>
-                        <div class="apply_form_content_file" v-on:mouseover="changeBackColor(1)" v-on:mouseout="recoverBackColor(1)">
-                          <el-upload
-                            ref="upload"
-                            class="upload_file2"
-                            name="fileAttach"
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            :on-preview="handlePreview"
-                            :on-remove="handleRemove"
-                            :before-remove="beforeRemove"
-                            multiple
-                            :limit="1"
-                            :on-exceed="handleExceed"
-                            :file-list="form_Value.file_attach" />
-                            <div class="fileCV_span">上传附件</div>
-                        </div>
-                         <div class="apply_for_upload_attach_format">支持文档、图片、压缩包、视频、音频等格式文件，所有附件大小总和不超过50MB</div>
-                  </div>
-                    <div class="apply_enterprise_title apply_form_content_attr_file">个人信息</div>
-                 <div class="apply_cutline"></div><!--分割线-->
-                 <div class="apply_form_input">
-                   <div class="apply_form_Name">
-                     <div class="apply_form_content_attr_title">姓名<span>*</span></div>
-                     <div class="apply_form_content_attr"><input id="apply_fName"  name="apply_fName" v-model="form_Value.apply_fName" placeholder="请输入您的姓名" /> </div>
-                   </div>
-                   <div  class="apply_form_Name">
-                     <div class="apply_form_content_attr_title">手机号码<span>*</span></div>
-                     <div class="apply_form_content_attr"><input id="apply_fPhone"  name="apply_fPhone" v-model="form_Value.apply_fPhone" placeholder="请输入您的手机号码" /></div>
-                   </div>
-                   <div  class="apply_form_Name">
-                     <div class="apply_form_content_attr_title">邮箱<span>*</span></div>
-                     <div class="apply_form_content_attr"><input id="apply_fMailbox"  name="apply_fMailbox" v-model="form_Value.apply_fMailbox" placeholder="请输入您的邮箱" /></div>
-                   </div>
-                 </div>
-                   <button class="apply_submit_buttons"  type="button" @click.prevent="form_submit()">提交</button>
-             </form>
-     </div>
-
- </div>
+    </div>
   </div>
 </template>
 <script>
@@ -85,35 +88,57 @@
     name: "apply",
     data() {
       return {
-          item:{},
-          form_Value:{
-            file_CV: [],
-            file_attach: [],
-            apply_fName:'',
-            apply_fPhone:'',
-            apply_fMailbox:''
-          }
-
+        item:{},
+        form_Value:{
+          file_CV: [],
+          file_attach: [],
+          apply_fName:'',
+          apply_fPhone:'',
+          apply_fMailbox:''
         }
+
+      }
     },
     methods: {
-      handleRemove(file, fileList) {
-        console.log(file, fileList);
-      },
-      handlePreview(file) {
-        alert(his.form_Value.file_CV[0].name)
-        console.log(file);
-      },
       handleExceed(files, fileList) {
+        console.log(files)
         this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
       },
       beforeRemove(file, fileList) {
         return this.$confirm(`确定移除 ${ file.name }？`);
       },
+      handleSuccess(files,fileList){
+        if(files.name==='file_CV'){
+          this.form_Value.file_CV=[] //上传完成后清空文件队列
+          console.log(fileList+"11111111111111111111111")
+          this.$message({
+            showClose: true,
+            message: '恭喜你，您的简历上传完成!',
+            type: 'success'
+          });
+        }
+        if(files.name==='file_attach'){
+
+          this.form_Value.file_attach=[] //上传完成后清空文件队列
+          console.log(fileList+"22222222222222222222222222")
+          this.$message({
+            showClose: true,
+            message: '恭喜你，您的附件上传完成!',
+            type: 'success'
+          });
+        }
+      },
+      handlefaild(){
+        this.$message({
+          showClose: true,
+          message: '很抱歉，您的文件上传失败!',
+          type: 'error'
+        });
+      },
       form_submit(){
         let formValue=this.form_Value;
-        alert(formValue.file_CV+"=========="+formValue.file_attach)
-        axios.post('http://localhost:8082/upload', this.formData, {
+        console.log(formValue.apply_fPhone+formValue.apply_fName+formValue.apply_fMailbox)
+        /*axios.post('http://localhost:8082/upload', this.formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             'Authorization': this.token
@@ -122,20 +147,23 @@
           console.log(res)
         }).catch(err => {
           console.log(err)
-        })
+        })*/
       },
       changeBackColor(val){
         document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(200,201,204,1);');
       },
       recoverBackColor(val){
         document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(225,227,230,1);');
+      },
+      upload_CV(fileCV_span_id){
+        document.getElementById(fileCV_span_id).click();
       }
     },
     mounted() {
 
     },
     created() {
-        //从路由中获取数组下标
+      //从路由中获取数组下标
       let index_tag=this.$route.params.index_first;
       //获取对应的职位信息
       this.item = software.recruitment_groups_Desc[index_tag];
@@ -144,7 +172,7 @@
 </script>
 <style scoped>
   apply_outline{
-   width: 19.2rem;
+    width: 19.2rem;
   }
 
   .apply {
@@ -171,10 +199,13 @@
     height:0.24rem;
     font-size:0.22rem;
     padding:0 0;
-    margin-bottom: 0.28rem;
     font-family:Microsoft YaHei;
     font-weight:400;
     color:rgba(44,46,51,1);
+  }
+
+  .apply_enterprise_Name{
+    margin-top: 0.28rem;
   }
 
   .apply_enterprise_position{
@@ -235,6 +266,10 @@
     height:1px;
     margin-bottom: 0.4rem;
     background:rgba(175,176,179,1);
+  }
+
+  .apply_form_content_attr_file{
+    margin-bottom: 0.19rem;
   }
 
   .apply_form_outline{
@@ -347,9 +382,9 @@
   }
 
   .apply_form_content_attr_title span{
-      vertical-align: middle;
+    vertical-align: middle;
     padding-left: 0.02rem;
-      color: red;
+    color: red;
   }
 
   .apply_form_content_attr{
