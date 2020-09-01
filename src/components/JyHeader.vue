@@ -8,8 +8,8 @@
         <div class="jy_nav_menu">
           <div class="menu-md">
             <ul>
-              <li><a href="#">首页</a></li>
-              <li v-on:mouseover="mouseoverMenu($event)" v-on:mouseout="mouseoutMenu($event)">
+              <li class="jy_active"><a href="#">首页</a></li>
+              <li @mouseover="mouseoverMenu($event)" @mouseout="mouseoutMenu($event)">
                 <a href="#">产品&nbsp;<span class="glyphicon glyphicon-menu-down menu_icon" aria-hidden="true"></span></a>
                 <div class="dropdownMenu jy_hidden">
                   <ul>
@@ -19,7 +19,7 @@
                   </ul>
                 </div>
               </li>
-              <li v-on:mouseover="mouseoverMenu($event)" v-on:mouseout="mouseoutMenu($event)">
+              <li @mouseover="mouseoverMenu($event)" @mouseout="mouseoutMenu($event)">
                 <a href="#" class="dropdown-toggle">核心业务&nbsp;<span class="glyphicon glyphicon-menu-down menu_icon" aria-hidden="true"></span></a>
                 <div class="dropdownMenu jy_hidden">
                   <ul>
@@ -58,6 +58,7 @@ export default {
   data () {
     return {
       menuShow: false,
+      menuCount: 0
     }
   },
   methods: {
@@ -65,7 +66,6 @@ export default {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       let navigation = document.getElementsByClassName('jy_nav')[0];
       let navigation_xbk = document.getElementsByClassName('xbk')[0];
-      console.log(scrollTop)
       // 判断背景色
       if (scrollTop === 0) {
         navigation.setAttribute('style','background-color:transparent;');
@@ -85,10 +85,25 @@ export default {
     mouseoutMenu (that) {
       that.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-down";
       that.currentTarget.lastElementChild.className = "dropdownMenu jy_hidden";
+    },
+    clickMenu () {
+      let menu = document.getElementsByClassName("menu-md")[0].firstElementChild.getElementsByTagName("li");
+      let menuLength = menu.length;
+      let that = this;
+      for(let i=0; i< menuLength; i++){
+        menu[i].onclick= function() {
+          alert(that.menuCount)
+          alert(i)
+          menu[that.menuCount].className = "";
+          menu[i].className = "active";
+          that.menuCount = i
+        }
+      }
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll, true)
+    this.clickMenu();
   },
   destroyed() {
     // 离开该页面需要移除这个监听的事件，不然会报错
@@ -104,11 +119,16 @@ export default {
 .jy_show {
   display: block;
 }
+.jy_active{
+  border-bottom: #ffffff solid 2px;
+}
+.jy_active > a {
+  color: black;
+}
 
 /* 导航栏 */
 .nav {
   width: 19.2rem;
-  margin-top: -0.2rem;
 }
 .nav:hover {
   background-color: #111F35;

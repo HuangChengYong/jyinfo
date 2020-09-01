@@ -168,42 +168,42 @@
   background: #ffffff;
   margin: 0.25rem auto 0.5rem auto;
 }
-.industry_case .case_content {
-  width: 100%;
+.industry_case #case_content {
+  width: 48rem;
   height: 6.8rem;
   justify-content: space-between;
   white-space: nowrap;
+  margin-left: -8.5rem;
   overflow-y: hidden;
   overflow-x: scroll;
+  position: relative;
+  left: 0;
 }
 ::-webkit-scrollbar {
   display: none;
 }
-.industry_case .case_content .case_content_left {
-  width: 3.3rem;
+.industry_case #case_content .case_content_div {
+  width: 11rem;
   height: 6.8rem;
   background: #EFF2F8;
   float: left;
   display: inline-block;
+  margin-left: 0.8rem;
+  position: relative;
+  left: 0;
 }
-.industry_case .case_content .case_content_center {
-  width: 11rem;
-  height: 6.8rem;
-  background: #EFF2F8;
-  display: inline-block;
-}
-.industry_case .case_content .case_image {
+.industry_case #case_content .case_image {
   width: 9.44rem;
   height: 5.02rem;
   background-color: gray;
   margin: 0.6rem auto 0;
 }
-.industry_case .case_content .case_title {
+.industry_case #case_content .case_title {
   width: 100%;
   height: 1.18rem;
   display: table;
 }
-.industry_case .case_content .case_title .case_title_content{
+.industry_case #case_content .case_title .case_title_content{
   line-height: 1;
   font-size: 0.32rem;
   font-family: Microsoft YaHei, serif;
@@ -212,33 +212,26 @@
   display: table-cell;
   vertical-align: middle;
 }
-.industry_case .case_content .case_content_right {
-  width: 3.3rem;
-  height: 6.8rem;
-  background: #EFF2F8;
-  display: inline-block;
-  float: right;
-}
-.industry_case .case_content .case_content_left .left_arrow {
+.industry_case .left_arrow {
   width: 0.8rem;
   height: 0.8rem;
-  position: relative;
-  top: 3rem;
-  left: 0.47rem;
   cursor: pointer;
+  position: relative;
+  top: -3.9rem;
+  left: -7.06rem;
 }
-.industry_case .case_content .case_content_right .right_arrow {
+.industry_case .right_arrow {
   width: 0.8rem;
   height: 0.8rem;
-  position: relative;
-  top: 3rem;
-  right: 0.47rem;
+  cursor: pointer;
   transform: rotate(180deg);
   -ms-transform: rotate(180deg); /* IE 9 */
   -moz-transform: rotate(180deg); /* Firefox */
   -webkit-transform: rotate(180deg); /* Safari and Chrome */
   -o-transform: rotate(180deg); /* Opera */
-  cursor: pointer;
+  position: relative;
+  top: -3.9rem;
+  left: 7.06rem;
 }
 .industry_case .more_button {
   width: 100%;
@@ -255,6 +248,8 @@
   color: rgba(255,255,255,1);
   outline: none;
   border: none;
+  position: relative;
+  top: -0.8rem;
 }
 
 /* 解决方案 */

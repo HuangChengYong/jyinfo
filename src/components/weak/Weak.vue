@@ -40,22 +40,20 @@
     <div class="industry_case">
       <span class="title_font">10+经验行业案例</span>
       <div class="title_div"></div>
-      <div class="case_content">
-        <div class="case_content_left">
-          <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
-        </div>
-        <div class="case_content_center">
-          <div class="case_image"></div>
+      <div id="case_content">
+        <div class="case_content_div" v-for="(item, index) in industryCaseList" :key="index">
+          <div class="case_image">
+            <img :src="item.industry_case_image" :alt="item.industry_case_name" />
+          </div>
           <div class="case_title">
-            <div class="case_title_content">徐州国泰太平洋酒店</div>
+            <div class="case_title_content">{{ item.industry_case_name }}</div>
           </div>
         </div>
-        <div class="case_content_right">
-          <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
-        </div>
       </div>
+      <img id="left_arrow" class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow" @click="handleLeftButton">
+      <img id="right_arrow" class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow" @click="handleRightButton">
       <div class="more_button">
-        <button class="button">更多案例>></button>
+        <button class="button" @click="getMoreCase">更多案例>></button>
       </div>
     </div>
     <!-- 解决方案 -->
@@ -189,10 +187,46 @@ export default {
   data() {
     return {
       serviceContentOne: [],
-      serviceContentTwo: []
+      serviceContentTwo: [],
+      industryCaseList: [],
+      speed: 20
     }
   },
   methods: {
+    getMoreCase () {
+      alert("暂无更多案例！！！")
+    },
+    scrollRight: function () {
+      // 滚动区域
+      let caseContent = document.getElementById("case_content");
+      let speed = 20;
+      let number = 0;
+      function Marquee () {
+        if ( caseContent.style.left === -2400 ) {
+          clearInterval(MyMar)
+        }
+        caseContent.style.left = number-- + 'px'
+      }
+      let MyMar = setInterval( Marquee, speed )
+      caseContent.onmouseover = function() {
+        clearInterval(MyMar)
+      }
+      caseContent.onmouseout = function() {
+        MyMar = setInterval( Marquee, speed )
+      }
+      document.getElementById("left_arrow").onclick = function () {
+        MyMar = setInterval( Marquee, speed )
+      }
+      document.getElementById("right_arrow").onclick = function () {
+        clearInterval(MyMar)
+      }
+    },
+    handleLeftButton() {
+
+    },
+    handleRightButton: function () {
+
+    }
   },
   components: {
     JyHeader
@@ -200,9 +234,12 @@ export default {
   created() {
     this.serviceContentOne = dataSource.weakServiceContentOne;
     this.serviceContentTwo = dataSource.weakServiceContentTwo;
-
+    this.industryCaseList = dataSource.industryCaseList;
   },
   mounted() {
+    // let caseContent = document.getElementById("case_content");
+    // caseContent.style.left = '0px'
+    // this.scrollRight()
   }
 }
 </script>

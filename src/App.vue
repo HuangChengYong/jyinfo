@@ -9,7 +9,7 @@ export default {
   name: 'App',
   mounted() {
     window.onresize = () => {
-      window.location.reload()
+      window.location.reload(true)
     };
   }
 }
@@ -40,5 +40,9 @@ a:link{/* 已经被正常访问过的链接 */
 a {
   outline: none;
   color: #ffffff;
+}
+#app{
+  padding: 0;
+  margin: -0.3rem 0 0;
 }
 </style>

@@ -41,7 +41,29 @@ let weakServiceContentTwo = [
 ];
 
 
+/* 行业案例 */
+let industryCaseList = [
+  {
+    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_name: '案例一'
+  },
+  {
+    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_name: '徐州国泰太平洋酒店'
+  },
+  {
+    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_name: '案例二'
+  },
+  {
+    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_name: '案例三'
+  },
+];
+
+
 export default {
   weakServiceContentOne: weakServiceContentOne,
-  weakServiceContentTwo: weakServiceContentTwo
+  weakServiceContentTwo: weakServiceContentTwo,
+  industryCaseList: industryCaseList
 }
