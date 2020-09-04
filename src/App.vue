@@ -9,7 +9,8 @@ export default {
   name: 'App',
   mounted() {
     window.onresize = () => {
-      window.location.reload(true)
+      window.location.reload()
+      window.scrollTo(0, 0)
     };
   }
 }
@@ -43,6 +44,6 @@ a {
 }
 #app{
   padding: 0;
-  margin: -0.3rem 0 0;
+  margin: -0.2rem 0 0;
 }
 </style>

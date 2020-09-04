@@ -59,6 +59,10 @@ let industryCaseList = [
     industry_case_image: path + 'xuzhou_guotaitai.png',
     industry_case_name: '案例三'
   },
+  {
+    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_name: '案例四'
+  },
 ];
 
 

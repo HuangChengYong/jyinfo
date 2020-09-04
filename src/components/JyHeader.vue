@@ -86,16 +86,14 @@ export default {
       that.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-down";
       that.currentTarget.lastElementChild.className = "dropdownMenu jy_hidden";
     },
-    clickMenu () {
+    selectMenu () {
       let menu = document.getElementsByClassName("menu-md")[0].firstElementChild.getElementsByTagName("li");
       let menuLength = menu.length;
       let that = this;
       for(let i=0; i< menuLength; i++){
         menu[i].onclick= function() {
-          alert(that.menuCount)
-          alert(i)
           menu[that.menuCount].className = "";
-          menu[i].className = "active";
+          menu[i].className = "jy_active";
           that.menuCount = i
         }
       }
@@ -103,7 +101,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll, true)
-    this.clickMenu();
+    this.selectMenu();
   },
   destroyed() {
     // 离开该页面需要移除这个监听的事件，不然会报错
@@ -112,14 +110,38 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+div, span,
+ul, li,
+a{
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+ol, ul, li {
+  list-style: none;
+}
+a,
+a:active,/* 正在点击的链接 */
+a:hover,/* 鼠标悬浮时的链接 */
+a:visited,/* 已经访问过的链接 */
+a:link{/* 已经被正常访问过的链接 */
+  text-decoration: none;
+}
+a {
+  outline: none;
+  color: #ffffff;
+}
 .jy_hidden {
   display: none;
 }
 .jy_show {
   display: block;
 }
-.jy_active{
+.jy_active {
   border-bottom: #ffffff solid 2px;
 }
 .jy_active > a {
@@ -140,7 +162,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 100;
 }
 /* 导航栏内容部分 */
@@ -205,7 +226,6 @@ export default {
 .jy_nav_menu > .menu-md > ul > li:hover > a {
   opacity: 1;
 }
-
 .jy_nav_menu .menu-md .dropdownMenu {
   width: 1rem;
   position: absolute;
@@ -220,7 +240,6 @@ export default {
 .jy_nav_menu .menu-md .dropdownMenu ul li:hover {
   background-color: #8c8c8c;
 }
-
 .jy_nav_menu .menu-md .dropdownMenu ul li a {
   line-height: 0.45rem;
   font-size: 0.16rem;
@@ -240,10 +259,13 @@ export default {
 
 /* 手机菜单 */
 .phone-menu {
-  z-index: 100;
+  width: 19.2rem;
   color: #ffffff;
   background-color: #111F35;
-
+  position: fixed;
+  top: 0.7rem;
+  left: 0;
+  z-index: 100;
 }
 .phone-menu div {
   height: 0.6rem;
@@ -267,36 +289,32 @@ export default {
 
 
 @media screen and (max-width: 768px) {
+  .menu-md {
+    display: none;
+  }
   .nav {
     background-color: #111F35;
   }
   .jy_nav {
+    width: 100%;
+  }
+  .phone-menu {
+    width: 100%;
+  }
+  .jy_nav_logo {
 
-  }
-  .jy_nav_content {
-    width: 6rem;
-    margin: 0 auto;
-  }
-  .jy_nav_logo img {
-    margin-left: -1.3rem;
   }
   .jy_nav_menu {
-    margin-right: 1.3rem;
-  }
-  .menu-md {
-    display: none;
   }
   .menu-xs {
+    width: 100%;
+    height: 100%;
     display: block;
   }
-
   .menu-xs div {
+    line-height: 0.7rem;
+    float: right;
     color: #ffffff;
   }
-
-  .phone-menu{
-    width: 9.4rem;
-  }
 }
-
 </style>
