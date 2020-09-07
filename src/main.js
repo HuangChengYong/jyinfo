@@ -8,7 +8,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex'
 import 'lib-flexible/flexible'
 import 'assets/utils/rem.js'
-import $ from 'jquery'
+
+import VideoPlayer from 'vue-video-player'
+require('vue-video-player/src/custom-theme.css')
+require('video.js/dist/video-js.css')
+Vue.use(VideoPlayer)
 
 Vue.use(ElementUI);
 Vue.use(Vuex);

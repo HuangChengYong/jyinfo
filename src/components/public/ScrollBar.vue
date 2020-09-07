@@ -39,6 +39,7 @@ export default {
       let li_width = (scroll_li[0].offsetWidth + 80);
       scroll_ul.style.width = li_width * scroll_li.length + 'px';
       function scroll() {
+        console.log(scroll_ul.offsetLeft)
         if (scroll_ul.offsetLeft < -scroll_ul.offsetWidth/2) {
           scroll_ul.style.left = '0'
         }
@@ -50,22 +51,34 @@ export default {
       let myTimer = setInterval( scroll,30 )
 
       scroll_area.onmousemove = () => {
-        clearInterval(myTimer);
+        myTimer = window.clearInterval(myTimer);
       }
       scroll_area.onmouseout = () => {
         myTimer = setInterval( scroll,30 )
       };
 
-      let left_arrow = document.getElementById('left_arrow');
-      left_arrow.onclick = () => {
-        if ( scroll_ul.style.left < -1950 ) {
-
+      document.getElementById('left_arrow').onclick = () => {
+        // 最后一个li居中展示
+        if ( scroll_ul.offsetLeft < - (scroll_li.length/2 - 1) * 1180) {
+          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / 1180));
+        } else {
+          scroll_ul.style.left = '-770px';
         }
-        scroll_ul.style.left = scroll_ul.offsetLeft + li_width + 'px';
       }
-      let right_arrow = document.getElementById('right_arrow');
-      right_arrow.onclick = () => {
-        scroll_ul.style.left = scroll_ul.offsetLeft - li_width + 'px';
+      document.getElementById('right_arrow').onclick = () => {
+        // 最后一个li居中展示
+        if ( scroll_ul.offsetLeft < -1180) {
+          if ( scroll_ul.offsetLeft > -2360 ) {
+            scroll_ul.style.left = '-770px'
+          } else {
+            scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / 1180));
+          }
+        } else {
+          scroll_ul.style.left = CalculateLeft(scroll_li.length/2 - 1);
+        }
+      }
+      function CalculateLeft(index) {
+        return -((index - 1) * 1180 + 770) + 'px';
       }
     }
   },

@@ -7,8 +7,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Weak',
-      component: () => import('../components/weak/Weak')
+      name: 'Dmsca',
+      component: () => import('../components/dmsca/Dmsca')
     },
     {
       path: '/devops',

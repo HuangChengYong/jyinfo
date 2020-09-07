@@ -1,0 +1,202 @@
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#kylin {
+  margin: 0;
+  padding: 0;
+  width: 19.2rem;
+}
+/* 横幅图 */
+.kylin_banner {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #0F65F3;
+}
+
+/* 内容区域 */
+.content_area {
+  width: 100%;
+}
+
+/* 内容 */
+.content {
+  width: 14rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.content .div_title {
+  font-size: 0.6rem;
+  color: #3D9CFD;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.content .div_content {
+  font-size: 0.26rem;
+  color: #5A5E66;
+  font-weight: 300;
+  line-height: 1.18;
+}
+
+/* 为业务打造 */
+.content_01 {
+  width: 100%;
+  height: 3.93rem;
+  margin-top: 1.3rem;
+}
+.content_01 > .content_left {
+  width: 6.68rem;
+  height: 100%;
+  float: left;
+}
+.content_01 > .content_left > .div_title {
+  margin-top: 0.21rem;
+}
+.content_01 > .content_left > .div_content {
+  margin-top: 0.38rem;
+  margin-bottom: 0.39rem;
+}
+.content_01 > .content_right {
+  width: 6.26rem;
+  height: 100%;
+  float: right;
+}
+
+/* 构建统一共享的业务逻辑统一定义，重复利用 */
+.content_02 {
+  width: 100%;
+  height: 4.54rem;
+  margin-top: 2rem;
+}
+.content_02 > .content_left {
+  width: 5.73rem;
+  height: 100%;
+  float: left;
+}
+.content_02 > .content_right {
+  width: 6.67rem;
+  height: 3.24rem;
+  float: right;
+  margin-top: 0.66rem;
+  margin-bottom: 0.64rem;
+}
+.content_02 > .content_right > .div_title {
+  margin-bottom: 0.37rem;
+}
+.content_02 > .content_right > .div_content {
+  margin-bottom: 0.3rem;
+}
+
+/* 统一的时间智能指标助力业务轻松洞察业绩 */
+.content_03 {
+  width: 100%;
+  height: 4.53rem;
+  margin-top: 2.61rem;
+}
+.content_03 > .content_left {
+  width: 4.91rem;
+  height: 100%;
+  float: left;
+}
+.content_03 > .content_left > .div_title {
+  margin-bottom: 0.36rem;
+}
+.content_03 > .content_left > .div_content + .div_content {
+  margin-top: 0.36rem;
+}
+.content_03 > .content_right {
+  width: 12.12rem;
+  height: 6.92rem;
+  position: relative;
+  left: 3.84rem;
+  bottom: 5.74rem;
+  z-index: -1;
+}
+
+/* 从任意数据源获取最有价值数据 */
+.content_04 {
+  width: 100%;
+  height: 6.62rem;
+  margin-top: 2.57rem;
+}
+.content_04 > .content_left {
+  width: 8.32rem;
+  height: 100%;
+  float: left;
+  background-color: #8c8c8c;
+}
+.content_04 > .content_right {
+  width: 4.85rem;
+  height: 100%;
+  float: right;
+  margin-top: 1.84rem;
+  margin-bottom: 1.27rem;
+}
+.content_04 > .content_right > .div_content {
+  margin-top: 0.36rem;
+}
+
+/* AI 增强引擎全程助力分析 */
+.content_05 {
+  width: 100%;
+  height: 4.56rem;
+  margin-top: 2rem;
+}
+.content_05 > .content_left {
+  width: 5.09rem;
+  height: 3.2rem;
+  float: left;
+  margin-top: 0.73rem;
+  margin-bottom: 0.63rem;
+}
+.content_05 > .content_left > .div_content {
+  margin-top: 0.37rem;
+}
+.content_05 > .content_right {
+  width: 8.1rem;
+  height: 100%;
+  float: right;
+  margin-top: -1.1rem;
+}
+
+/* 为数据管理和分析构建一套可信的单一信源平台 */
+.content_06 {
+  width: 100%;
+  height: 5.19rem;
+  margin-top: 1.99rem;
+  margin-bottom: 2rem;
+}
+.content_06 > .content_left {
+  width: 7.68rem;
+  height: 100%;
+  float: left;
+}
+.content_06 > .content_right {
+  width: 4.91rem;
+  height: 4.54rem;
+  float: right;
+  margin-top: 0.29rem;
+  margin-bottom: 0.36rem;
+}
+.content_06 .div_content {
+  margin-top: 0.37rem;
+}
+
+/* 底部 */
+#kylin .kylin_bottom {
+  width: 100%;
+  height: 4rem;
+  background-color: #111F35;
+}
+/* 底部ICP */
+#kylin .kylin_icp {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #020202;
+}
