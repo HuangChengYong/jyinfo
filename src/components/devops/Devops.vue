@@ -26,18 +26,7 @@
     <div class="industry_case">
       <span class="title_font">10+经验行业案例</span>
       <div class="title_div"></div>
-      <div class="case_content">
-        <div class="case_content_left">
-          <img class="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
-        </div>
-        <div class="case_content_center">
-          <img class="center_left" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="center_left_arrow">
-          <img class="center_right" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="center_right_arrow">
-        </div>
-        <div class="case_content_right">
-          <img class="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
-        </div>
-      </div>
+      <scroll-bar :caseList="industryCaseList"/>
       <div class="more_button">
         <button class="button">更多案例>></button>
       </div>
@@ -110,24 +99,28 @@
 <script>
 import dataSource from '../../assets/utils/devops-data.js';
 import JyHeader from "../JyHeader";
-import Hexagon from "../Hexagon";
+import Hexagon from "../public/Hexagon";
+import ScrollBar from "../public/ScrollBar";
 export default {
   name: "Devops",
   components: {
     JyHeader,
-    Hexagon
+    Hexagon,
+    ScrollBar
   },
   data() {
     return {
       serviceContentOne: [],
       serviceContentTwo: [],
       allRoundList: [],
+      industryCaseList: []
     }
   },
   created() {
     this.serviceContentOne = dataSource.serviceContentOne;
     this.serviceContentTwo = dataSource.serviceContentTwo;
     this.allRoundList = dataSource.allRoundList;
+    this.industryCaseList = dataSource.industryCaseList;
   }
 
 }

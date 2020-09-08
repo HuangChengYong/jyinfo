@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../src/assets/css/hexagon.css";
+@import "../../assets/css/hexagon.css";
 </style>

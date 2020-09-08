@@ -7,8 +7,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Dmsca',
-      component: () => import('../components/dmsca/Dmsca')
+      name: 'Weak',
+      component: () => import('../components/weak/Weak')
     },
     {
       path: '/devops',
@@ -61,7 +61,17 @@ const router = new Router({
       path: '/park',
       name: 'Park',
       component: () => import('../components/solution/Park')
-    }/* 智慧园区解决方案 */
+    },/* 智慧园区解决方案 */
+    {
+      path: '/kylin',
+      name: 'Kylin',
+      component: () => import('../components/kylin/Kylin')
+    },/* 麒麟大数据 */
+    {
+      path: '/dmsca',
+      name: 'Dmsca',
+      component: () => import('../components/dmsca/Dmsca')
+    },/* 端玛科技 */
   ]
 })
 

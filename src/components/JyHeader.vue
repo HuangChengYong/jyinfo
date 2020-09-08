@@ -26,6 +26,8 @@
                     <router-link to="/soft"><li><a href="#">软件</a></li></router-link>
                     <router-link to="/weak"><li><a href="#">弱电</a></li></router-link>
                     <router-link to="/devops"><li><a href="#">运维</a></li></router-link>
+                    <router-link to="/kylin"><li><a href="#">麒麟大数据</a></li></router-link>
+                    <router-link to="/dmsca"><li><a href="#">端玛科技</a></li></router-link>
                   </ul>
                 </div>
               </li>
@@ -79,6 +81,7 @@ export default {
       this.menuShow = this.menuShow !== true;
     },
     mouseoverMenu (that) {
+
       that.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-up";
       that.currentTarget.lastElementChild.className = "dropdownMenu jy_show";
     },

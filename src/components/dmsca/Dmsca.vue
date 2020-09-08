@@ -20,28 +20,74 @@
         </div>
         <!-- 主要功能及特性 -->
         <div class="content_02">
-          <div content="div_title">
+          <div class="div_title">
             <p class="content_title">主要功能及特性</p>
             <p class="title_xhx"></p>
           </div>
-          <div class="div_content">
-            <div class="feature_div">
-              <div class="feature_icon">
-                <img src="" alt=""/>
-              </div>
-              <div class="feature_title"></div>
-              <div class="feature_content"></div>
+          <div class="features">
+            <div class="feature_div" v-for="(item, index) in dmscaFeatureList" :key="index">
+              <img class="feature_icon" :src="item.featureIcon" :alt="item.featureName" />
+              <span class="feature_name">{{ item.featureName }}</span><br/>
+              <span class="feature_detail">{{ item.featureDetail }}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- 产品展示界面 -->
+    <div class="products_show">
+      <div class="div_title">
+        <p class="content_title">产品展示界面</p>
+        <p class="title_xhx"></p>
+      </div>
+      <scroll-bar :caseList="productShowList"/>
+    </div>
+    <!-- 系统架构 system_structure -->
+    <div class="system_structure">
+      <div class="div_title">
+        <p class="content_title">系统架构</p>
+        <p class="title_xhx"></p>
+      </div>
+      <div class="system_structure_content">
+        <img src="//jy-info.qicp.vip/static/dmsca/system_structure.png" alt="system_structure"/>
+      </div>
+    </div>
+    <!-- 集成 SDLC Integrated SDLC -->
+    <div class="integrated_SDLC">
+      <div class="div_title">
+        <p class="content_title">集成SDLC</p>
+        <p class="title_xhx"></p>
+      </div>
+      <div class="integrated_SDLC_content">
+        <img src="//jy-info.qicp.vip/static/dmsca/integrated_SDLC.png" alt="integrated_SDLC"/>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="dmsca_bottom"></div>
+    <!-- ICP -->
+    <div class="dmsca_icp"></div>
   </div>
 </template>
 
 <script>
+import dataSource from '../../assets/utils/dmsca-data.js';
+import ScrollBar from "../public/ScrollBar";
 export default {
-name: "Dmsca"
+
+  name: "Dmsca",
+  data () {
+    return {
+      dmscaFeatureList: [],
+      productShowList: []
+    }
+  },
+  created() {
+    this.dmscaFeatureList = dataSource.dmscaFeatureList
+    this.productShowList = dataSource.productShowList
+  },
+  components: {
+    ScrollBar
+  }
 }
 </script>
 
@@ -51,9 +97,29 @@ p {
   padding: 0;
   line-height: 1;
 }
+span {
+  margin: 0;
+  padding: 0;
+}
 img {
   width: 100%;
   height: 100%;
+}
+
+.content_title {
+  font-size: 0.4rem;
+  font-weight: 400;
+  font-family: Microsoft YaHei, sans-serif;
+  color: #2D2F33;
+  margin-top: 1.2rem;
+  text-align: center;
+  line-height: 1.1;
+}
+.title_xhx {
+  width: 1.4rem;
+  height: 0.04rem;
+  background: #3E9CFD;
+  margin: 0.25rem auto 0 ;
 }
 
 #dmsca {
@@ -76,20 +142,6 @@ img {
 .content_area > .content {
   width: 14rem;
   margin: 0 auto;
-}
-.content_area > .content .content_title {
-  font-size: 0.4rem;
-  font-weight: 400;
-  color: #2D2F33;
-  margin-top: 1.2rem;
-  text-align: center;
-  line-height: 1.1;
-}
-.content_area > .content .title_xhx {
-  width: 1.4rem;
-  height: 0.04rem;
-  background: #3E9CFD;
-  margin: 0.25rem auto 0 ;
 }
 
 /* 企业级源代码安全扫描分析服务平台-DMSCA */
@@ -127,9 +179,115 @@ img {
 }
 .content_02 > .div_content {
   width: 100%;
-  height: 27.5rem;
   background-color: #FFFFFF;
   box-shadow: 0.01rem 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
   margin-top: 0.6rem;
+}
+.content_02 > .div_title {
+  margin-bottom: 0.6rem;
+}
+.content_02 > .features {
+  width: 100%;
+  background-color: #Ffffff;
+  box-shadow: 0 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
+  padding: 0.2rem 0;
+}
+.content_02 > .features .feature_div {
+  padding: 0.2rem 0.4rem;
+}
+.content_02 > .features .feature_icon {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.content_02 > .features .feature_name {
+  height: 0.33rem;
+  font-size: 0.32rem;
+  font-weight: 600;
+  font-family: Microsoft YaHei, sans-serif;
+  color: #2C2E33;
+  display: inline;
+  margin-left: 0.4rem;
+  position: relative;
+  top: 0.08rem;
+}
+.content_02 > .features .feature_detail {
+  font-size: 0.26rem;
+  font-weight: 600;
+  font-family: Microsoft YaHei, sans-serif;
+  color: #5A5E66;
+  line-height: 1.18;
+  margin-left: 1rem;
+  display: block;
+}
+
+/* 产品展示界面 */
+.products_show {
+  line-height: 1;
+  text-align: center;
+  padding-top: 1rem;
+  background: linear-gradient(-57deg, #3B2866, #0E519E);
+  background-size: cover;
+  width: 19.2rem;
+  height: 10.04rem;
+  margin-top: 1.2rem;
+}
+.products_show .content_title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+.products_show .title_xhx {
+  background: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* 系统架构 */
+.system_structure .title_xhx {
+  margin-bottom: 0.4rem;
+}
+.system_structure .system_structure_content {
+  width: 14rem;
+  height: 6.7rem;
+  background: #FFFFFF;
+  box-shadow: 0 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
+  margin: 0 auto;
+}
+.system_structure .system_structure_content img {
+  width: 13.09rem;
+  height: 5.71rem;
+  margin-top: 0.51rem;
+  margin-left: 0.59rem;
+}
+
+/* 集成 SDLC */
+.integrated_SDLC .title_xhx{
+  margin-bottom: 0.4rem;
+}
+.integrated_SDLC .integrated_SDLC_content {
+  width: 14rem;
+  height: 5.24rem;
+  background: #FFFFFF;
+  box-shadow: 0 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
+  margin: 0 auto;
+}
+.integrated_SDLC .integrated_SDLC_content img {
+  width: 12.65rem;
+  height: 4.05rem;
+  margin-top: 0.6rem;
+  margin-left: 1.06rem;
+}
+
+/* 底部 */
+#dmsca .dmsca_bottom {
+  width: 19.2rem;
+  height: 4rem;
+  background-color: #111F35;
+  margin-top: 2rem;
+}
+/* 底部ICP */
+#dmsca .dmsca_icp {
+  width: 19.2rem;
+  height: 1.2rem;
+  background-color: #020202;
 }
 </style>

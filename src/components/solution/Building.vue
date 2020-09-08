@@ -55,12 +55,6 @@ export default {
   height: 0.7rem;
   background-color: #0D0F29;
 }
-.building >>> .jy_header #jy_nav {
-  background-color: #0D0F29;
-}
-.building >>> .jy_header #xbk {
-  display: none;
-}
 .building .content {
   width: 14rem;
   margin: 0 auto;

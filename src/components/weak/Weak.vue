@@ -171,7 +171,6 @@
 import dataSource from '../../assets/utils/weak-data.js';
 import JyHeader from "../JyHeader";
 import ScrollBar from "../public/ScrollBar";
-
 export default {
   name: "Weak",
   data() {
@@ -179,7 +178,6 @@ export default {
       serviceContentOne: [],
       serviceContentTwo: [],
       industryCaseList: []
-
     }
   },
   methods: {
