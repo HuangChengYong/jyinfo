@@ -45,16 +45,19 @@ export default {
 
 <style scoped>
 .building {
-  margin: 0;
   padding: 0;
-  line-height: 1;
   width: 19.2rem;
+  margin-top: -0.2rem;
 }
 .building .nav {
   width: 100%;
   height: 0.7rem;
   background-color: #0D0F29;
 }
+/*.building .nav .jy_header /deep/ .jy_navbar_underscore {*/
+/*  background-color: #0D0F29;*/
+/*}*/
+
 .building .content {
   width: 14rem;
   margin: 0 auto;
@@ -137,11 +140,11 @@ export default {
   content: ">";
 }
 .breadcrumb a {
-  text-decoration: none;
+  text-decoration-line: none;
   color: #5A5E66;
 }
 .breadcrumb a:hover {
-  text-decoration: none;
+  text-decoration-line: none;
   color: #5A5E66;
 }
 </style>

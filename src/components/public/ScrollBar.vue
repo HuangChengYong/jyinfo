@@ -61,16 +61,16 @@ export default {
 
       document.getElementById('left_arrow').onclick = () => {
         if ( scroll_ul.offsetLeft <  -(scroll_li.length/2 - 1) * li_width) {
-          scroll_ul.style.left = '-770px';
+          scroll_ul.style.left = '-7.7rem';
         } else {
-          scroll_ul.style.left = CalculateLeft( parseInt((-scroll_ul.offsetLeft - 770) / li_width + 2) );
+          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - 770) / li_width + 1) );
         }
       }
       document.getElementById('right_arrow').onclick = () => {
         // 最后一个li居中展示
         if ( scroll_ul.offsetLeft < -li_width) {
           if ( scroll_ul.offsetLeft > -li_width*2 ) {
-            scroll_ul.style.left = '-770px'
+            scroll_ul.style.left = '-7.7rem'
           } else {
             scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / li_width));
           }
@@ -79,7 +79,7 @@ export default {
         }
       }
       function CalculateLeft(index) {
-        return -((index - 1) * 1180 + 770) + 'px';
+        return -((index - 1) * 1180 + 770) / 100 + 'rem';
       }
     }
   },

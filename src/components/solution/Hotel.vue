@@ -45,10 +45,10 @@ export default {
 
 <style scoped>
 .hotel {
-  margin: 0;
   padding: 0;
   line-height: 1;
   width: 19.2rem;
+  margin-top: -0.2rem;
 }
 .hotel .nav {
   width: 100%;
@@ -143,11 +143,11 @@ export default {
   content: ">";
 }
 .breadcrumb a {
-  text-decoration: none;
+  text-decoration-line: none;
   color: #5A5E66;
 }
 .breadcrumb a:hover {
-  text-decoration: none;
+  text-decoration-line: none;
   color: #5A5E66;
 }
 </style>

@@ -123,10 +123,10 @@ img {
 }
 
 #dmsca {
-  margin: 0;
   padding: 0;
   width: 19.2rem;
   background-color: #EDF5FD;
+  margin-top: -0.2rem;
 }
 /* 横幅图 */
 #dmsca .dmsca_banner {

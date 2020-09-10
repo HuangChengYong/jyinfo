@@ -9,9 +9,9 @@ img {
 }
 
 #kylin {
-  margin: 0;
   padding: 0;
   width: 19.2rem;
+  margin-top: -0.2rem;
 }
 /* 横幅图 */
 .kylin_banner {
