@@ -10,16 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        // target: 'http://www.jy-info.com:8088',//生产环境Nginx代理
-        target: 'http://192.168.1.80:8088',//后端接口地址
-        changeOrigin: true,//是否允许跨越
-        pathRewrite: {
-          '^/api': '/api',//重写,
-        }
-      }
-    },
+    // proxyTable: {
+    //   '/': {
+    //     // target: 'http://www.jy-info.com:8088',//生产环境Nginx代理
+    //     target: 'http://192.168.1.67:8088',//后端接口地址
+    //     changeOrigin: true,//是否允许跨越
+    //     pathRewrite: {
+    //       '^/': '/',//重写,
+    //     }
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

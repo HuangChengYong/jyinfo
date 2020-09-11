@@ -12,22 +12,22 @@
         <div class="apply_cutline"></div><!--分割线-->
       </div>
       <div class="apply_form_outline">
-        <form class="apply_form" >
+        <form class="apply_form">
           <div class="apply_enterprise_title">上传资料</div>
           <div class="apply_form_content">
             <div class="apply_form_content_attr_title apply_form_content_attr_CV">上传简历<span>*</span></div>
             <div class="apply_form_content_file" v-on:mouseover="changeBackColor(0)" v-on:mouseout="recoverBackColor(0)" >
               <el-upload
-                ref="upload"
+                ref="uploadfile1"
                 style="display: none"
                 class="upload_file1"
-                name="fileCV"
-                action="https://jsonplaceholder.typicode.com/posts"
-                :on-success="handleSuccess"
+                name="files"
+                action='http://localhost:8088/recruition/uploadFile/?senceCode=CV'
+                :on-success="handleSuccessCV"
                 :on-error="handlefaild"
-                multiple
                 :on-exceed="handleExceed"
-                :file-list="form_Value.file_CV" >
+                :auto-upload="true"
+                :file-list="file_CV" >
                 <el-button slot="trigger" size="small" type="primary" id="fileCV_span1">选取文件</el-button>
                 <el-button style="margin-left: 10px;" size="small" type="success">上传到服务器</el-button>
                 <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
@@ -41,16 +41,16 @@
             <div class="apply_form_content_attr_title">上传附件</div>
             <div class="apply_form_content_file" v-on:mouseover="changeBackColor(1)" v-on:mouseout="recoverBackColor(1)">
               <el-upload
-                ref="upload"
+                ref="uploadfile2"
                 class="upload_file2"
                 style="display: none"
-                name="fileAttach"
-                action="https://jsonplaceholder.typicode.com/posts"
-                :on-success="handleSuccess"
+                name="files"
+                action='http://localhost:8088/recruition/uploadFile/?senceCode=attach'
+                :on-success="handleSuccessAttach"
                 :on-error="handlefaild"
-                multiple
                 :on-exceed="handleExceed"
-                :file-list="form_Value.file_attach">
+                :auto-upload="true"
+                :file-list="file_attach">
                 <el-button slot="trigger" size="small" id="fileCV_span2" type="primary"></el-button>
               </el-upload>
               <div class="fileCV_span"  @click="upload_CV('fileCV_span2')" >上传附件</div>
@@ -81,54 +81,59 @@
   </div>
 </template>
 <script>
-
   import software from "../../assets/js/software";
-
+  import { PositionApply } from "../../api/getData";
+  import axios from 'axios'
   export default {
     name: "apply",
     data() {
       return {
         item:{},
+        fRecruitionCode:0,
+        file_CV: [],
+        file_attach: [],
         form_Value:{
-          file_CV: [],
-          file_attach: [],
+
+          file_CV_Path:'',
+          file_attach_Path: '',
           apply_fName:'',
           apply_fPhone:'',
-          apply_fMailbox:''
+          apply_fMailbox:'',
+          fRecruitionCode:0
         }
-
       }
     },
     methods: {
+      //通过onchanne触发方法获得文件列表
+       /*handleChange1() {
+         let files=this.form_Value.file_CV;
+
+       return '
+      },*/
+      upload_CV(fileCV_span){
+        if(fileCV_span==='fileCV_span1'){
+          document.getElementById('fileCV_span1').click();
+        }
+        if(fileCV_span==='fileCV_span2'){
+          document.getElementById('fileCV_span2').click();
+        }
+      },
       handleExceed(files, fileList) {
-        console.log(files)
-        this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+        if(fileList.size>1){
+          this.$message.warning(`当前限制选择 1 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+        }
+
       },
       beforeRemove(file, fileList) {
         return this.$confirm(`确定移除 ${ file.name }？`);
       },
-      handleSuccess(files,fileList){
-        if(files.name==='file_CV'){
-          this.form_Value.file_CV=[] //上传完成后清空文件队列
-          console.log(fileList+"11111111111111111111111")
-          this.$message({
-            showClose: true,
-            message: '恭喜你，您的简历上传完成!',
-            type: 'success'
-          });
-        }
-        if(files.name==='file_attach'){
-
-          this.form_Value.file_attach=[] //上传完成后清空文件队列
-          console.log(fileList+"22222222222222222222222222")
-          this.$message({
-            showClose: true,
-            message: '恭喜你，您的附件上传完成!',
-            type: 'success'
-          });
-        }
+      handleSuccessCV(response,files,fileList){
+        this.form_Value.file_CV_Path=response.data[0].relativeFile
       },
-      handlefaild(){
+      handleSuccessAttach(response,files,fileList){
+        this.form_Value.file_attach_Path=response.data[0].relativeFile
+      },
+    handlefaild(){
         this.$message({
           showClose: true,
           message: '很抱歉，您的文件上传失败!',
@@ -136,37 +141,58 @@
         });
       },
       form_submit(){
-        let formValue=this.form_Value;
-        console.log(formValue.apply_fPhone+formValue.apply_fName+formValue.apply_fMailbox)
-        /*axios.post('http://localhost:8082/upload', this.formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-            'Authorization': this.token
+
+        let form=this.form_Value;
+        //表单提交
+        let formValue={
+          fEmployeeName:form.apply_fName,
+          fRecruitionCode:form.fRecruitionCode,
+          fEmployeeCv:form.file_CV_Path,
+          fEmployeeAttach:form.file_attach_Path,
+          fEmployeeMobile:form.apply_fPhone,
+          fEmployeeEmail:form.apply_fMailbox,
+          fCreateTime:new Date()
+        }
+        PositionApply({
+
+          cvinfo:formValue
           }
-        }).then(res => {
-          console.log(res)
-        }).catch(err => {
-          console.log(err)
-        })*/
+        ).then(res => {
+          if (res.code === 0) {
+            this.$message({
+              type: 'success',
+              message: res.code === 0 ? '提交申请完成' : '提交申请失败,请重新操作'
+            })
+          } else {
+            this.$message({
+              type: 'error',
+              message: res.message
+            })
+
+          }
+          this.form={}
+        });
+
       },
       changeBackColor(val){
         document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(200,201,204,1);');
       },
       recoverBackColor(val){
         document.getElementsByClassName('fileCV_span')[val].setAttribute('style','background-color:rgba(225,227,230,1);');
-      },
-      upload_CV(fileCV_span_id){
-        document.getElementById(fileCV_span_id).click();
       }
+
     },
     mounted() {
-
+        this.form_Value.cVBaseURl=axios.defaults.baseURL+"/recruition/uploadFile?sceneCode=CV"
+        this.form_Value.attachBaseURl=axios.defaults.baseURL+"/recruition/uploadFile?sceneCode=attach"
     },
     created() {
       //从路由中获取数组下标
       let index_tag=this.$route.params.index_first;
+      this.fRecruitionCode=index_tag;
       //获取对应的职位信息
       this.item = software.recruitment_groups_Desc[index_tag];
+
     }
   }
 </script>

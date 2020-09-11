@@ -81,4 +81,10 @@ router.afterEach((to, from, next) => {
   window.scrollTo(0, 0)
 })
 
+/*router.beforeEach((to, from, next) => {
+  let token = router.app.$storage.fetch("token");
+  let needAuth = to.matched.some(item => item.meta.login);
+  if(!token && needAuth) return next({path: "/login"});
+  next();
+})*/
 export default router;

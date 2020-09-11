@@ -102,17 +102,17 @@
             <p class="submit_report_title_second">马上提交需求，我们会在24小时内联系您，并提供产品咨询和项目报价</p>
           </div>
           <div class="form_content">
-            <form ref="form" :model="form" label-width="0.80rem" @submit.prevent="onSubmit">
+            <form ref="form" :model="form" label-width="0.80rem">
 
-              <input class="form_name" v-model="form.name" placeholder="姓名">
+              <input class="form_name"  v-model="form.name" onBlur="if(value=='') {value='请填写您的姓名'}else{value=value.replace(/[ -~]/g,'')}" placeholder="姓名">
 
-              <input class="form_name" v-model="form.mobile" placeholder="手机号">
+              <input class="form_name" onkeyup="value=value.replace(/[^\d]/g,'')"  v-model="form.mobile" onBlur="if(value=='') {value='请填写您的联系方式'}else{value=value.replace(/[ -~]/g,'')}" placeholder="手机号">
 
 
               <input class="form_uint" v-model="form.uint" placeholder="公司名称">
 
 
-              <input class="form_uint" v-model="form.budget" placeholder="开发预算" />
+              <input class="form_uint" onkeyup="value=value.replace(/[^\d]/g,'')" v-model="form.budget" placeholder="开发预算" />
 
 
               <input class="form_description" v-model="form.description" placeholder="示例：我们是电商公司，想开发一款企业内部采购管理软件">
@@ -139,7 +139,8 @@
   import SoftwareFooter from '../public/footer';
   import Grapic from '../public/grapic';
   import software from '../../assets/js/software.js';
- // import screen from '../../assets/js/screen.js'; //屏幕分辨率
+  import { DevelopConsult } from '../../api/getdata.js'
+
 export default {
     name: "Soft",
     components: {
@@ -167,33 +168,39 @@ export default {
   },
   methods: {
     onSubmit() {
-      let data = {
-        name: this.form.name,
-        mobile: this.form.mobile,
-        uint: this.form.uint,
-        budget: this.form.budget,
-        description: this.form.description
+      let developNeeds={
+        fName: this.form.name,
+        fMobile: this.form.mobile,
+        fUnit: this.form.uint,
+        fBudget: this.form.budget,
+        fDescription: this.form.description,
+        fCreateTime:new Date()
       }
+
       //表单提交
-      axios.post(`/activity/CreateActivity`, data)
-        .then(res => {
-          if (res.status === '0') {
+      DevelopConsult({
+
+          developNeeds
+      }
+      ).then(res => {
+          if (res.code === 0) {
             this.$message({
               type: 'success',
-              message: res.status === '0' ? '提交完成' : '提交失败'
+              message: res.code === 0 ? '提交完成' : '提交失败'
             })
           } else {
             this.$message({
               type: 'error',
-              message: res.info
+              message: res.message
             })
+
           }
+        this.form={}
         });
 
     }
 
-
-    },
+  },
     watch: {
       screenWidth(val) {
         if (!this.timer) {
@@ -233,7 +240,6 @@ export default {
     this.softServiceContentThree = software.softServiceContentThree;
     this.softServiceContentFour = software.softServiceContentFour;
     }
-
 
 }
 </script>
@@ -280,24 +286,7 @@ export default {
           padding-bottom:9.7rem;
           }
 
-  .content_index01 {
-    height: 2.50rem;
-    font-size: 0.40rem;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 7.70rem;
-    position: absolute;
-    font-family: Microsoft YaHei;
-    font-weight: 400;
-    color: rgba(44,46,51,1);
-  }
 
-  .content_index01_baseline {
-    width: 1.40rem;
-    height: 0.04rem;
-    background: rgba(61,156,253,1);
-    margin: 1.86rem auto 0.26rem;
-  }
 
   .content_index02 {
     width: 100%;
@@ -355,7 +344,7 @@ export default {
   }
 
   /* @media (min-width: 1200px) and (max-width: 979px)*/
-  @media (min-width: 1200px) {
+  @media (min-width: 1200px){
     .query {
       width: 2.40rem;
       height: 0.60rem;
@@ -469,7 +458,7 @@ export default {
   }
 
   .develop {
-    width: 14.00rem;
+    width: 72.92%;
     height: 7.20rem;
     background: rgba(255,255,255,1);
     margin: 0.90rem auto 0 auto;
@@ -502,7 +491,7 @@ export default {
   }
 
   .develop_issue_content {
-    width: 8.51rem;
+    width: 60.79%;
     height: 0.26rem;
     font-size: 0.26rem;
     font-family: Microsoft YaHei;
@@ -510,13 +499,6 @@ export default {
     padding: 0rem 0rem;
     margin: 0.21rem auto 0rem 1.01rem;
     color: rgba(90,94,102,1);
-  }
-
-  .content_index08 {
-    width: 8.73rem;
-
-    margin: 0rem auto 0.5rem;
-    padding: 0rem 0rem;
   }
 
   .content_index08_top {

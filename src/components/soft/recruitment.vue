@@ -80,21 +80,7 @@
               document.getElementsByClassName("recruitment_groups_view")[index_first].setAttribute('style', 'transform: rotateX(360deg);');
             }
           }
-          /*if (index != index_first) {
-            this.direction_tag[index] = false
-          }else{
-            console.log(current_direction)
-            current_direction=true
 
-          }*/
-         /* if (this.direction_tag[index]) {
-            this.direction_tag[index]=true
-            this.recruitment_groups_responsibilities = software.recruitment_groups_responsibilities[index],
-              this.recruitment_groups_capability = software.recruitment_groups_capability[index];
-            document.getElementsByClassName("recruitment_groups_view")[index].setAttribute('style', 'transform: rotateX(180deg);');
-          } else {
-            document.getElementsByClassName("recruitment_groups_view")[index].setAttribute('style', 'transform: rotateX(360deg);');
-          }*/
         }
 
       },
