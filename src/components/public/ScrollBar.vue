@@ -39,7 +39,6 @@ export default {
       let li_width = (scroll_li[0].offsetWidth + 80);
       scroll_ul.style.width = li_width * scroll_li.length + 'px';
       function scroll() {
-        console.log(scroll_ul.offsetLeft)
         if (scroll_ul.offsetLeft < -scroll_ul.offsetWidth/2) {
           scroll_ul.style.left = '0'
         }

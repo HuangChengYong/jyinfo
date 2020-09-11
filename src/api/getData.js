@@ -1,15 +1,29 @@
 import { fetch, post } from '../utils/http.js'
 
 /**
- * 登录
+ * 用户登录
  * @param data
  * @returns {Promise<any>}
  */
-export const userLogin = (data) => post('/user/loginByPwd', data)
+export const LoginInfo = () => post('/login/loginInfo')
 
 /**
- * 首页统计用户数量
+ * 职位申请
  * @param data
  * @returns {Promise<any>}
  */
-export const IndexStatistic = () => fetch('/Index/IndexStatistic')
+export const PositionApply = (data) => post('/recruition/positionApply',data)
+
+/**
+ * 上传文件
+ * @param data
+ * @returns {Promise<any>}
+ */
+export const UploadFile = (data) => post('/recruition/uploadFile/',data)
+
+/**
+ * 开发需求咨询
+ * @param data
+ * @returns {Promise<any>}
+ */
+export const DevelopConsult = (data) => post('/consult/developConsult',data)
