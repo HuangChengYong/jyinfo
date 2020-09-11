@@ -1,8 +1,8 @@
 <template>
   <div class="weak">
+    <jy-header/>
     <!-- 头部 -->
     <div class="background_images_one">
-      <jy-header/>
       <span class="headline">弱电与系统集成</span><br/>
       <span class="subhead">主动式、前瞻式、一站式综合服务</span>
     </div>
@@ -171,7 +171,6 @@
 import dataSource from '../../assets/utils/weak-data.js';
 import JyHeader from "../JyHeader";
 import ScrollBar from "../public/ScrollBar";
-
 export default {
   name: "Weak",
   data() {
@@ -179,7 +178,6 @@ export default {
       serviceContentOne: [],
       serviceContentTwo: [],
       industryCaseList: []
-
     }
   },
   methods: {

@@ -1,4 +1,4 @@
-let path = "http://jy-info.qicp.vip/static/weak/";
+let path = "//jy-info.qicp.vip/static/weak/";
 
 /* 服务内容第一行数据 */
 let weakServiceContentOne = [
@@ -44,23 +44,23 @@ let weakServiceContentTwo = [
 /* 行业案例 */
 let industryCaseList = [
   {
-    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_image: '//jy-info.qicp.vip/static/xuzhou_guotaitai.png',
     industry_case_name: '案例一'
   },
   {
-    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_image: '//jy-info.qicp.vip/static/xuzhou_guotaitai.png',
     industry_case_name: '徐州国泰太平洋酒店'
   },
   {
-    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_image: '//jy-info.qicp.vip/static/xuzhou_guotaitai.png',
     industry_case_name: '案例二'
   },
   {
-    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_image: '//jy-info.qicp.vip/static/xuzhou_guotaitai.png',
     industry_case_name: '案例三'
   },
   {
-    industry_case_image: path + 'xuzhou_guotaitai.png',
+    industry_case_image: '//jy-info.qicp.vip/static/xuzhou_guotaitai.png',
     industry_case_name: '案例四'
   },
 ];

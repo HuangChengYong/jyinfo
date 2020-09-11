@@ -12,8 +12,8 @@
         </div>
       </li>
     </ul>
-    <img id="left_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="left_arrow">
-    <img id="right_arrow" src="//jy-info.qicp.vip/static/weak/arrow.png" alt="right_arrow">
+    <img id="left_arrow" src="//jy-info.qicp.vip/static/left_arrow.png" alt="left_arrow">
+    <img id="right_arrow" src="//jy-info.qicp.vip/static/right_arrow.png" alt="right_arrow">
   </div>
 </template>
 
@@ -50,34 +50,36 @@ export default {
       let myTimer = setInterval( scroll,30 )
 
       scroll_area.onmousemove = () => {
+        scroll_ul.className = 'jy_transition';
         myTimer = window.clearInterval(myTimer);
       }
       scroll_area.onmouseout = () => {
+        scroll_ul.className = '';
+        myTimer = window.clearInterval(myTimer);
         myTimer = setInterval( scroll,30 )
       };
 
       document.getElementById('left_arrow').onclick = () => {
-        // 最后一个li居中展示
-        if ( scroll_ul.offsetLeft < - (scroll_li.length/2 - 1) * 1180) {
-          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / 1180));
+        if ( scroll_ul.offsetLeft <  -(scroll_li.length/2 - 1) * li_width) {
+          scroll_ul.style.left = '-7.7rem';
         } else {
-          scroll_ul.style.left = '-770px';
+          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - 770) / li_width + 1) );
         }
       }
       document.getElementById('right_arrow').onclick = () => {
         // 最后一个li居中展示
-        if ( scroll_ul.offsetLeft < -1180) {
-          if ( scroll_ul.offsetLeft > -2360 ) {
-            scroll_ul.style.left = '-770px'
+        if ( scroll_ul.offsetLeft < -li_width) {
+          if ( scroll_ul.offsetLeft > -li_width*2 ) {
+            scroll_ul.style.left = '-7.7rem'
           } else {
-            scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / 1180));
+            scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / li_width));
           }
         } else {
-          scroll_ul.style.left = CalculateLeft(scroll_li.length/2 - 1);
+          scroll_ul.style.left = CalculateLeft(scroll_li.length/2);
         }
       }
       function CalculateLeft(index) {
-        return -((index - 1) * 1180 + 770) + 'px';
+        return -((index - 1) * 1180 + 770) / 100 + 'rem';
       }
     }
   },
@@ -90,6 +92,11 @@ export default {
 </script>
 
 <style scoped>
+
+.jy_transition {
+  transition:all 1s linear 0.3s;
+}
+
 #jy_scroll_bar {
   width: 19.2rem;
   height: 6.8rem;
@@ -149,11 +156,6 @@ export default {
   width: 0.8rem;
   height: 0.8rem;
   cursor: pointer;
-  transform: rotate(180deg);
-  -ms-transform: rotate(180deg); /* IE 9 */
-  -moz-transform: rotate(180deg); /* Firefox */
-  -webkit-transform: rotate(180deg); /* Safari and Chrome */
-  -o-transform: rotate(180deg); /* Opera */
   position: relative;
   top: -3.9rem;
   left: 7.08rem;
