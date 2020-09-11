@@ -24,11 +24,11 @@
               <a class="core_profession">核心业务&nbsp;<span class="glyphicon glyphicon-menu-down" /></a><br/>
               <div class="dropdown_menu jy_nav_hidden">
                 <ul>
-                  <router-link to="/soft"><li><a>软件</a></li></router-link>
-                  <router-link to="/weak"><li><a>弱电</a></li></router-link>
-                  <router-link to="/devops"><li><a>运维</a></li></router-link>
-                  <router-link to="/kylin"><li><a>麒麟大数据</a></li></router-link>
-                  <router-link to="/dmsca"><li><a>端玛科技</a></li></router-link>
+                  <li><router-link to="/soft">软件</router-link></li>
+                  <li><router-link to="/weak">弱电</router-link></li>
+                  <li><router-link to="/devops">运维</router-link></li>
+                  <li><router-link to="/kylin">麒麟大数据</router-link></li>
+                  <li><router-link to="/dmsca">端玛科技</router-link></li>
                 </ul>
               </div>
             </li>
@@ -39,7 +39,7 @@
               <a>关于我们</a>
             </li>
             <li class="nav_li">
-              <a>企业招聘</a>
+              <router-link to="/recruitment">企业招聘</router-link>
             </li>
           </ul>
         </div>
