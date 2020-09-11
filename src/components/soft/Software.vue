@@ -139,7 +139,7 @@
   import SoftwareFooter from '../public/footer';
   import Grapic from '../public/grapic';
   import software from '../../assets/js/software.js';
-  import { DevelopConsult } from '../../api/getdata.js'
+  import { DevelopConsult } from '../../api/getData.js'
 
 export default {
     name: "Soft",
