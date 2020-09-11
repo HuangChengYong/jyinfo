@@ -95,13 +95,15 @@ export default {
       }
     }
   },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll, true)
-    this.clickMenu()
+  created() {
   },
-  destroyed() {
+  mounted() {
+    this.clickMenu()
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  beforeDestroy() {
     // 离开该页面需要移除这个监听的事件，不然会报错
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll, true)
   },
 }
 </script>

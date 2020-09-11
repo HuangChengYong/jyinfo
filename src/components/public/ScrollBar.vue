@@ -1,6 +1,6 @@
 <template>
   <div id="jy_scroll_bar">
-    <ul id="case_content">
+    <ul id="case_content" class="jy_transition">
       <li class="case_content_div" v-for="(item, index) in caseList" :key="index">
         <div>
           <div class="case_image">
@@ -34,38 +34,25 @@ export default {
       let scroll_area = document.getElementById('jy_scroll_bar');
       let scroll_ul = scroll_area.getElementsByTagName('ul')[0];
       let scroll_li = scroll_ul.getElementsByTagName('li');
-      const spa = 1;
       scroll_ul.innerHTML =  scroll_ul.innerHTML + scroll_ul.innerHTML;
       let li_width = (scroll_li[0].offsetWidth + 80);
       scroll_ul.style.width = li_width * scroll_li.length + 'px';
-      function scroll() {
-        if (scroll_ul.offsetLeft < -scroll_ul.offsetWidth/2) {
-          scroll_ul.style.left = '0'
-        }
-        if (scroll_ul.offsetLeft > 0) {
-          scroll_ul.style.left = -scroll_ul.offsetWidth/2 + 'px';
-        }
-        scroll_ul.style.left = scroll_ul.offsetLeft -spa + 'px';
-      }
-      let myTimer = setInterval( scroll,30 )
-
-      scroll_area.onmousemove = () => {
-        scroll_ul.className = 'jy_transition';
-        myTimer = window.clearInterval(myTimer);
-      }
-      scroll_area.onmouseout = () => {
-        scroll_ul.className = '';
-        myTimer = window.clearInterval(myTimer);
-        myTimer = setInterval( scroll,30 )
-      };
-
-      document.getElementById('left_arrow').onclick = () => {
+      function leftScroll() {
         if ( scroll_ul.offsetLeft <  -(scroll_li.length/2 - 1) * li_width) {
           scroll_ul.style.left = '-7.7rem';
         } else {
           scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - 770) / li_width + 1) );
         }
       }
+      let myTimer = setInterval( leftScroll,6000 )
+      scroll_area.onmouseover = function () {
+        myTimer = clearInterval(myTimer)
+      }
+      scroll_area.onmouseout = function () {
+        myTimer = clearInterval(myTimer)
+        myTimer = setInterval( leftScroll,6000 )
+      }
+      document.getElementById('left_arrow').onclick = leftScroll
       document.getElementById('right_arrow').onclick = () => {
         // 最后一个li居中展示
         if ( scroll_ul.offsetLeft < -li_width) {
@@ -87,17 +74,27 @@ export default {
   },
   mounted() {
     this.scrollBar()
+  },
+  beforeDestroy() {
+    if(this.timer) { //如果定时器还在运行 或者直接关闭，不用判断
+      clearInterval(this.timer); //关闭
+    }
   }
 }
 </script>
 
 <style scoped>
-
+img {
+  width: 100%;
+  height: 100%;
+}
 .jy_transition {
   transition:all 1s linear 0.3s;
 }
 
 #jy_scroll_bar {
+  margin: 0;
+  padding: 0;
   width: 19.2rem;
   height: 6.8rem;
   position: relative;
@@ -112,6 +109,7 @@ export default {
 }
 
 #jy_scroll_bar ul li {
+  width: 11rem;
   height: 6.8rem;
   float: left;
   margin-right: 0.8rem;
@@ -148,16 +146,16 @@ export default {
   width: 0.8rem;
   height: 0.8rem;
   cursor: pointer;
-  position: relative;
-  top: -3.9rem;
-  left: -7.08rem;
+  position: absolute;
+  top: 3rem;
+  left: 2.1rem;
 }
 #jy_scroll_bar #right_arrow {
   width: 0.8rem;
   height: 0.8rem;
   cursor: pointer;
-  position: relative;
-  top: -3.9rem;
-  left: 7.08rem;
+  position: absolute;
+  top: 3rem;
+  right: 1.3rem;
 }
 </style>
