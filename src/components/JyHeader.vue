@@ -134,11 +134,6 @@ ol, ul, li {
   border-bottom: 0.02rem solid #ffffff;
   opacity: 1!important;
 }
-.jy_nav_active {
-  color: #FFFFFF;
-  border-bottom: 0.02rem solid #ffffff;
-}
-
 .jy_nav_show {
   display: block;
 }
