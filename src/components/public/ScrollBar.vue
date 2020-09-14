@@ -115,6 +115,8 @@ img {
   margin-right: 0.8rem;
   background-color: #ffffff;
   text-align: center;
+  position: relative;
+  left: -0.4rem;
 }
 
 #jy_scroll_bar ul li div {
@@ -148,7 +150,7 @@ img {
   cursor: pointer;
   position: absolute;
   top: 3rem;
-  left: 2.1rem;
+  left: 1.7rem;
 }
 #jy_scroll_bar #right_arrow {
   width: 0.8rem;
@@ -156,6 +158,6 @@ img {
   cursor: pointer;
   position: absolute;
   top: 3rem;
-  right: 1.3rem;
+  right: 1.7rem;
 }
 </style>

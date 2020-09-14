@@ -15,7 +15,7 @@
         </div>
         <div class="content_div">
           <div class="introduction_title">甲悦，专业的一站式弱电工程服务商</div>
-          <div class="introduction_content">甲悦信息科技（上海）发展有限公司自创办以来，专业承包综合布线系统，安防监控系统，机房管理系统，楼宇对讲系统，智能家居系统，视频会议系统，公共广播系统，门禁考勤系统，门禁道闸系统，防盗报警系统，智能化停车场管理系统，一卡通巡更系统，楼宇自控系统等弱电系统集成工程。</div>
+          <div class="introduction_content">甲悦信息科技发展（上海）有限公司自创办以来，专业承包综合布线系统，安防监控系统，机房管理系统，楼宇对讲系统，智能家居系统，视频会议系统，公共广播系统，门禁考勤系统，门禁道闸系统，防盗报警系统，智能化停车场管理系统，一卡通巡更系统，楼宇自控系统等弱电系统集成工程。</div>
         </div>
       </div>
       <!-- 全方位的服务内容 -->
@@ -182,7 +182,7 @@ export default {
   },
   methods: {
     getMoreCase () {
-      alert("暂无更多案例！！！")
+      // alert("暂无更多案例！！！")
     },
     handleLeftButton() {
 
@@ -207,4 +207,5 @@ export default {
 
 <style scoped>
 @import "../../assets/css/weak/weak.css";
+@import "../../assets/css/weak/weak-phone.css";
 </style>

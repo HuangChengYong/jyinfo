@@ -1,0 +1,9 @@
+@media screen and (max-width:750px) {
+  .weak {
+    margin-top: -0.5rem;
+  }
+  .weak .background_images_one {
+    width: auto;
+    height: 6.5rem;
+  }
+}

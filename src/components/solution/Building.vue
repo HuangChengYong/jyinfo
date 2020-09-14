@@ -1,9 +1,7 @@
 <template>
   <div class="building">
     <!-- 导航栏 -->
-    <div class="nav">
-      <jy-header class="jy_header" />
-    </div>
+    <jy-header class="jy_header" />
     <!-- 内容 -->
     <div class="content">
       <!-- 面包屑导航 -->
@@ -49,14 +47,11 @@ export default {
   width: 19.2rem;
   margin-top: -0.2rem;
 }
-.building .nav {
+.building .jy_header {
   width: 100%;
   height: 0.7rem;
-  background-color: #0D0F29;
+  background-color: #0D0F29 !important;
 }
-/*.building .nav .jy_header /deep/ .jy_navbar_underscore {*/
-/*  background-color: #0D0F29;*/
-/*}*/
 
 .building .content {
   width: 14rem;
@@ -67,7 +62,7 @@ export default {
   font-size: 0.22rem;
   font-family: Microsoft YaHei, sans-serif;
   font-weight: 500;
-  margin-top: 0.22rem;
+  margin-top: 0.93rem;
   color: #595D65;
 }
 .content .title_content {
