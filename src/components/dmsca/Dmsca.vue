@@ -212,7 +212,7 @@ img {
 }
 .content_02 > .features .feature_detail {
   font-size: 0.26rem;
-  font-weight: 600;
+  font-weight: 300;
   font-family: Microsoft YaHei, sans-serif;
   color: #5A5E66;
   line-height: 1.18;

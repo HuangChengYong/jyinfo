@@ -1,12 +1,11 @@
 <template>
-  <div id="jy_header">
-    <div class="jy_navbar">
-      <div class="nav_content">
-        <div class="nav_logo">
-          <img class="nav_logo_img" src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="jyinfo_logo">
-        </div>
-        <div class="nav_list">
-          <ul>
+  <div class="jy_navbar">
+    <div class="nav_content">
+      <div class="nav_logo">
+        <img class="nav_logo_img" src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="jyinfo_logo">
+      </div>
+      <div class="nav_list">
+        <ul>
             <li class="nav_li">
               <a id="jy_nav_active">首页</a>
             </li>
@@ -42,10 +41,10 @@
               <router-link to="/recruitment">企业招聘</router-link>
             </li>
           </ul>
-        </div>
       </div>
+      <div class="nav_list_phone glyphicon glyphicon-menu-hamburger"></div>
     </div>
-    <div class="jy_navbar_underscore"></div>
+    <div class="nav_underscore"></div>
   </div>
 </template>
 
@@ -62,11 +61,13 @@ export default {
     mouseoverMenu (event) {
       event.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-up"
       event.currentTarget.lastElementChild.className = "dropdown_menu jy_nav_show"
+      // event.currentTarget.firstElementChild.setAttribute('style', 'border-bottom: 0.02rem solid transparent;')
     },
     // 鼠标移出菜单事件，更改图标和CSS样式
     mouseoutMenu (event) {
       event.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-down"
       event.currentTarget.lastElementChild.className = "dropdown_menu jy_nav_hidden"
+      // event.currentTarget.firstElementChild.setAttribute('style', 'border-bottom: 0.02rem solid #ffffff;')
     },
     // 点击菜单添加 .active 样式
     clickMenu () {
@@ -74,7 +75,7 @@ export default {
       let that = this;
       for (let i = 0; i < navMenuList.length; i++) {
         navMenuList[i].onclick= function() {
-          navMenuList[that.currentMenu].getElementsByTagName("a")[0].id = "";
+          navMenuList[that.currentMenu].getElementsByTagName("a")[0].id = "no_active";
           navMenuList[i].getElementsByTagName("a")[0].id = "jy_nav_active";
           that.currentMenu = i
         }
@@ -84,7 +85,7 @@ export default {
     handleScroll: function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       let nav = document.getElementsByClassName('jy_navbar')[0];
-      let nav_underscore = document.getElementsByClassName('jy_navbar_underscore')[0];
+      let nav_underscore = document.getElementsByClassName('nav_underscore')[0];
       // 判断背景色
       if (scrollTop === 0) {
         nav.setAttribute('style','background-color:transparent;');
@@ -133,6 +134,10 @@ ol, ul, li {
   border-bottom: 0.02rem solid #ffffff;
   opacity: 1!important;
 }
+.jy_nav_active {
+  color: #FFFFFF;
+  border-bottom: 0.02rem solid #ffffff;
+}
 
 .jy_nav_show {
   display: block;
@@ -140,6 +145,7 @@ ol, ul, li {
 .jy_nav_hidden {
   display: none;
 }
+
 /* 导航栏 */
 .jy_navbar {
   width: 19.2rem;
@@ -154,7 +160,7 @@ ol, ul, li {
 /* 导航栏内容部分 */
 .jy_navbar > .nav_content {
   width: 14rem;
-  height: 100%;
+  height: 0.7rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -163,7 +169,7 @@ ol, ul, li {
 /* 导航栏内容部分——nav_logo */
 .jy_navbar > .nav_content > .nav_logo {
   width: 1.46rem;
-  height: 100%;
+  height: 0.7rem;
   display: flex;
   align-items: center;
 }
@@ -175,13 +181,12 @@ ol, ul, li {
 /* 导航栏内容部分——nav_list */
 .jy_navbar > .nav_content > .nav_list {
   width: 9.02rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  height: 0.7rem;
+  display: block;
 }
 .jy_navbar > .nav_content > .nav_list > ul {
   width: 100%;
-  height: 100%;
+  height: 0.7rem;
   display: flex;
   justify-content: space-between;
 }
@@ -190,14 +195,14 @@ ol, ul, li {
 }
 .jy_navbar > .nav_content > .nav_list > ul > li {
   width: 1.08rem;
-  height: 100%;
+  height: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .jy_navbar > .nav_content > .nav_list > ul > li > a {
   width: 0.62rem;
-  height: 100%;
+  height: 0.7rem;
   font-size: 0.16rem;
   font-family: Microsoft YaHei,sans-serif;
   font-weight: 400;
@@ -231,25 +236,69 @@ ol, ul, li {
   width: 100%;
   height: 0.45rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .jy_navbar > .nav_content > .nav_list > ul > li > .dropdown_menu > ul  li:hover {
   background-color: #8c8c8c;
 }
 .jy_navbar > .nav_content > .nav_list > ul > li > .dropdown_menu > ul  li > a {
+  width: 100%;
   font-size: 0.16rem;
   color: #ffffff;
 }
 
 /* 下划线 */
-.jy_navbar_underscore{
+.nav_underscore {
   width: 19.2rem;
   height: 0.01rem;
+  background:rgba(255,255,255,1);
   opacity:0.4;
-  position: fixed;
-  top: 0.7rem;
-  z-index: 100;
-  background-color: #ffffff;
+}
+
+/* 菜单栏手机区域 */
+.nav_list_phone {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav_list {
+    display: none !important;
+  }
+  .nav_list_phone {
+    display: block;
+  }
+
+  .jy_navbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .jy_navbar > .nav_content {
+    width: 75%;
+  }
+  .jy_navbar > .nav_content > .nav_logo {
+  }
+  .jy_navbar > .nav_content > .nav_list_phone {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .jy_navbar > .nav_phone_list {
+    width: 100%;
+    height: 10rem;
+    background-color: #111F35;
+  }
+
+  .jy_navbar > .nav_phone_list > ul {
+
+  }
+  .jy_navbar > .nav_phone_list > ul > li {
+
+  }
+  .jy_navbar > .nav_phone_list > ul > li a{
+
+  }
 }
 </style>
