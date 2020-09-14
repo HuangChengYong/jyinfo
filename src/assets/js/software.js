@@ -32,7 +32,7 @@ let DevelopService = [
   {
     desopsImg: path + 'software/develop_01.png',
     desopsName: '软件系统开发',
-    desopsContent: ['OA办公系统、CRM系统、', '物联网应用等系统软件开发'] 
+    desopsContent: ['OA办公系统、CRM系统、', '物联网应用等系统软件开发']
 
   },
   {
@@ -76,7 +76,7 @@ let ProcessServiceTop = [
 ];
 
 let ProcessServiceBelow = [
-  
+
   {
     desopsImg: path + 'software/process_05.png',
     desopsName: '系统开发',
@@ -103,34 +103,24 @@ let Recruitment_groups_Desc = [
   },
   {
     position: '弱电工程师',
-    condition: '',
+    condition: '(有经验优先)',
     workplcae: ['职能类型：技术类', '所属部门：弱电部', '工作地点：上海市']
   },
   {
     position: '财务会计人员',
-    condition: '',
+    condition: '(已停止)',
     workplcae: ['职能类型：会计类', '所属部门：财务部', '工作地点：上海市']
   },
   {
     position: 'UI设计师',
-    condition: '',
+    condition: '(已停止)',
     workplcae: ['职能类型：设计类', '所属部门：软件部', '工作地点：上海市']
   },
   {
     position: '前端工程师',
-    condition: '',
+    condition: '(已停止)',
     workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
-  },
-  {
-    position: 'ios开发工程师',
-    condition: '',
-    workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
-  },
-  {
-    position: '安卓开发工程师',
-    condition: '',
-    workplcae: ['职能类型：技术类', '所属部门：软件部', '工作地点：上海市']
-  },
+  }
 ];
 
 let Recruitment_groups_responsibilities = [
@@ -142,14 +132,13 @@ let Recruitment_groups_responsibilities = [
       '主要对于会议系统设备了解',
       '后台逻辑梳理 弱电相关设备的维护、检修工作']
   }, {
-    title: '',
-    desc: []
-  }, {
-    title: '',
-    desc: []
-  }, {
-    title: '',
-    desc: []
+    title: '岗位职责',
+    desc: ['熟悉音视频会议系统、安防系统、布线、监控门禁、智能楼宇等弱电智能化系统的现场管理和实施',
+  '弱电系统的安装、调试、简单的机房服务器网络服务器了解',
+  '完成投标文件的编写,PPT演示稿件的制作及交流汇报',
+  '在工程设计中，有能力完成工程图纸的绘制、审查和确认,并为此承担相应的责任',
+  '负责音视频系统集成、弱电工程等信息系统项目的实施、系统培训及整体验收；提供验收资料及文档，制作公司留底技术文档'
+    ]
   }, {
     title: '',
     desc: []
@@ -170,14 +159,14 @@ let Recruitment_groups_capability = [
     desc: ['学习能力强、具有较强的责任心和良好的沟通能力，工作认真、耐心、踏实，有较强团队合作精神',
            '具备良好的服务意识，能合理解决各种工作中的问题']
   }, {
-    title: '',
-    desc: []
-  }, {
-    title: '',
-    desc: []
-  }, {
-    title: '',
-    desc: []
+    title: '任职要求',
+    desc: [
+      '专科或以上学历，2年以上视频会议系统行业工作经验',
+      '有较强的沟通能力，动手能力强，对工程项目的实施进行工作指导、技术协调',
+      '具备良好的服务意识，能合理解决各种工作中的问题',
+      '能接受出差和加班',
+      '有安全员证书、一建或二建证书、有人社局颁发的职称证书优先考虑。薪金可面议'
+    ]
   }, {
     title: '',
     desc: []
@@ -188,7 +177,7 @@ let Recruitment_groups_capability = [
     title: '',
     desc: []
   }
-  
+
 ];
 
 export default {
