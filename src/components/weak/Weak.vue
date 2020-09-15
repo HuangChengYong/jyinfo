@@ -161,15 +161,15 @@
       </div>
     </div>
     <!-- 底部 -->
-    <div class="weak_bottom"></div>
     <!-- ICP -->
-    <div class="weak_icp"></div>
+    <jy-footer />
   </div>
 </template>
 
 <script>
 import dataSource from '../../assets/utils/weak-data.js';
 import JyHeader from "../JyHeader";
+import JyFooter from "../JyFooter";
 import ScrollBar from "../public/ScrollBar";
 export default {
   name: "Weak",
@@ -193,6 +193,7 @@ export default {
   },
   components: {
     JyHeader,
+    JyFooter,
     ScrollBar
   },
   created() {

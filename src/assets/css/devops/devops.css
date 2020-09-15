@@ -267,17 +267,3 @@
   width: 100%;
   height: 100%;
 }
-
-
-/* 底部 */
-.devops .devops_bottom {
-  width: 100%;
-  height: 4rem;
-  background-color: #111F35;
-}
-/* 底部ICP */
-.devops .devops_icp {
-  width: 100%;
-  height: 1.2rem;
-  background-color: #020202;
-}

@@ -7,7 +7,7 @@
       <div class="nav_list">
         <ul>
             <li class="nav_li">
-              <a id="jy_nav_active">首页</a>
+              <router-link id="jy_nav_active" to="/">首页</router-link>
             </li>
             <li class="nav_li" @mouseover="mouseoverMenu($event)" @mouseout="mouseoutMenu($event)">
               <a>产品&nbsp;<span class="glyphicon glyphicon-menu-down" /></a><br/>
@@ -42,7 +42,29 @@
             </li>
           </ul>
       </div>
-      <div class="nav_list_phone glyphicon glyphicon-menu-hamburger"></div>
+      <div class="nav_list_phone glyphicon glyphicon-menu-hamburger" @click="handlePhoneMenu"></div>
+    </div>
+    <div class="nav_phone_list" v-show="navPhoneMenuIsShow">
+      <ul>
+        <li>
+          <router-link to="/">首页</router-link>
+        </li>
+        <li>
+          <router-link to="/">产品&nbsp;<span class="glyphicon glyphicon-menu-down" /></router-link>
+        </li>
+        <li>
+          <router-link to="/">核心业务&nbsp;<span class="glyphicon glyphicon-menu-down" /></router-link>
+        </li>
+        <li>
+          <router-link to="/">成功案例</router-link>
+        </li>
+        <li>
+          <router-link to="/">关于我们</router-link>
+        </li>
+        <li>
+          <router-link to="/recruitment">企业招聘</router-link>
+        </li>
+      </ul>
     </div>
     <div class="nav_underscore"></div>
   </div>
@@ -53,7 +75,8 @@ export default {
   name: "JyHeader",
   data () {
     return {
-      currentMenu: 0
+      currentMenu: 0,
+      navPhoneMenuIsShow: false
     }
   },
   methods: {
@@ -61,13 +84,12 @@ export default {
     mouseoverMenu (event) {
       event.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-up"
       event.currentTarget.lastElementChild.className = "dropdown_menu jy_nav_show"
-      // event.currentTarget.firstElementChild.setAttribute('style', 'border-bottom: 0.02rem solid transparent;')
+      event.currentTarget.firstElementChild.setAttribute('style', 'border-bottom: 0.02rem solid transparent;')
     },
     // 鼠标移出菜单事件，更改图标和CSS样式
     mouseoutMenu (event) {
       event.currentTarget.firstElementChild.firstElementChild.className = "glyphicon glyphicon-menu-down"
       event.currentTarget.lastElementChild.className = "dropdown_menu jy_nav_hidden"
-      // event.currentTarget.firstElementChild.setAttribute('style', 'border-bottom: 0.02rem solid #ffffff;')
     },
     // 点击菜单添加 .active 样式
     clickMenu () {
@@ -94,6 +116,10 @@ export default {
         nav.setAttribute('style','background-color:#111F35;');
         nav_underscore.setAttribute('style','background-color: transparent;');
       }
+    },
+    // 点击汉堡按钮，显示/隐藏手机导航栏
+    handlePhoneMenu () {
+      this.navPhoneMenuIsShow = !this.navPhoneMenuIsShow;
     }
   },
   created() {
@@ -130,8 +156,8 @@ ol, ul, li {
 }
 
 #jy_nav_active {
-  color: #FFFFFF;
-  border-bottom: 0.02rem solid #ffffff;
+  color: #FFFFFF!important;
+  border-bottom: 0.02rem solid #ffffff!important;
   opacity: 1!important;
 }
 .jy_nav_show {
@@ -264,10 +290,14 @@ ol, ul, li {
   .nav_list_phone {
     display: block;
   }
+  .nav_underscore {
+    display: none;
+  }
 
   .jy_navbar {
     width: 100%;
     margin: 0 auto;
+    background-color: #111F35 !important;
   }
   .jy_navbar > .nav_content {
     width: 75%;
@@ -282,18 +312,26 @@ ol, ul, li {
 
   .jy_navbar > .nav_phone_list {
     width: 100%;
-    height: 10rem;
     background-color: #111F35;
+    border-top: 0.01rem solid #ffffff;
+    text-align: center;
   }
 
   .jy_navbar > .nav_phone_list > ul {
-
+    width: 100%;
+    height: 100%;
   }
   .jy_navbar > .nav_phone_list > ul > li {
-
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+  }
+  .jy_navbar > .nav_phone_list > ul > li:hover {
+    background-color: #8c8c8c;
   }
   .jy_navbar > .nav_phone_list > ul > li a{
-
+    width: 100%;
+    color: #ffffff;
   }
 }
 </style>

@@ -27,17 +27,20 @@
       </div>
     </div>
     <!-- 底部 -->
-    <div class="solution_bottom"></div>
     <!-- ICP -->
-    <div class="solution_icp"></div>
+    <jy-footer />
   </div>
 </template>
 
 <script>
 import JyHeader from "../JyHeader";
+import JyFooter from "../JyFooter";
 export default {
   name: "Hotel",
-  components: {JyHeader}
+  components: {
+    JyHeader,
+    JyFooter
+  }
 }
 </script>
 
@@ -108,19 +111,6 @@ export default {
 .content .text_content .hotel_image img {
   width: 100%;
   height: 100%;
-}
-
-/* 底部 */
-.hotel .solution_bottom {
-  width: 100%;
-  height: 4rem;
-  background-color: #111F35;
-}
-/* 底部ICP */
-.hotel .solution_icp {
-  width: 100%;
-  height: 1.2rem;
-  background-color: #020202;
 }
 
 /* 面包屑导航 */

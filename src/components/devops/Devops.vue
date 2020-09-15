@@ -90,21 +90,22 @@
       </div>
     </div>
     <!-- 底部 -->
-    <div class="devops_bottom"></div>
     <!-- ICP -->
-    <div class="devops_icp"></div>
+    <jy-footer />
   </div>
 </template>
 
 <script>
 import dataSource from '../../assets/utils/devops-data.js';
 import JyHeader from "../JyHeader";
+import JyFooter from "../JyFooter";
 import Hexagon from "../public/Hexagon";
 import ScrollBar from "../public/ScrollBar";
 export default {
   name: "Devops",
   components: {
     JyHeader,
+    JyFooter,
     Hexagon,
     ScrollBar
   },

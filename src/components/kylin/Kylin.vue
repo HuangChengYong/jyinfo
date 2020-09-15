@@ -81,16 +81,19 @@
       </div>
     </div>
     <!-- 底部 -->
-    <div class="kylin_bottom"></div>
     <!-- ICP -->
-    <div class="kylin_icp"></div>
+    <jy-footer />
   </div>
 </template>
 
 <script>
+import JyFooter from "../JyFooter";
   import store from '../../store/index.js';
 export default {
   name: "Kylin",
+  components: {
+    JyFooter
+  },
   data () {
     return {
       playerOptions: [

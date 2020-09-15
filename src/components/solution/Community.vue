@@ -28,17 +28,20 @@
       </div>
     </div>
     <!-- 底部 -->
-    <div class="solution_bottom"></div>
     <!-- ICP -->
-    <div class="solution_icp"></div>
+    <jy-footer />
   </div>
 </template>
 
 <script>
 import JyHeader from "../JyHeader";
+import JyFooter from "../JyFooter";
 export default {
   name: "Community",
-  components: {JyHeader},
+  components: {
+    JyHeader,
+    JyFooter
+  },
 }
 </script>
 
@@ -99,18 +102,6 @@ export default {
   line-height: 0.34rem;
   letter-spacing: 0.01rem;
   margin-bottom: 0.25rem;
-}
-/* 底部 */
-.community .solution_bottom {
-  width: 100%;
-  height: 4rem;
-  background-color: #111F35;
-}
-/* 底部ICP */
-.community .solution_icp {
-  width: 100%;
-  height: 1.2rem;
-  background-color: #020202;
 }
 
 /* 面包屑导航 */

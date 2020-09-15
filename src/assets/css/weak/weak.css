@@ -409,15 +409,3 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-/* 底部 */
-.weak .weak_bottom {
-  width: 19.2rem;
-  height: 4rem;
-  background-color: #111F35;
-}
-/* 底部ICP */
-.weak .weak_icp {
-  width: 19.2rem;
-  height: 1.2rem;
-  background-color: #020202;
-}

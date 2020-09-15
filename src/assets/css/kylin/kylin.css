@@ -187,16 +187,3 @@ img {
 .content_06 .div_content {
   margin-top: 0.37rem;
 }
-
-/* 底部 */
-#kylin .kylin_bottom {
-  width: 100%;
-  height: 4rem;
-  background-color: #111F35;
-}
-/* 底部ICP */
-#kylin .kylin_icp {
-  width: 100%;
-  height: 1.2rem;
-  background-color: #020202;
-}

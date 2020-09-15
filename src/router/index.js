@@ -72,6 +72,12 @@ const router = new Router({
       name: 'Dmsca',
       component: () => import('../components/dmsca/Dmsca')
     },/* 端玛科技 */
+    {
+      path: '/soft/download',
+      name: 'Download',
+      component: () => import('../components/soft/Download')
+    },/* 端玛科技 */
+
   ]
 })
 
