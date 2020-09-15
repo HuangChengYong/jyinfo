@@ -276,7 +276,7 @@
     background: rgba(90,94,102,1);
     margin-right: 0.18rem;
     margin-bottom: 0.09rem;
-    padding-top: 0rem;
+    padding-top: 0;
     display: inline-block;
   }
 
