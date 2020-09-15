@@ -5,7 +5,7 @@ import { fetch, post } from '../utils/http.js'
  * @param data
  * @returns {Promise<any>}
  */
-export const LoginInfo = () => post('/login/loginInfo')
+export const LoginInfo = (data) => post('/login/loginInfo',data)
 
 /**
  * 职位申请

@@ -102,11 +102,11 @@
             <p class="submit_report_title_second">马上提交需求，我们会在24小时内联系您，并提供产品咨询和项目报价</p>
           </div>
           <div class="form_content">
-            <form ref="form" :model="form" label-width="0.80rem">
+            <form ref="form" :model="form" >
 
-              <input class="form_name"  v-model="form.name" onBlur="if(value=='') {value='请填写您的姓名'}else{value=value.replace(/[ -~]/g,'')}" placeholder="姓名">
+              <input class="form_name"  v-model="form.name" onBlur="if(value==='') {value='请填写您的姓名'}else{value=value.replace(/[ -~]/g,'')}" placeholder="姓名">
 
-              <input class="form_name" onkeyup="value=value.replace(/[^\d]/g,'')"  v-model="form.mobile" onBlur="if(value=='') {value='请填写您的联系方式'}else{value=value.replace(/[ -~]/g,'')}" placeholder="手机号">
+              <input class="form_name" onkeyup="value=value.replace(/[^\d]/g,'')"  v-model="form.mobile" onBlur="if(value==='') {value='请填写您的联系方式'}else{value=value.replace(/[ -~]/g,'')}" placeholder="手机号">
 
 
               <input class="form_uint" v-model="form.uint" placeholder="公司名称">
@@ -139,7 +139,8 @@
   import SoftwareFooter from '../public/footer';
   import Grapic from '../public/grapic';
   import software from '../../assets/js/software.js';
-  import { DevelopConsult } from '../../api/getData.js'
+  import store from '../../store/index.js';
+  import { DevelopConsult,LoginInfo } from '../../api/getData.js'
 
 export default {
     name: "Soft",
@@ -201,23 +202,6 @@ export default {
     }
 
   },
-    watch: {
-      screenWidth(val) {
-        if (!this.timer) {
-          location.reload()
-          this.screenWidth = val
-          this.timer = true
-          let that = this
-          setTimeout(function () {
-            //that.screenWidth = that.$store.state.canvasWidth
-            console.log(that.screenWidth)
-            that.timer = false
-
-          }, 60)
-        }
-      }
-
-    },
     mounted() {
       const that = this
       window.onresize = () => {
@@ -239,6 +223,25 @@ export default {
     this.softServiceContentTwo = software.softServiceContentTwo;
     this.softServiceContentThree = software.softServiceContentThree;
     this.softServiceContentFour = software.softServiceContentFour;
+
+ //登录接口
+    /*let userLoginInfo={
+      loginName:'leo',
+      loginPassword:'123456',
+    }
+    LoginInfo( {
+
+      userLoginInfo
+
+    }).then(res => {
+      if(res.code==200){
+console.log(res.data)
+          //token的值储存到localsortage
+          store.commit('setToken',res.data)
+
+          console.log(res.data+"================================"+store.state.myToken)
+        }
+    })*/
     }
 
 }
@@ -307,8 +310,8 @@ export default {
     width: 0.26rem;
     height: 0.06rem;
     margin-top: 0.46rem;
-    margin-bottom: 0rem;
-    padding-top: 0rem;
+    margin-bottom: 0;
+    padding-top: 0;
     vertical-align:middle;
     border: none;
     display: inline-block;
@@ -319,12 +322,11 @@ export default {
     width: 3.00rem;
     height: 0.30rem;
     font-size: 0.30rem;
-    margin-left: 0.12rem;
     border: none;
     margin-top: 0.34rem;
-    margin-bottom: 0rem;
-    padding: 0rem;
-    font-family: Microsoft YaHei;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: Microsoft YaHei,sans-serif;
     vertical-align: middle;
     font-weight: 200;
     display: inline-block;
@@ -334,11 +336,11 @@ export default {
 
   .content_index03_content {
     width: 5.12rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     margin-top:0.36rem;
-    padding-bottom:0rem;
+    padding-bottom: 0;
     margin-bottom:0.56rem;
-    padding-top:0rem;
+    padding-top: 0;
     float:left;
 
   }
@@ -351,7 +353,7 @@ export default {
       margin-top: 2.84rem;
       margin-left: 0.80rem;
       font-size: 0.26rem;
-      font-family: Microsoft YaHei;
+      font-family: Microsoft YaHei,sans-serif;
       font-weight: 500;
       color: rgba(255,255,255,1);
       background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
@@ -367,7 +369,7 @@ export default {
       margin-top: 2.84rem;
       margin-left: 0.80rem;
       font-size: 0.26rem;
-      font-family: Microsoft YaHei;
+      font-family: Microsoft YaHei,sans-serif;
       font-weight: 500;
       color: rgba(255,255,255,1);
       background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
@@ -388,16 +390,16 @@ export default {
   .content_index04 {
     width: 8.73rem;
     height: 0.70rem;
-    margin: 1.20rem auto 0rem;
-    padding:0rem 0rem;
+    margin: 1.20rem auto 0;
+    padding: 0 0;
   }
 
   .content_index04_top {
     height: 0.40rem;
     margin-left:2.11rem;
     font-size: 0.40rem;
-    font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     font-weight: 400;
     text-align:center;
     color: rgba(44,46,51,1);
@@ -410,8 +412,8 @@ export default {
     height: 0.40rem;
     margin-left: 1.08rem;
     font-size: 0.40rem;
-    font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     font-weight: 400;
     text-align: center;
     color: rgba(44,46,51,1);
@@ -421,8 +423,8 @@ export default {
     height: 0.40rem;
     margin-left: 1.45rem;
     font-size: 0.40rem;
-    font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     font-weight: 400;
     text-align: center;
     color: rgba(44,46,51,1);
@@ -432,8 +434,8 @@ export default {
     height: 0.40rem;
     margin:auto auto ;
     font-size: 0.40rem;
-    font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     font-weight: 400;
     text-align: center;
     color: rgba(44,46,51,1);
@@ -444,7 +446,7 @@ export default {
     margin-left: 2.45rem;
     font-size: 0.40rem;
     font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    padding: 0 0;
     font-weight: 400;
     text-align: center;
     color: rgba(44,46,51,1);
@@ -453,7 +455,7 @@ export default {
   .content_index04_bottomline {
     width: 1.40rem;
     height: 0.04rem;
-    margin: 0.26rem auto 0rem;
+    margin: 0.26rem auto 0;
     background: rgba(61,156,253,1);
   }
 
@@ -462,8 +464,8 @@ export default {
     height: 7.20rem;
     background: rgba(255,255,255,1);
     margin: 0.90rem auto 0 auto;
-    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
-    padding: 0.40rem 0rem 0rem 0.40rem;
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
+    padding: 0.40rem 0 0 0.40rem;
   }
 
   .develop_issue {
@@ -482,8 +484,8 @@ export default {
     width: 1.29rem;
     height: 0.31rem;
     font-size: 0.32rem;
-    font-family: Microsoft YaHei;
-    padding:0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     vertical-align:middle;
     font-weight: 400;
     color: rgba(44,46,51,1);
@@ -494,10 +496,10 @@ export default {
     width: 60.79%;
     height: 0.26rem;
     font-size: 0.26rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 300;
-    padding: 0rem 0rem;
-    margin: 0.21rem auto 0rem 1.01rem;
+    padding: 0 0;
+    margin: 0.21rem auto 0 1.01rem;
     color: rgba(90,94,102,1);
   }
 
@@ -505,8 +507,8 @@ export default {
     height: 0.40rem;
     margin-left: 2.11rem;
     font-size: 0.40rem;
-    font-family: Microsoft YaHei;
-    padding: 0rem 0rem;
+    font-family: Microsoft YaHei,sans-serif;
+    padding: 0 0;
     font-weight: 400;
     text-align: center;
     color: rgba(44,46,51,1);
@@ -518,7 +520,7 @@ export default {
   .content_index08_bottomline {
     width: 1.40rem;
     height: 0.04rem;
-    margin: 0.25rem auto 0rem;
+    margin: 0.25rem auto 0;
     background: rgba(61,156,253,1);
   }
   .project_case {
@@ -533,7 +535,7 @@ export default {
     width: 16.6%;
     background: rgba(255,255,255,1);
     float: left;
-    padding: 0rem 0rem;
+    padding: 0 0;
   }
 
   .project_case_left_inner {
@@ -548,7 +550,7 @@ export default {
     width: 57.3%;
     margin-left: 3.65%;
     background: rgba(255,255,255,1);
-    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     float: left;
   }
 
@@ -562,7 +564,7 @@ export default {
   .project_case_right {
     width: 16.6%;
     background: rgba(255,255,255,1);
-    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     margin-left: 3.60%;
     float: right;
   }
@@ -611,7 +613,7 @@ export default {
     font-weight: 500;
     color: rgba(255,255,255,1);
     position: relative;
-    margin: 0.6rem 42% 0rem;
+    margin: 0.6rem 42% 0;
     border: none;
   }
 
@@ -626,7 +628,7 @@ export default {
     width: 22.86%;
     height: 3.80rem;
     background: rgba(255,255,255,1);
-    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     float: left;
     margin-right: 0.29rem;
   }
@@ -641,11 +643,11 @@ export default {
     width: 100%;
     height: 0.27rem;
     font-size: 0.26rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 400;
     text-align: center;
     display: inline-block;
-    padding: 0rem 0rem ;
+    padding: 0 0 ;
     margin-bottom:0.17rem;
     vertical-align: bottom;
     color: rgba(44,46,51,1);
@@ -656,10 +658,10 @@ export default {
     width: 100%;
     height: 0.22rem;
     font-size: 0.20rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 400;
     color: rgba(90,94,102,1);
-    padding: 0rem 0rem;
+    padding: 0 0;
     text-align: center;
     display: inline-block;
     padding-left: 0.20rem;
@@ -703,12 +705,12 @@ export default {
   .submit_report {
     width: 72.91%;
     height: 7.70rem;
-    padding: 0rem 0.6rem;
+    padding: 0 0.6rem;
     top: 7.65rem;
     left: 13.5%;
     background: rgba(255,255,255,1);
 
-    box-shadow: 0rem 0.10rem 0.24rem 0rem rgba(29,36,85,0.1);
+    box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     position: relative;
   }
 
@@ -719,7 +721,7 @@ export default {
 
     position: absolute;
     font-size: 0.26rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 300;
     color: rgba(44,46,51,1);
   }
@@ -753,7 +755,7 @@ export default {
     font-size: 0.22rem;
     display: block;
     float: left;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 300;
     color: rgba(133,138,153,1);
   }
@@ -766,7 +768,7 @@ export default {
     margin-bottom: 0.30rem;
     border: 0.01rem solid rgba(171,174,179,1);
     font-size: 0.22rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 300;
     color: rgba(133,138,153,1);
   }
@@ -780,7 +782,7 @@ export default {
     margin-left: 0.60rem;
     border: 0.01rem solid rgba(171,174,179,1);
     font-size: 0.22rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 300;
     color: rgba(133,138,153,1);
   }
@@ -794,7 +796,7 @@ export default {
     background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
     border-radius: 0.30rem;
     font-size: 0.26rem;
-    font-family: Microsoft YaHei;
+    font-family: Microsoft YaHei,sans-serif;
     font-weight: 500;
     color: rgba(255,255,255,1);
     border: none;

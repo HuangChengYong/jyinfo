@@ -88,6 +88,7 @@
 </template>
 
 <script>
+  import store from '../../store/index.js';
 export default {
   name: "Kylin",
   data () {
@@ -139,6 +140,11 @@ export default {
         }
       ]
     }
+  },
+
+  created() {
+    //测试页面调用localstroage and xueX
+    console.log(store.state.myToken+"666666666666666666666666666666666666666666666666666666"+localStorage.myToken)
   }
 }
 </script>
