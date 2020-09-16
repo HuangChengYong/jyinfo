@@ -1,4 +1,4 @@
-const path = '//jy-info.qicp.vip/static/download/'
+const path = '//jy-info.qicp.vip/img/download/'
 
 let softWareList = [
   {

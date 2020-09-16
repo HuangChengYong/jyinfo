@@ -11,7 +11,7 @@
       <!-- 介绍 -->
       <div class="introduction">
         <div class="images_div">
-          <img class="introduction_images" src="//jy-info.qicp.vip/static/weak/introduction_images.png" alt="介绍图片"/>
+          <img class="introduction_images" src="//jy-info.qicp.vip/img/weak/introduction_images.png" alt="介绍图片"/>
         </div>
         <div class="content_div">
           <div class="introduction_title">甲悦，专业的一站式弱电工程服务商</div>
@@ -52,10 +52,10 @@
       <div class="solution_content">
         <div class="building">
           <div class="div_solution">
-            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/building.png" alt="building">
+            <img class="solution_image" src="//jy-info.qicp.vip/img/weak/building.png" alt="building">
           </div>
           <div class="solution_content_div">
-            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_building.png" alt="icon_building" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/img/weak/icon_building.png" alt="icon_building" />
             <div class="content_div">智慧楼宇解决方案</div>
             <router-link to="/building" >
               <div class="more_details">
@@ -67,10 +67,10 @@
         </div>
         <div class="hotel">
           <div class="div_solution">
-            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/hotel.png" alt="hotel">
+            <img class="solution_image" src="//jy-info.qicp.vip/img/weak/hotel.png" alt="hotel">
           </div>
           <div class="solution_content_div">
-            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_hotel.png" alt="icon_hotel" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/img/weak/icon_hotel.png" alt="icon_hotel" />
             <div class="content_div">智慧酒店解决方案</div>
             <router-link to="/hotel" >
               <div class="more_details">
@@ -82,10 +82,10 @@
         </div>
         <div class="hospital">
           <div class="div_solution">
-            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/hospital.png" alt="hospital">
+            <img class="solution_image" src="//jy-info.qicp.vip/img/weak/hospital.png" alt="hospital">
           </div>
           <div class="solution_content_div">
-            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_hospital.png" alt="icon_hospital" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/img/weak/icon_hospital.png" alt="icon_hospital" />
             <div class="content_div">智慧医院解决方案</div>
             <router-link to="/hospital" >
               <div class="more_details">
@@ -97,10 +97,10 @@
         </div>
         <div class="community">
           <div class="div_solution">
-            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/community.png" alt="community">
+            <img class="solution_image" src="//jy-info.qicp.vip/img/weak/community.png" alt="community">
           </div>
           <div class="solution_content_div">
-            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_community.png" alt="icon_community" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/img/weak/icon_community.png" alt="icon_community" />
             <div class="content_div">智慧社区解决方案</div>
             <router-link to="/community" >
               <div class="more_details">
@@ -112,10 +112,10 @@
         </div>
         <div class="park">
           <div class="div_solution">
-            <img class="solution_image" src="//jy-info.qicp.vip/static/weak/park.png" alt="park">
+            <img class="solution_image" src="//jy-info.qicp.vip/img/weak/park.png" alt="park">
           </div>
           <div class="solution_content_div">
-            <img class="solution_icon" src="//jy-info.qicp.vip/static/weak/icon_park.png" alt="icon_park" />
+            <img class="solution_icon" src="//jy-info.qicp.vip/img/weak/icon_park.png" alt="icon_park" />
             <div class="content_div">智慧园区解决方案</div>
             <router-link to="/park" >
               <div class="more_details">
@@ -133,30 +133,30 @@
       <div class="title_div"></div>
       <div class="enterprise_icon">
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose1.png" alt="国泰君安证券">
+          <img src="//jy-info.qicp.vip/img/weak/choose1.png" alt="国泰君安证券">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose2.png" alt="水利部太湖流域管理局">
+          <img src="//jy-info.qicp.vip/img/weak/choose2.png" alt="水利部太湖流域管理局">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose3.png" alt="Techcode太库">
+          <img src="//jy-info.qicp.vip/img/weak/choose3.png" alt="Techcode太库">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose4.png" alt="农业部东海区渔政局">
+          <img src="//jy-info.qicp.vip/img/weak/choose4.png" alt="农业部东海区渔政局">
         </div>
       </div>
       <div class="enterprise_icon">
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose5.png" alt="十月妈咪">
+          <img src="//jy-info.qicp.vip/img/weak/choose5.png" alt="十月妈咪">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose6.png" alt="上海检察">
+          <img src="//jy-info.qicp.vip/img/weak/choose6.png" alt="上海检察">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose7.png" alt="武警第八支队">
+          <img src="//jy-info.qicp.vip/img/weak/choose7.png" alt="武警第八支队">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/static/weak/choose8.png" alt="上海临港软件园">
+          <img src="//jy-info.qicp.vip/img/weak/choose8.png" alt="上海临港软件园">
         </div>
       </div>
     </div>

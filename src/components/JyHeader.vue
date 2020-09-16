@@ -2,7 +2,7 @@
   <div class="jy_navbar">
     <div class="nav_content">
       <div class="nav_logo">
-        <img class="nav_logo_img" src="//jy-info.qicp.vip/static/jyinfo_logo.png" alt="jyinfo_logo">
+        <img class="nav_logo_img" src="//jy-info.qicp.vip/img/jyinfo_logo.png" alt="jyinfo_logo">
       </div>
       <div class="nav_list">
         <ul>

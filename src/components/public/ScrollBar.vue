@@ -12,8 +12,8 @@
         </div>
       </li>
     </ul>
-    <img id="left_arrow" src="//jy-info.qicp.vip/static/left_arrow.png" alt="left_arrow">
-    <img id="right_arrow" src="//jy-info.qicp.vip/static/right_arrow.png" alt="right_arrow">
+    <img id="left_arrow" src="//jy-info.qicp.vip/img/left_arrow.png" alt="left_arrow">
+    <img id="right_arrow" src="//jy-info.qicp.vip/img/right_arrow.png" alt="right_arrow">
   </div>
 </template>
 

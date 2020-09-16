@@ -215,7 +215,7 @@
 
     left: 87.1%;
     bottom: 0.19rem;
-    background-image: url("//jy-info.qicp.vip/static/software/recruitment_groups_view.png");
+    background-image: url("//jy-info.qicp.vip/img/software/recruitment_groups_view.png");
     background-size:cover;
   }
 

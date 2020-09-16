@@ -11,7 +11,7 @@ a:hover {
 .background_images_one {
   width: 19.2rem;
   height: 6.5rem;
-  background: url("//jy-info.qicp.vip/static/weak/background_images_one.png");
+  background: url("//jy-info.qicp.vip/img/weak/background_images_one.png");
   background-size: cover;
   color: #FFFFFF;
 }
@@ -155,7 +155,7 @@ a:hover {
   line-height: 1;
   text-align: center;
   padding-top: 1rem;
-  background: url("//jy-info.qicp.vip/static/weak/background_images_two.png");
+  background: url("//jy-info.qicp.vip/img/weak/background_images_two.png");
   background-size: cover;
   width: 19.2rem;
   height: 10.8rem;

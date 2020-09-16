@@ -1,4 +1,4 @@
-let path = "http://jy-info.qicp.vip/static/";
+let path = "http://jy-info.qicp.vip/img/";
 
 let SolutionService = [
   {
