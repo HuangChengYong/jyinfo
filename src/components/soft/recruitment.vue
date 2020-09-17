@@ -24,7 +24,7 @@
             <span class="recruitment_groups_details_title">{{ recruitment_groups_responsibilities.title}}</span>
 
             <div class="recruitment_groups_details_desc" v-for=" (item, index_three) in recruitment_groups_responsibilities.desc" :key="index_three">
-              <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
+              <div class="recruitment_groups_details_symble_outbox"><div class="recruitment_groups_details_symble" /></div><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
             <!--任职要求-->
 
@@ -35,7 +35,7 @@
 
             <div class="recruitment_groups_details_desc" v-for=" (item, index_four) in recruitment_groups_capability.desc" :key="index_four">
 
-              <div class="recruitment_groups_details_symble" /><div class="recruitment_groups_details_des_content">{{item }}</div>
+              <div class="recruitment_groups_details_symble_outbox"><div class="recruitment_groups_details_symble" /></div><div class="recruitment_groups_details_des_content">{{item }}</div>
             </div>
           </div>
           <button class="position_apply" ><span class="position_apply_link"><router-link :to="'/apply/'+index_first">立即申请</router-link></span></button>
@@ -246,10 +246,11 @@
     width: 90%;
     height: 0.01rem;
     background: rgba(175,176,179,1);
-    margin: auto auto;
+    margin-left: 0;
   }
 
   .recruitment_groups_details_content {
+    width: 12.25rem;
     padding-top: 0.59rem;
   }
 
@@ -270,18 +271,26 @@
     margin-bottom: 0.17rem;
   }
 
+  .recruitment_groups_details_symble_outbox{
+    width: 0.18rem;
+    height: 100%;
+
+    margin-right: 0.17rem;
+
+    display: inline-block;
+  }
+
   .recruitment_groups_details_symble {
     width: 0.18rem;
     height: 0.02rem;
     background: rgba(90,94,102,1);
-    margin-right: 0.18rem;
+
     margin-bottom: 0.09rem;
     padding-top: 0;
     display: inline-block;
   }
 
   .recruitment_groups_details_des_content {
-    height: 0.25rem;
     font-size: 0.26rem;
     font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
     font-weight: 400;
