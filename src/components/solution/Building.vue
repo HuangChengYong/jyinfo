@@ -48,7 +48,6 @@ export default {
 .building {
   padding: 0;
   width: 19.2rem;
-  margin-top: -0.2rem;
 }
 .building .jy_header {
   width: 100%;

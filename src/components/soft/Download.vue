@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 #download {
-  margin: -0.2rem 0 0;
+  margin: 0;
   padding: 0;
   width: 19.2rem;
 }

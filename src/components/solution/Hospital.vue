@@ -50,7 +50,6 @@ export default {
   padding: 0;
   line-height: 1;
   width: 19.2rem;
-  margin-top: -0.2rem;
 }
 .hospital .jy_header {
   width: 100%;
