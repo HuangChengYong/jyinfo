@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from '../router'
 // axios 设置
 axios.defaults.timeout = 50000 // 设置超时时间
- axios.defaults.baseURL = 'http://www.jy-info.com:8080'  //正式服务器
+ axios.defaults.baseURL = 'https://www.jy-info.com:8080'  //正式服务器
 //axios.defaults.baseURL = 'http://localhost:8080'
 
 // // 拦截接口返回异常跳转至登录页
