@@ -263,7 +263,7 @@ console.log(res.data)
   .head_Top {
     width: 100%;
     height: 6.50rem;
-    background-image: url("//jy-info.qicp.vip/img/software/soft_Top.png");
+    background-image: url("https://www.jy-info.com/img/software/soft_Top.png");
     background-size: cover;
   }
 
@@ -283,7 +283,7 @@ console.log(res.data)
 
         .content_body {
           width: 100%;
-          background-image: url("//jy-info.qicp.vip/img/software/depthBackground.png") ;
+          background-image: url("https://www.jy-info.com/img/software/depthBackground.png") ;
           background-size: cover;
           background-repeat:no-repeat;
           padding-bottom:9.7rem;
@@ -383,7 +383,7 @@ console.log(res.data)
     left: 2.55rem;
     top: 8.29rem;
     position: absolute;
-    background-image: url("//jy-info.qicp.vip/img/software/soft_Second.png");
+    background-image: url("https://www.jy-info.com/img/software/soft_Second.png");
     background-size: cover;
   }
 
@@ -542,7 +542,7 @@ console.log(res.data)
     width: 100%;
     height: 6.80rem;
     overflow: hidden;
-    background-image: url("//jy-info.qicp.vip/img/software/soft_Top.png");
+    background-image: url("https://www.jy-info.com/img/software/soft_Top.png");
     background-size: cover;
   }
 
@@ -557,7 +557,7 @@ console.log(res.data)
   .project_case_middle_inner {
     width: 100%;
     height: 6.80rem;
-    background-image: url("//jy-info.qicp.vip/img/software/soft_Top_copy1.png");
+    background-image: url("https://www.jy-info.com/img/software/soft_Top_copy1.png");
     background-size: cover;
   }
 
@@ -573,7 +573,7 @@ console.log(res.data)
     width: 100%;
     height: 6.80rem;
     overflow: hidden;
-    background-image: url("//jy-info.qicp.vip/img/software/soft_Top_copy2.png");
+    background-image: url("https://www.jy-info.com/img/software/soft_Top_copy2.png");
     background-size: cover;
   }
 
@@ -581,7 +581,7 @@ console.log(res.data)
     width: 0.80rem;
     height: 0.80rem;
     border-radius: 50%;
-    background-image: url("//jy-info.qicp.vip/img/software/arrow-left.png");
+    background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
     background-size: cover;
     top: 28.55rem;
     left: 12.5%;
@@ -593,7 +593,7 @@ console.log(res.data)
     width: 0.80rem;
     height: 0.80rem;
     border-radius: 50%;
-    background-image: url("//jy-info.qicp.vip/img/software/arrow-left.png");
+    background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
     background-size: cover;
     transform: rotateY(180deg); /* 垂直镜像翻转 */
     top: 28.55rem;

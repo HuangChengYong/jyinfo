@@ -29,7 +29,7 @@
 /* 背景图二 */
 .devops .background_images_two {
   width: 100%;
-  background-image: url("//jy-info.qicp.vip/img/devops/devops_background_two.png");
+  background-image: url("https://www.jy-info.com/img/devops/devops_background_two.png");
   background-size: cover;
 }
 
@@ -103,7 +103,7 @@
   line-height: 1;
   text-align: center;
   padding-top: 1rem;
-  background: url("//jy-info.qicp.vip/img/devops/devops_background_two.png");
+  background: url("https://www.jy-info.com/img/devops/devops_background_two.png");
   background-size: cover;
   width: 100%;
   height: 10.8rem;

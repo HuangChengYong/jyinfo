@@ -2,7 +2,7 @@
   <div class="devops">
     <div class="devops_one">
       <jy-header/>
-      <img src="//jy-info.qicp.vip/img/devops/devops_background_one.png" alt="background_img_one" />
+      <img src="https://www.jy-info.com/img/devops/devops_background_one.png" alt="background_img_one" />
       <button>马上获取项目报价及方案</button>
     </div>
     <!-- 服务内容 -->
@@ -62,30 +62,30 @@
       <div class="title_div"></div>
       <div class="enterprise_icon">
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose1.png" alt="国泰君安证券">
+          <img src="https://www.jy-info.com/img/weak/choose1.png" alt="国泰君安证券">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose2.png" alt="水利部太湖流域管理局">
+          <img src="https://www.jy-info.com/img/weak/choose2.png" alt="水利部太湖流域管理局">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose3.png" alt="Techcode太库">
+          <img src="https://www.jy-info.com/img/weak/choose3.png" alt="Techcode太库">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose4.png" alt="农业部东海区渔政局">
+          <img src="https://www.jy-info.com/img/weak/choose4.png" alt="农业部东海区渔政局">
         </div>
       </div>
       <div class="enterprise_icon">
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose5.png" alt="十月妈咪">
+          <img src="https://www.jy-info.com/img/weak/choose5.png" alt="十月妈咪">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose6.png" alt="上海检察">
+          <img src="https://www.jy-info.com/img/weak/choose6.png" alt="上海检察">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose7.png" alt="武警第八支队">
+          <img src="https://www.jy-info.com/img/weak/choose7.png" alt="武警第八支队">
         </div>
         <div class="icon_border">
-          <img src="//jy-info.qicp.vip/img/weak/choose8.png" alt="上海临港软件园">
+          <img src="https://www.jy-info.com/img/weak/choose8.png" alt="上海临港软件园">
         </div>
       </div>
     </div>

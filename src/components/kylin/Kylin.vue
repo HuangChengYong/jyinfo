@@ -14,13 +14,13 @@
             <p class="div_content">Kyligence 提供统一融合的大数据平台。通过对接数据库、数据仓库、云端存储、大数据及流式数据源，并提供标准的 MDX 接口，IT 可以消除传统技术之上的数据孤岛，为业务提供统一的 Single source of truth，助力业务基于所有数据进行精准的业务决策。</p>
           </div>
           <div class="content_right">
-            <img src="//jy-info.qicp.vip/img/kylin/kylin_index_01.png" alt="kylin_index_01"/>
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_01.png" alt="kylin_index_01"/>
           </div>
         </div>
         <!-- 构建统一共享的业务逻辑统一定义，重复利用 -->
         <div class="content_02">
           <div class="content_left">
-            <img src="//jy-info.qicp.vip/img/kylin/kylin_index_02.png" alt="kylin_index_02"/>
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_02.png" alt="kylin_index_02"/>
           </div>
           <div class="content_right">
             <p class="div_title">构建统一共享的业务逻辑统一定义，重复利用</p>
@@ -36,7 +36,7 @@
             <p class="div_content">业务用户可以直接通过 BI工具使用 Kyligence语义层上统一定义的指标，而无需关心底层复杂的计算逻辑。</p>
           </div>
           <div class="content_right">
-            <img src="//jy-info.qicp.vip/img/kylin/kylin_index_03.gif" alt="kylin_index_03"/>
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_03.gif" alt="kylin_index_03"/>
           </div>
         </div>
         <!-- 从任意数据源获取最有价值数据 -->
@@ -70,7 +70,7 @@
         <!-- 为数据管理和分析构建一套可信的单一信源平台 -->
         <div class="content_06">
           <div class="content_left">
-            <img src="//jy-info.qicp.vip/img/kylin/kylin_index_06.png" alt="kylin_index_06"/>
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_06.png" alt="kylin_index_06"/>
           </div>
           <div class="content_right">
             <p class="div_title">为数据管理和分析构建一套可信的单一信源平台</p>
@@ -108,9 +108,9 @@ export default {
           fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
           sources: [{
             type: "",
-            src: "//jy-info.qicp.vip/img/kylin/kylin_index_04.mp4" //url地址
+            src: "https://www.jy-info.com/img/kylin/kylin_index_04.mp4" //url地址
           }],
-          poster: "//jy-info.qicp.vip/img/kylin/kylin_index_04.png", //你的封面地址
+          poster: "https://www.jy-info.com/img/kylin/kylin_index_04.png", //你的封面地址
           notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
           controlBar: {
             timeDivider: true,
@@ -130,9 +130,9 @@ export default {
           fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
           sources: [{
             type: "",
-            src: "//jy-info.qicp.vip/img/kylin/kylin_index_05.mp4" //url地址
+            src: "https://www.jy-info.com/img/kylin/kylin_index_05.mp4" //url地址
           }],
-          poster: "//jy-info.qicp.vip/img/kylin/kylin_index_05.png", //你的封面地址
+          poster: "https://www.jy-info.com/img/kylin/kylin_index_05.png", //你的封面地址
           notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
           controlBar: {
             timeDivider: true,

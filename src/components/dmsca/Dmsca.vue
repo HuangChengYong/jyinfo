@@ -49,7 +49,7 @@
         <p class="title_xhx"></p>
       </div>
       <div class="system_structure_content">
-        <img src="//jy-info.qicp.vip/img/dmsca/system_structure.png" alt="system_structure"/>
+        <img src="https://www.jy-info.com/img/dmsca/system_structure.png" alt="system_structure"/>
       </div>
     </div>
     <!-- 集成 SDLC Integrated SDLC -->
@@ -59,7 +59,7 @@
         <p class="title_xhx"></p>
       </div>
       <div class="integrated_SDLC_content">
-        <img src="//jy-info.qicp.vip/img/dmsca/integrated_SDLC.png" alt="integrated_SDLC"/>
+        <img src="https://www.jy-info.com/img/dmsca/integrated_SDLC.png" alt="integrated_SDLC"/>
       </div>
     </div>
     <!-- 底部 -->

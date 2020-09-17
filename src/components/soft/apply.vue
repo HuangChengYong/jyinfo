@@ -22,7 +22,7 @@
                 style="display: none"
                 class="upload_file1"
                 name="files"
-                action='http://192.168.1.10:8080/recruition/uploadFile/?senceCode=CV'
+                action='http://www.jy-info.com:8080/recruition/uploadFile/?senceCode=CV'
                 :on-success="handleSuccessCV"
                 :on-error="handlefaild"
                 :on-exceed="handleExceed"
@@ -45,7 +45,7 @@
                 class="upload_file2"
                 style="display: none"
                 name="files"
-                action='http://192.168.1.10:8080/recruition/uploadFile/?senceCode=attach'
+                action='http://www.jy-info.com:8080/recruition/uploadFile/?senceCode=attach'
                 :on-success="handleSuccessAttach"
                 :on-error="handlefaild"
                 :on-exceed="handleExceed"
