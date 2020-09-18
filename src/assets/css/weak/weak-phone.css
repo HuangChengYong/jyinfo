@@ -6,4 +6,20 @@
     width: auto;
     height: 6.5rem;
   }
+
+  /* 服务内容 */
+  .service .title_div {
+    margin: 0.26rem auto 0.2rem auto;
+  }
+  .service .content {
+    margin: 0.3rem;
+  }
+
+  /* 这些企业选择了甲悦 */
+  .choose_jy .enterprise_icon {
+    width: 7.7rem;
+  }
+  .choose_jy .icon_border {
+    margin: 0.3rem;
+  }
 }

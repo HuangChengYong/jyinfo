@@ -118,7 +118,7 @@
               <input class="form_description" v-model="form.description" placeholder="示例：我们是电商公司，想开发一款企业内部采购管理软件">
 
 
-              <button class="submit_report_button" type="submit" @click="onSubmit">立即提交你的需求</button>
+              <button class="submit_report_button" type="submit" @click.prevent="onSubmit">立即提交你的需求</button>
 
             </form>
           </div>

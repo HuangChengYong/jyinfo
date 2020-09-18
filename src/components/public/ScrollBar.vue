@@ -160,4 +160,14 @@ img {
   top: 3rem;
   right: 1.7rem;
 }
+
+
+@media screen and (max-width: 768px) {
+  #jy_scroll_bar ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -12.5rem;
+  }
+}
 </style>

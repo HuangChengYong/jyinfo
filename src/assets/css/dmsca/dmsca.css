@@ -30,7 +30,7 @@ img {
 
 #dmsca {
   padding: 0;
-  width: 19.2rem;
+  width: 100%;
   background-color: #EDF5FD;
 }
 /* 横幅图 */
@@ -132,7 +132,7 @@ img {
   padding-top: 1rem;
   background: linear-gradient(-57deg, #3B2866, #0E519E);
   background-size: cover;
-  width: 19.2rem;
+  width: 100%;
   height: 10.04rem;
   margin-top: 1.2rem;
 }

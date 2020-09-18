@@ -132,4 +132,19 @@ export default {
   text-decoration-line: none;
   color: #5A5E66;
 }
+
+
+@media screen and (max-width: 768px){
+  .hospital {
+    width: 100%;
+  }
+
+  .hospital .content {
+    width: 80%;
+  }
+
+  .content .text_content .hospital_image {
+    width: 100%;
+  }
+}
 </style>

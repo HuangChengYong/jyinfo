@@ -10,7 +10,7 @@ export default {
   mounted() {
     window.onresize = () => {
       window.location.reload()
-      window.scrollTo(0, 0)
+      window.scrollX = 0
     };
   }
 }

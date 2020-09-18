@@ -122,4 +122,14 @@ export default {
   text-decoration-line: none;
   color: #5A5E66;
 }
+
+@media screen and (max-width: 768px){
+  .community {
+    width: 100%;
+  }
+
+  .community .content {
+    width: 80%;
+  }
+}
 </style>

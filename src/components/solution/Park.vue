@@ -132,4 +132,18 @@ export default {
   text-decoration-line: none;
   color: #5A5E66;
 }
+
+@media screen and (max-width: 768px){
+  .park {
+    width: 100%;
+  }
+
+  .park .content {
+    width: 80%;
+  }
+
+  .content .text_content .park_image {
+    width: 100%;
+  }
+}
 </style>

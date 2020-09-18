@@ -131,4 +131,18 @@ export default {
   text-decoration-line: none;
   color: #5A5E66;
 }
+
+@media screen and (max-width: 768px){
+  .hotel {
+    width: 100%;
+  }
+
+  .hotel .content {
+    width: 80%;
+  }
+
+  .content .text_content .hotel_image {
+    width: 100%;
+  }
+}
 </style>

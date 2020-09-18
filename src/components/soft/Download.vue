@@ -46,7 +46,7 @@ export default {
 #download {
   margin: 0;
   padding: 0;
-  width: 19.2rem;
+  width: 100%;
 }
 
 /* 下载页横幅 */
@@ -80,7 +80,7 @@ export default {
 }
 /* 下载区域内容 */
 #download > .download_area > .area_content {
-  width: 14.4rem;
+  width: 82%;
   margin: 0.93rem auto 0;
 }
 
@@ -137,5 +137,50 @@ export default {
   font-family: Microsoft YaHei,sans-serif;
   font-weight: 300;
   color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 768px){
+
+  #download > .download_area {
+    height: 30rem;
+  }
+
+  #download > .download_area > .area_content {
+    width: 50%;
+    margin: 0.93rem auto 0;
+  }
+
+  #download > .download_area > .area_content > .content {
+    width: 5.28rem;
+    height: 2.88rem;
+    float: none;
+    margin-left: -0.46rem;
+    text-align: center;
+  }
+
+
+  #download > .download_area > .area_content > .content > .soft_icon > img{
+    width: 120%;
+    height: 120%;
+  }
+
+  #download > .download_area > .area_content > .content > .soft_name{
+    font-size: 0.4rem;
+  }
+
+  #download > .download_area > .area_content > .content > .soft_description{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 0.36rem;
+  }
+
+  #download > .download_area > .area_content > .content > .soft_download_button{
+    width: 1.58rem;
+    height: 0.55rem;
+    position: relative;
+    top: 2.25rem;
+  }
 }
 </style>

@@ -439,5 +439,51 @@
     border: none;
     border-radius:0.33rem;
   }
+
+
+
+@media screen and (max-width: 768px){
+  .apply_outline {
+    width: 100%;
+  }
+  .apply {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+  .apply_desc {
+    width: 100%;
+  }
+
+  .apply_enterprise_Name {
+    margin-bottom: 0.4rem ;
+  }
+  .apply_enterprise_bar_content {
+    display: block;
+    margin: 0.2rem auto;
+  }
+
+  .apply_desc .apply_cutline {
+    margin-top: 1.15rem;
+  }
+
+  .apply_form_outline {
+    width: 100%;
+  }
+
+  .apply_form_outline .apply_cutline {
+    margin-top: 0.32rem;
+  }
+
+
+  .apply_for_upload_attach_format{
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .apply_submit_buttons {
+    margin: 4rem 0 0 28%;
+  }
+}
 </style>
 
