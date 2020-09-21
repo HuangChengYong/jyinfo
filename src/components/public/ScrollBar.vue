@@ -26,6 +26,7 @@ export default {
   },
   data () {
     return {
+      init_width: 770
     }
   },
   methods: {
@@ -35,13 +36,14 @@ export default {
       let scroll_ul = scroll_area.getElementsByTagName('ul')[0];
       let scroll_li = scroll_ul.getElementsByTagName('li');
       scroll_ul.innerHTML =  scroll_ul.innerHTML + scroll_ul.innerHTML;
-      let li_width = (scroll_li[0].offsetWidth + 80);
+      let li_width = (scroll_li[0].offsetWidth + 0.8 * 100);
+      let that = this;
       scroll_ul.style.width = li_width * scroll_li.length + 'px';
       function leftScroll() {
         if ( scroll_ul.offsetLeft <  -(scroll_li.length/2 - 1) * li_width) {
-          scroll_ul.style.left = '-7.7rem';
+          scroll_ul.style.left = - that.init_width / 100 + 'rem'
         } else {
-          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - 770) / li_width + 1) );
+          scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - that.init_width) / li_width + 1) );
         }
       }
       let myTimer = setInterval( leftScroll,6000 )
@@ -57,7 +59,7 @@ export default {
         // 最后一个li居中展示
         if ( scroll_ul.offsetLeft < -li_width) {
           if ( scroll_ul.offsetLeft > -li_width*2 ) {
-            scroll_ul.style.left = '-7.7rem'
+            scroll_ul.style.left = - that.init_width / 100 + 'rem'
           } else {
             scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / li_width));
           }
@@ -66,7 +68,7 @@ export default {
         }
       }
       function CalculateLeft(index) {
-        return -((index - 1) * 1180 + 770) / 100 + 'rem';
+        return -((index - 1) * li_width + that.init_width) / 100 + 'rem';
       }
     }
   },
@@ -167,7 +169,18 @@ img {
     width: 100%;
     height: 100%;
     position: relative;
-    left: -12.5rem;
+    left: -12rem;
+  }
+
+  #jy_scroll_bar #left_arrow {
+    position: relative;
+    top: -3.9rem;
+    left: -8rem;
+  }
+  #jy_scroll_bar #right_arrow {
+    position: relative;
+    top: -3.9rem;
+    left: 1.3rem;
   }
 }
 </style>
