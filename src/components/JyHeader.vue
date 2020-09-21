@@ -2,7 +2,7 @@
   <div class="jy_navbar">
     <div class="nav_content">
       <div class="nav_logo">
-        <img class="nav_logo_img" src="https://www.jy-info.com/img/jyinfo_logo.png" alt="jyinfo_logo">
+        <img src="https://www.jy-info.com/img/logo.png" alt="logo">
       </div>
       <div class="nav_list">
         <ul>
@@ -194,7 +194,7 @@ ol, ul, li {
   display: flex;
   align-items: center;
 }
-.jy_navbar > .nav_content > .nav_logo > .nav_logo_img {
+.jy_navbar > .nav_content > .nav_logo > img {
   width: 100%;
   height: 0.38rem;
 }

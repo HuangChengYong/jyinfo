@@ -54,14 +54,13 @@ img {
   width: 100%;
 }
 .content_01 > .div_content {
-  width: 14rem;
-  height: 6.3rem;
+  width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0.01rem 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
   margin-top: 0.6rem;
 }
 .content_01 > .div_content > p {
-  width: 13.32rem;
+  width: 95%;
   font-size: 0.26rem;
   font-weight: 300;
   font-family: Microsoft YaHei, sans-serif;
@@ -70,6 +69,7 @@ img {
   letter-spacing: 0.0088rem;
   margin: 0 auto;
   padding-top: 0.4rem;
+  text-indent: 2em;
 }
 .content_01 > .div_content > p:first-child {
   padding-top: 0.5rem;

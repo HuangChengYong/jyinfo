@@ -9,6 +9,7 @@ export default {
   name: 'App',
   mounted() {
     window.onresize = () => {
+      window.scrollX = 0
       window.location.reload()
       window.scrollX = 0
     };

@@ -27,8 +27,8 @@
           <div class="features">
             <div class="feature_div" v-for="(item, index) in dmscaFeatureList" :key="index">
               <img class="feature_icon" :src="item.featureIcon" :alt="item.featureName" />
-              <span class="feature_name">{{ item.featureName }}</span><br/>
-              <span class="feature_detail">{{ item.featureDetail }}</span>
+              <span class="feature_name">{{item.featureName}}</span><br/>
+              <span class="feature_detail">{{item.featureDetail}}</span>
             </div>
           </div>
         </div>
@@ -94,4 +94,5 @@ export default {
 
 <style scoped>
 @import "../../assets/css/dmsca/dmsca.css";
+@import "../../assets/css/dmsca/dmsca-xs.css";
 </style>

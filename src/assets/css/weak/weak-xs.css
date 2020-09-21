@@ -1,0 +1,44 @@
+@media screen and (max-width:750px) {
+  .weak .background_images_one {
+    width: 100%;
+    height: 6rem;
+    background-size:100% 100%;
+  }
+  .background_images_one > .headline {
+    font-size: 0.64rem;
+  }
+  .background_images_one > .subhead {
+    font-size: 0.24rem;
+  }
+
+  /* 介绍 */
+  .introduction {
+    width: 3.5rem;
+  }
+  .introduction >.images_div {
+    float: none;
+  }
+  .introduction >.content_div {
+    float: none;
+  }
+
+  /* 服务内容 */
+  .service {
+    width: 8rem;
+    margin: 0 auto;
+  }
+  .service .title_div {
+    margin: 0.26rem auto 0.2rem auto;
+  }
+  .service .content {
+    margin: 0.4rem;
+  }
+
+  /* 这些企业选择了甲悦 */
+  .choose_jy .enterprise_icon {
+    width: 8.15rem;
+  }
+  .choose_jy .icon_border {
+    margin: 0.4rem;
+  }
+}

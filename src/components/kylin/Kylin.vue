@@ -19,13 +19,13 @@
         </div>
         <!-- 构建统一共享的业务逻辑统一定义，重复利用 -->
         <div class="content_02">
-          <div class="content_left">
-            <img src="https://www.jy-info.com/img/kylin/kylin_index_02.png" alt="kylin_index_02"/>
-          </div>
           <div class="content_right">
             <p class="div_title">构建统一共享的业务逻辑统一定义，重复利用</p>
             <p class="div_content">Kyligence 帮助 IT 将业务熟知的维度、度量、层级结构等定义通过统一的语义层同步到主流 BI 工具中，实现业务语义的统一和复用。</p>
             <p class="div_content">Kyligence业务语义层支持 Tableau, Excel 及 Power BI。</p>
+          </div>
+          <div class="content_left">
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_02.png" alt="kylin_index_02"/>
           </div>
         </div>
         <!-- 统一的时间智能指标助力业务轻松洞察业绩 -->
@@ -41,16 +41,16 @@
         </div>
         <!-- 从任意数据源获取最有价值数据 -->
         <div class="content_04">
+          <div class="content_right">
+            <p class="div_title">从任意数据源获取最有价值数据</p>
+            <p class="div_content">Kyligence &nbsp;可以对接丰富的数据源，支持从多种数据存储系统加载数据，并进行统一管理和加速，如关系型数据库、MPP 数据库、数据湖、云等。Kyligence 还提供智能的查询路由能力，根据查询场景选择最合适的索引和执行引擎。</p>
+          </div>
           <div class="content_left">
             <video-player class="video-player vjs-custom-skin"
                           ref="videoPlayer"
                           :playsinline="true"
                           :options="playerOptions[0]">
             </video-player>
-          </div>
-          <div class="content_right">
-            <p class="div_title">从任意数据源获取最有价值数据</p>
-            <p class="div_content">Kyligence &nbsp;可以对接丰富的数据源，支持从多种数据存储系统加载数据，并进行统一管理和加速，如关系型数据库、MPP 数据库、数据湖、云等。Kyligence 还提供智能的查询路由能力，根据查询场景选择最合适的索引和执行引擎。</p>
           </div>
         </div>
         <!-- AI 增强引擎全程助力分析 -->
@@ -69,13 +69,13 @@
         </div>
         <!-- 为数据管理和分析构建一套可信的单一信源平台 -->
         <div class="content_06">
-          <div class="content_left">
-            <img src="https://www.jy-info.com/img/kylin/kylin_index_06.png" alt="kylin_index_06"/>
-          </div>
           <div class="content_right">
             <p class="div_title">为数据管理和分析构建一套可信的单一信源平台</p>
             <p class="div_content">Kyligence 的 AI 增强的数据平台为分析师和业务用户提供统一的、经过整合及优化的全局数据视图。</p>
             <p class="div_content">通过 SQL、MDX 及 Rest API 等多种接口，无缝对接各类主流 BI 产品，业务用户可以继续使用自己习惯的 BI 产品。</p>
+          </div>
+          <div class="content_left">
+            <img src="https://www.jy-info.com/img/kylin/kylin_index_06.png" alt="kylin_index_06"/>
           </div>
         </div>
       </div>
@@ -154,4 +154,5 @@ export default {
 
 <style scoped>
 @import "../../assets/css/kylin/kylin.css";
+@import "../../assets/css/kylin/kylin-xs.css";
 </style>

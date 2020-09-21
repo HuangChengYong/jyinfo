@@ -36,4 +36,12 @@ name: "JyFooter"
   font-weight: bold;
   color: #FFFFFF;
 }
+
+
+@media screen and (max-width: 768px) {
+  /* 底部ICP */
+  .jy_icp {
+    width: 100%;
+  }
+}
 </style>
