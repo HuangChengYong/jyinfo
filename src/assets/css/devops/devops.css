@@ -1,6 +1,7 @@
 .devops {
   width: 100%;
   background-color: #EDF5FD;
+  overflow: hidden;
 }
 .devops .devops_one {
   width: 100%;

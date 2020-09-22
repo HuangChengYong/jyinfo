@@ -9,11 +9,20 @@ export default {
   name: 'App',
   mounted() {
     window.onresize = () => {
-      window.scrollX = 0
       window.location.reload()
-      window.scrollX = 0
     };
   }
+}
+/* 禁止IOS端缩放页面 */
+window.onload = function() {
+  document.addEventListener('touchstart', function(event) {
+    if (event.touches.length > 1) {
+      event.preventDefault()
+    }
+  })
+  document.addEventListener('gesturestart', function(event) {
+    event.preventDefault()
+  })
 }
 </script>
 <style>

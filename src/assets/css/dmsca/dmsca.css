@@ -32,6 +32,7 @@ img {
   padding: 0;
   width: 100%;
   background-color: #EDF5FD;
+  overflow: hidden;
 }
 /* 横幅图 */
 #dmsca .dmsca_banner {

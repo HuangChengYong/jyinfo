@@ -49,6 +49,7 @@ export default {
   padding: 0;
   line-height: 1;
   width: 19.2rem;
+  overflow: hidden;
 }
 .hotel .jy_header {
   width: 100%;

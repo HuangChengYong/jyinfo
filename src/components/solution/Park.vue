@@ -50,6 +50,7 @@ export default {
   padding: 0;
   line-height: 1;
   width: 19.2rem;
+  overflow: hidden;
 }
 .park .jy_header {
   width: 100%;

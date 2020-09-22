@@ -47,6 +47,7 @@ export default {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 /* 下载页横幅 */

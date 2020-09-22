@@ -12,35 +12,38 @@
   }
 
   /* 介绍 */
-  .introduction {
-    width: 10.8rem !important;
-    height: 10rem !important;
+  .introduction_service .introduction {
+    width: 9.2rem;
+    height: 10.6rem;
+    box-shadow:0 0.1rem 0.24rem 0 rgba(29,36,85,0.1);
   }
-  .introduction >.images_div {
-    float: none !important;
+  .introduction_service .introduction >.images_div {
+    float: none;
     margin: 0 auto;
   }
 
   .introduction > .images_div > .introduction_images {
     width: 100%;
     height: 100%;
-    margin: 0.6rem 0 0;
+    margin: 0.9rem 0 0;
+    box-shadow:0 0.1rem 0.24rem 0 rgba(29,36,85,0.1);
   }
 
-  .introduction >.content_div {
-    float: none !important;
-    width: 100% !important;
+  .introduction_service .introduction >.content_div {
+    float: none;
+    width: 100%;
   }
 
-  .introduction .introduction_title {
+  .introduction_service .introduction .introduction_title {
     line-height: 0.8rem;
-    margin: 0.6rem auto 0!important;
+    margin: 0.2rem auto 0;
   }
 
-  .introduction .introduction_content {
-    width: 90% !important;
-    margin: 0 auto !important;
+  .introduction_service .introduction .introduction_content {
+    width: 88%;
+    margin: 0.5rem auto 0;
     line-height: 0.66rem;
+    text-indent: 2em;
   }
 
   /* 服务内容 */
@@ -63,11 +66,59 @@
     height: 1.6rem;
   }
 
-
   /* 10+经验行业案例 */
   .industry_case {
     width: 100%;
     background-size: 100% 100%;
+  }
+
+  /* 解决方案 */
+  .solution {
+    width: 100%;
+    height: 11.77rem;
+  }
+
+  .solution .solution_content {
+    width: 10.8rem;
+    height: auto;
+  }
+  /* 楼宇 building */
+  .solution .solution_content .building {
+    width: 4.5rem;
+    height: 6rem;
+    margin: 0 0 0 0.6rem;
+  }
+  .solution .solution_content .building .solution_image {
+    width: 4.5rem;
+    height: 6rem;
+  }
+  .solution .solution_content .building .mask {
+    width: 4.5rem;
+    height: 6rem;
+  }
+  .solution .solution_content > .building .solution_content_div {
+    margin: 2.28rem 0 0 1.1rem;
+  }
+  /* 酒店 hotel */
+  .solution .solution_content .hotel {
+    margin: 0 0 0 0.6rem;
+  }
+  /* 医院 hospital */
+  .solution .solution_content .hospital {
+    margin: 0.4rem 0 0 0.6rem;
+  }
+  /* 社区 community */
+  .solution .solution_content .community {
+    margin: 0.4rem 0 0 0.6rem;
+  }
+  /* 园区 park */
+  .solution .solution_content .park {
+    margin: 0.4rem 0 0 0.6rem;
+  }
+  /* 解决方案——icon */
+  .solution .solution_content .solution_content_div .solution_icon {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 
   /* 这些企业选择了甲悦 */

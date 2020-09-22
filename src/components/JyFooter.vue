@@ -39,6 +39,10 @@ name: "JyFooter"
 
 
 @media screen and (max-width: 768px) {
+  .jy_bottom {
+    width: 100%;
+  }
+
   /* 底部ICP */
   .jy_icp {
     width: 100%;
