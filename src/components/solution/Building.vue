@@ -100,6 +100,7 @@ export default {
   line-height: 0.34rem;
   letter-spacing: 0.01rem;
   margin-bottom: 0.25rem;
+  text-indent: 2em;
 }
 /* 智慧楼宇 */
 .content .text_content .building_image {
@@ -143,6 +144,11 @@ export default {
 
   .content .text_content .building_image {
     width: 100%;
+    height: 100%;
+  }
+
+  .content .text_content p {
+    line-height: 0.66rem;
   }
 }
 </style>

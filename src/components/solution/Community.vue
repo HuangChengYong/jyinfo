@@ -101,6 +101,7 @@ export default {
   line-height: 0.34rem;
   letter-spacing: 0.01rem;
   margin-bottom: 0.25rem;
+  text-indent: 2em;
 }
 
 /* 面包屑导航 */
@@ -130,6 +131,10 @@ export default {
 
   .community .content {
     width: 80%;
+  }
+
+  .content .text_content p {
+    line-height: 0.66rem;
   }
 }
 </style>

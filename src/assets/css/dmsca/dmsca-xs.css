@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px) {
+  /* 内容区域 */
+  .content_area {
+    width: 100%;
+  }
+  .content_area > .content {
+    width: 10.8rem;
+  }
+
+  /* 企业级源代码安全扫描分析服务平台-DMSCA */
+  .content_01 {
+    width: 10.8rem;
+    height: 100%;
+  }
+
+  /* 主要功能及特性 */
+  .content_02 > .features .feature_name {
+    /*background-color: #4cae4c;*/
+  }
+
+  /* 系统架构 */
+  .system_structure .system_structure_content {
+    width: 10.8rem;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
+    margin: 0 auto;
+  }
+  .system_structure .system_structure_content img {
+    width: 95%;
+    height: 95%;
+    margin: 0.4rem 0.2rem;
+  }
+
+  /* 集成 SDLC */
+  .integrated_SDLC .integrated_SDLC_content {
+    width: 10.8rem;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0 0.1rem 0.24rem 0 rgba(29, 36, 85, 0.1);
+    margin: 0 auto;
+  }
+  .integrated_SDLC .integrated_SDLC_content img {
+    width: 95%;
+    height: 95%;
+    margin: 0.4rem 0.2rem;
+  }
+
+  /* 企业级源代码安全扫描分析服务平台-DMSCA 段落部分css*/
+  .div_content p {
+    line-height: 0.66rem !important;
+  }
+
+  /* 主要功能 详情部分css */
+  .features .feature_div .feature_detail {
+    line-height: 0.66rem;
+  }
+}

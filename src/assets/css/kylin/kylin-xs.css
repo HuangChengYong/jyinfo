@@ -1,0 +1,51 @@
+@media screen and (max-width: 768px) {
+  .content_area {
+    width: 100%;
+  }
+
+  .content {
+    width: 10.8rem;
+  }
+
+  .content > .content_01,
+  .content > .content_02,
+  .content > .content_03,
+  .content > .content_04,
+  .content > .content_05,
+  .content > .content_06 {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  .content > .content_01 > .content_left,
+  .content > .content_02 > .content_left,
+  .content > .content_03 > .content_left,
+  .content > .content_04 > .content_left,
+  .content > .content_05 > .content_left,
+  .content > .content_06 > .content_left {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  .content > .content_01 > .content_right,
+  .content > .content_02 > .content_right,
+  .content > .content_03 > .content_right,
+  .content > .content_04 > .content_right,
+  .content > .content_05 > .content_right,
+  .content > .content_06 > .content_right {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-top: 0.2rem;
+  }
+
+  .content > .content_03 > .content_right {
+    width: 16rem;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: -2.6rem;
+  }
+}

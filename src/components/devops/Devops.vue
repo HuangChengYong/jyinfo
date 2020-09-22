@@ -129,5 +129,5 @@ export default {
 
 <style scoped>
 @import "../../assets/css/devops/devops.css";
-@import "../../assets/css/devops/xs-devops.css";
+@import "../../assets/css/devops/devops-xs.css";
 </style>

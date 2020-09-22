@@ -1,0 +1,82 @@
+@media screen and (max-width:750px) {
+  .weak .background_images_one {
+    width: 100%;
+    height: 6rem;
+    background-size:100% 100%;
+  }
+  .background_images_one > .headline {
+    font-size: 0.64rem;
+  }
+  .background_images_one > .subhead {
+    font-size: 0.24rem;
+  }
+
+  /* 介绍 */
+  .introduction {
+    width: 10.8rem !important;
+    height: 10rem !important;
+  }
+  .introduction >.images_div {
+    float: none !important;
+    margin: 0 auto;
+  }
+
+  .introduction > .images_div > .introduction_images {
+    width: 100%;
+    height: 100%;
+    margin: 0.6rem 0 0;
+  }
+
+  .introduction >.content_div {
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .introduction .introduction_title {
+    line-height: 0.8rem;
+    margin: 0.6rem auto 0!important;
+  }
+
+  .introduction .introduction_content {
+    width: 90% !important;
+    margin: 0 auto !important;
+    line-height: 0.66rem;
+  }
+
+  /* 服务内容 */
+  .service {
+    width: 10.8rem;
+    margin: 0 auto;
+  }
+
+  .service .title_div {
+    margin: 0.26rem auto 0.2rem auto;
+  }
+  .service .content {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.56rem;
+  }
+
+  .service .content img{
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+
+  /* 10+经验行业案例 */
+  .industry_case {
+    width: 100%;
+    background-size: 100% 100%;
+  }
+
+  /* 这些企业选择了甲悦 */
+  .choose_jy .enterprise_icon {
+    width: 10.8rem;
+  }
+  .choose_jy .icon_border {
+    width: 4.8rem;
+    height: 1.8rem;
+    margin: 0.4rem 0.272rem;
+  }
+}

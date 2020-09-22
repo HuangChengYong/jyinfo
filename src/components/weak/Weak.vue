@@ -208,5 +208,5 @@ export default {
 
 <style scoped>
 @import "../../assets/css/weak/weak.css";
-@import "../../assets/css/weak/weak-phone.css";
+@import "../../assets/css/weak/weak-xs.css";
 </style>

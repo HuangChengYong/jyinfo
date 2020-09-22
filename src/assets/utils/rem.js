@@ -12,7 +12,7 @@ function setRem() {
     }
   }
   if (pageWidth <= 750) {
-    const baseSize = 42
+    const baseSize = 30
     // 当前页面宽度小于等于750px的缩放比例，可根据自己需要修改。
     const scale = document.documentElement.clientWidth / pageWidth
     // 设置页面根节点字体大小

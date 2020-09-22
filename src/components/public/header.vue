@@ -3,7 +3,7 @@
     <nav id="jy_nav" class="row navbar navbar-default navbar-fixed-top">
       <div class="col-md-1 col-lg-1 "></div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 jy_nav_logo">
-        <img src="https://www.jy-info.com/img/jyinfo_logo.png" alt="logo">
+        <img src="https://www.jy-info.com/img/logo.png" alt="logo">
       </div>
       <div class="col-xs-6 col-sm-9 col-md-1 col-lg-2 "></div>
       <div class="hidden-xs hidden-sm col-md-8 col-lg-7 jy_nav_list container">

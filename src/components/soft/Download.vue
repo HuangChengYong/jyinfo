@@ -143,26 +143,32 @@ export default {
 @media screen and (max-width: 768px){
 
   #download > .download_area {
-    height: 30rem;
+    width: 10.8rem;
+    height: auto;
+    margin: 1.2rem auto 2rem;
   }
 
   #download > .download_area > .area_content {
-    width: 50%;
     margin: 0.93rem auto 0;
   }
 
   #download > .download_area > .area_content > .content {
-    width: 5.28rem;
-    height: 2.88rem;
+    width: 7.6rem;
+    height: 3.9rem;
     float: none;
-    margin-left: -0.46rem;
+    margin: 2rem auto 0;
     text-align: center;
   }
 
+  #download > .download_area > .area_content > .content > .soft_icon {
+    width: 1rem;
+    height: 1rem;
+    margin: -0.54rem auto 0;
+  }
 
   #download > .download_area > .area_content > .content > .soft_icon > img{
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
   }
 
   #download > .download_area > .area_content > .content > .soft_name{
@@ -177,10 +183,10 @@ export default {
   }
 
   #download > .download_area > .area_content > .content > .soft_download_button{
-    width: 1.58rem;
-    height: 0.55rem;
+    width: 2.37rem;
+    height: 0.825rem;
     position: relative;
-    top: 2.25rem;
+    top: 2.98rem;
   }
 }
 </style>
