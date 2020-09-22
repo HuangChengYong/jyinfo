@@ -86,7 +86,7 @@
   .solution .solution_content .building {
     width: 4.5rem;
     height: 6rem;
-    margin: 0 0 0 0.6rem;
+    margin: 0 0 0 0.58rem;
   }
   .solution .solution_content .building .solution_image {
     width: 4.5rem;
@@ -109,7 +109,7 @@
   }
   /* 社区 community */
   .solution .solution_content .community {
-    margin: 0.4rem 0 0 0.6rem;
+    margin: 0.4rem 0 0 0.58rem;
   }
   /* 园区 park */
   .solution .solution_content .park {
@@ -126,8 +126,8 @@
     width: 10.8rem;
   }
   .choose_jy .icon_border {
-    width: 4.8rem;
-    height: 1.8rem;
-    margin: 0.4rem 0.272rem;
+    width: 4.5rem;
+    height: 2.1rem;
+    margin: 0.4rem 0.42rem;
   }
 }
