@@ -339,4 +339,119 @@
   .position_apply:hover a{
     -webkit-text-fill-color: white;
   }
+
+  @media  screen and (max-width: 768px) {
+    .recruitment_search_box{
+      width: 85%;
+      height: 0.6rem;
+      padding: 0 0;
+      border: none;
+    }
+
+    .details_bar_content{
+      height: 0.26rem;
+      font-size: 0.26rem;
+      line-height: 0.26rem;
+      font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      margin-right: 0.81rem;
+      padding: 0;
+      border: none;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+
+
+    .recruitment_groups_details_bar{
+      height: 0.86rem;
+      padding-left: 0;
+      color: rgba(90,94,102,1);
+    }
+
+    .recruitment_groups_view{
+      width: 0.6rem;
+      height: 0.3rem;
+      display: block;
+      left: 86.1%;
+      background: url("https://www.jy-info.com/img/software/recruitment_groups_view.png");
+      background-size: 0.6rem 0.3rem;
+
+    }
+
+    .recruitment_groups_details_content{
+      width: 6.25rem;
+      margin-bottom: 0.6rem;
+
+    }
+
+    .recruitment_groups_details_desc{
+     margin-bottom: 1.0rem;
+      padding-right: 0.2rem;
+    }
+
+    .recruitment_groups_details_des_content{
+      width: 5.55rem;
+      font-size: 0.16rem;
+      font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      display: block;
+      float: right;
+      color: rgba(90,94,102,1);
+    }
+
+    .position_apply {
+      width: 2.40rem;
+      height: 0.70rem;
+      border-radius: 0.35rem;
+      margin: 1.2rem 1.6rem 0rem;
+      border:0.02rem solid rgba(227,90,104,1);
+      background:linear-gradient(-45deg,rgba(253,126,130,1),rgba(253,176,144,1));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .position_apply .position_apply_link{
+      width:1.07rem;
+      height:0.26rem;
+      font-size:0.26rem;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(90,94,102,1);
+      background:linear-gradient(-45deg, rgba(253,126,130,1) 0%,rgba(253,176,144,1) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .position_apply:hover  {
+      width: 2.40rem;
+      height: 0.70rem;
+      border: 0.02rem solid rgba(227,90,104,1);
+      border-radius: 0.35rem;
+      font-size: 0.26rem;
+      font-family: Microsoft YaHei Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      border:none;
+      margin: auto;
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+    }
+
+    .position_apply:hover a{
+      -webkit-text-fill-color: white;
+    }
+
+    .recruitment_groups_details_symble_outbox{
+      width: 0.3rem;
+
+    }
+
+    .recruitment_groups_details_symble{
+      width: 70%;
+      height: 0.01rem;
+      margin-right: 0.17rem;
+
+      display: inline-block;
+    }
+
+  }
 </style>
