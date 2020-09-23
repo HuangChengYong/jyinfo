@@ -657,7 +657,7 @@ console.log(res.data)
   .process_content {
     width: 100%;
     margin: auto auto;
-    padding-bottom: 0.60rem;
+    padding-bottom: 2.80rem;
   }
   .process_top_outline {
     margin-top: 0.60rem;
@@ -670,21 +670,22 @@ console.log(res.data)
     height: 2.92rem;
     margin-right: 0.40rem;
     float: left;
-
-
+    padding-bottom: 4rem;
   }
 
   .process_below_outline {
     background-color: transparent;
     margin-left: 4.39rem;
+
   }
 
   .process_below {
     width: 3.20rem;
     height: 2.92rem;
-    margin-top: 0.60rem;
+    margin-top: 0.10rem;
     margin-right: 0.40rem;
     float: left;
+    padding-bottom: 4.3rem;
   }
 
   .submit_report {
@@ -694,7 +695,6 @@ console.log(res.data)
     top: 7.65rem;
     left: 13.5%;
     background: rgba(255,255,255,1);
-
     box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
     position: relative;
   }
@@ -727,6 +727,7 @@ console.log(res.data)
   .form_content {
     top: 1.72rem;
     left: 0.20rem;
+    padding-right: 0.8rem;
     position: absolute;
   }
 
@@ -803,13 +804,13 @@ console.log(res.data)
 
 
     .soft > .head_Top > .scheme {
-      width: 46.8%;
+      width: 31.0%;
       height: 0.80rem;
       position: absolute;
       top: 5.0rem;
       left: 7.2%;
       border-radius: 0.40rem;
-      font-size: 0.06rem;
+      font-size: 0.3rem;
       color: #FFFFFF;
       background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
       border: none;
@@ -837,7 +838,7 @@ console.log(res.data)
       width: auto;
       position: relative;
       padding-bottom: 2.26rem;
-      left: 45%;
+      left: 52%;
 
     }
 
@@ -852,7 +853,7 @@ console.log(res.data)
     .content_index03_content .link-right {
       width: 4.00rem;
       height: 0.30rem;
-      font-size: 0.01rem;
+      font-size: 0.26rem;
       border: none;
       margin-top: 0.34rem;
       margin-bottom: 0;
@@ -862,15 +863,15 @@ console.log(res.data)
       font-weight: 200;
       display: inline-block;
       color: rgba(255,255,255,1);
-      margin-left: 0.10rem
+      margin-left: 0.20rem
     }
 
     .query{
       width: 2.40rem;
       height: 0.70rem;
       margin-top: 3.04rem;
-      margin-left: 0.35rem;
-      font-size: 0.16rem;
+      margin-left: 0.6rem;
+      font-size: 0.26rem;
       font-family: Microsoft YaHei,sans-serif;
       font-weight: 500;
       color: rgba(255,255,255,1);
@@ -901,7 +902,7 @@ console.log(res.data)
     border-radius: 50%;
     background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
     background-size: cover;
-    top: 33.55rem;
+    top: 34.15rem;
     left: 10.1%;
     border: none;
     position: absolute;
@@ -914,7 +915,7 @@ console.log(res.data)
       background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
       background-size: cover;
       transform: rotateY(180deg); /* 垂直镜像翻转 */
-      top: 33.55rem;
+      top: 34.15rem;
       left: 83.4%;
       position: absolute;
       border: none;
@@ -922,26 +923,27 @@ console.log(res.data)
 
     .soft_service{
       width: 76.92%;
-      height: 5.80rem;
+
       margin-left: 1.6rem;
       margin-top: 0.60rem;
-      margin-bottom: 5.4rem;
+      margin-bottom: 5.8rem;
+
     }
 
     .soft_design {
       width: 46.86%;
-      height: 5.10rem;
+      height: 4.00rem;
       background: rgba(255,255,255,1);
       box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
       float: left;
       margin-right: 0.29rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.39rem;
     }
 
     .soft_design > img {
       width: 2.44rem;
       height: 1.98rem;
-      margin:0.30rem 0.94rem 0.19rem;
+      margin:0.30rem 0.94rem 0.12rem;
     }
 
     .soft_design_name {
@@ -953,7 +955,7 @@ console.log(res.data)
       text-align: center;
       display: inline-block;
       padding: 0 0 ;
-      margin-bottom:0.27rem;
+      margin-bottom:0.02rem;
       vertical-align: bottom;
       color: rgba(44,46,51,1);
 
@@ -961,15 +963,12 @@ console.log(res.data)
 
     .soft_design_content {
       width: 100%;
-      height: 0.5rem;
-      font-size: 0.06rem !important;
+      font-size: 0.22rem !important;
       font-family: Microsoft YaHei,sans-serif;
       font-weight: 400;
       color: rgba(90,94,102,1);
-      text-align: left;
-
-      display: inline;
-
+      text-align: center;
+      display: inline-block;
     }
 
     .content_index04 {
@@ -981,40 +980,44 @@ console.log(res.data)
     /*严控流程 高质量服务*/
     .process_content {
       width: 100%;
-      margin: 0 auto;
-      padding-bottom: 8.80rem;
+      margin: 0 auto 1.8rem;
+      padding-bottom: 8.0rem;
     }
     .process_top_outline {
       margin-top: 0.80rem;
-      margin-left: 2.60rem;
+      margin-left: 2.00rem;
 
     }
     .process_top {
 
-      width: 3.20rem;
+      width: 4.0rem;
+      height: 3.5rem;
       margin-right: 0.40rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       float: left;
     }
 
     .process_below_outline {
       background-color: transparent;
-      margin-left: 2.60rem;
+      margin-left: 2.00rem;
+
     }
 
     .process_below {
-      width: 3.20rem;
-
-
-      margin-right: 0.40rem;
-      margin-bottom: 0.5rem;
+      width: 4.0rem;
+      height: 3.5rem;
+      margin-right: 0.40rem !important;
+      margin-bottom: 0.1rem;
       float: left;
     }
 
 
-    .grapic  /deep/ .hexagon_despo_content {
-      font-size: 0.16rem;
+    .hexagon /deep/ .hexagon_despo_content{
+      font-size: 0.21rem !important;
+      line-height: 0.36rem;
+
     }
+
 
     .form_title{
       top: 0.42rem;

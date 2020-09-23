@@ -56,3 +56,60 @@
 .hexagon .hexagon_content .hexagon_span {
   margin: 0.06rem;
 }
+
+
+@media screen and (max-width: 768px) {
+  .hexagon {
+    width: 4.14rem;
+    height: 3.504rem;
+  }
+  .hexagon .hexagon_left {
+    width: 1.11rem;
+    height: 3.504rem;
+    border-top: 1.752rem solid transparent;
+    border-right: 1.11rem solid rgba(255,255,255,1);
+    border-bottom: 1.752rem solid transparent;
+  }
+  .hexagon .hexagon_center {
+    width: 1.752rem;
+    height: 3.504rem;
+  }
+  .hexagon .hexagon_right {
+    width: 1.11rem;
+    height: 3.504rem;
+    border-top: 1.752rem solid transparent;
+    border-left: 1.11rem solid rgba(255,255,255,1);
+    border-bottom: 1.752rem solid transparent;
+  }
+
+  .hexagon .hexagon_content {
+    position: relative;
+    width: 3.864rem;
+    height: 3.528rem;
+    text-align: center;
+    top: -3.264rem;
+    font-family:Microsoft YaHei,serif;
+  }
+  .hexagon .hexagon_content img {
+    position: relative;
+    width: 0.96rem;
+    height: 0.96rem;
+  }
+  .hexagon .hexagon_content .hexagon_title {
+    font-size: 0.264rem;
+    font-weight: 400;
+    color: #2C2E33;
+    margin: 0 0 0.228rem;
+  }
+  .hexagon .hexagon_content span {
+    position: relative;
+    display: block;
+    color: #5A5E66;
+    font-size: 0.24rem;
+    font-weight: 300;
+  }
+
+  .hexagon .hexagon_content .hexagon_span {
+    margin: 0.072rem;
+  }
+}
