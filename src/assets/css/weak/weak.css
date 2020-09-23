@@ -6,6 +6,7 @@ a:hover {
 .weak {
   width: 100%;
   background-color: #EDF5FD;
+  overflow: hidden;
 }
 .background_images_one {
   width: 100%;

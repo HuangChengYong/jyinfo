@@ -26,40 +26,44 @@ export default {
   },
   data () {
     return {
-      init_width: 770
+      init_width: 770,
+      current_rem: 100,
     }
   },
   methods: {
     scrollBar() {
+      let that = this;
+      // 定时器 间隔时长
+      let timeout = 6000;
       /* 获取滚动区域 */
       let scroll_area = document.getElementById('jy_scroll_bar');
       let scroll_ul = scroll_area.getElementsByTagName('ul')[0];
       let scroll_li = scroll_ul.getElementsByTagName('li');
       scroll_ul.innerHTML =  scroll_ul.innerHTML + scroll_ul.innerHTML;
-      let li_width = (scroll_li[0].offsetWidth + 0.8 * 100);
-      let that = this;
+      // 移动距离 （div + div之间间隔距离 总和）
+      let li_width = (scroll_li[0].offsetWidth + 0.8 * that.current_rem);
       scroll_ul.style.width = li_width * scroll_li.length + 'px';
       function leftScroll() {
         if ( scroll_ul.offsetLeft <  -(scroll_li.length/2 - 1) * li_width) {
-          scroll_ul.style.left = - that.init_width / 100 + 'rem'
+          scroll_ul.style.left = - that.init_width / that.current_rem + 'rem'
         } else {
           scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft - that.init_width) / li_width + 1) );
         }
       }
-      let myTimer = setInterval( leftScroll,6000 )
+      let myTimer = setInterval( leftScroll, timeout )
       scroll_area.onmouseover = function () {
         myTimer = clearInterval(myTimer)
       }
       scroll_area.onmouseout = function () {
         myTimer = clearInterval(myTimer)
-        myTimer = setInterval( leftScroll,6000 )
+        myTimer = setInterval( leftScroll, timeout )
       }
       document.getElementById('left_arrow').onclick = leftScroll
       document.getElementById('right_arrow').onclick = () => {
         // 最后一个li居中展示
         if ( scroll_ul.offsetLeft < -li_width) {
           if ( scroll_ul.offsetLeft > -li_width*2 ) {
-            scroll_ul.style.left = - that.init_width / 100 + 'rem'
+            scroll_ul.style.left = - that.init_width / that.current_rem + 'rem'
           } else {
             scroll_ul.style.left = CalculateLeft( parseInt(-(scroll_ul.offsetLeft) / li_width));
           }
@@ -68,7 +72,7 @@ export default {
         }
       }
       function CalculateLeft(index) {
-        return -((index - 1) * li_width + that.init_width) / 100 + 'rem';
+        return -((index - 1) * 1180 + that.init_width) / that.current_rem + 'rem';
       }
     }
   },

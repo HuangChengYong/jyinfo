@@ -11,6 +11,7 @@ img {
 #kylin {
   padding: 0;
   width: 100%;
+  overflow: hidden;
 }
 /* 横幅图 */
 .kylin_banner {

@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  #kylin {
+    width: 100%;
+  }
+
   .content_area {
     width: 100%;
   }
