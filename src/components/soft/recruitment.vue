@@ -382,12 +382,11 @@
     .recruitment_groups_details_content{
       width: 6.25rem;
       margin-bottom: 0.6rem;
-
     }
 
     .recruitment_groups_details_desc{
-     margin-bottom: 1.0rem;
-      padding-right: 0.2rem;
+     margin-bottom: 1.5rem;
+
     }
 
     .recruitment_groups_details_des_content{
@@ -441,7 +440,7 @@
     }
 
     .recruitment_groups_details_symble_outbox{
-      width: 0.3rem;
+      width: 0.5rem;
 
     }
 

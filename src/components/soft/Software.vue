@@ -71,7 +71,7 @@
         <div class="soft_service">
           <div class="soft_design" v-for="(item, index) in softServiceContentTwo" :key="index">
             <img :src="item.desopsImg" :alt="item.desopsName" />
-            <span class="soft_design_name">{{ item.desopsName }}</span><br />
+            <span class="soft_design_name">{{ item.desopsName }}</span>
             <span class="soft_design_content" v-for=" (item, index) in item.desopsContent" :key="index">{{ item }}</span>
             <!--<span class="soft_design_content">{{ item.desopsContent }}</span>-->
           </div>
@@ -202,21 +202,6 @@ export default {
     }
 
   },
-    mounted() {
-      const that = this
-      window.onresize = () => {
-        return (() => {
-          window.screenWidth = document.body.clientWidth
-          that.screenWidth = window.screenWidth
-          console.log(that.screenWidth)
-          if (that.screenWidth <1200) {
-            window.screenWidth=1200
-          } else {
-            this.$forceUpdate()
-          }
-        })()
-      }
-    },
 
   created() {
     this.softServiceContentOne = software.softServiceContentOne;
@@ -251,7 +236,7 @@ console.log(res.data)
   #soft_root {
     padding: 0;
     margin: auto auto;
-    width:19.2rem;
+    width:100%;
     background-color:blue;
   }
   .soft {
@@ -293,8 +278,8 @@ console.log(res.data)
 
   .content_index02 {
     width: 100%;
-    height: 4.00rem;
     margin-top:0.60rem;
+    padding-bottom: 0.4rem;
     background: rgba(20,71,192,1);
   }
 
@@ -362,7 +347,7 @@ console.log(res.data)
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     .query {
       width: 2.40rem;
       height: 0.60rem;
@@ -804,6 +789,274 @@ console.log(res.data)
 
   .grapic  /deep/ .hexagon_despo_content {
     line-height:0.23rem;
+  }
+
+  @media screen and (max-width: 768px){
+
+    .head_Top {
+      width: 100%;
+      height: 6.50rem;
+      background-image: url("https://www.jy-info.com/img/software/soft_Top.png");
+      background-size: 100% 100%;
+    }
+
+
+
+    .soft > .head_Top > .scheme {
+      width: 46.8%;
+      height: 0.80rem;
+      position: absolute;
+      top: 5.0rem;
+      left: 7.2%;
+      border-radius: 0.40rem;
+      font-size: 0.06rem;
+      color: #FFFFFF;
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+      border: none;
+    }
+
+    .erroricon {
+      width: 35.3%;
+      height: 3.92rem;
+      left: 5.6%;
+      top: 8.29rem;
+      position: absolute;
+      background-image: url("https://www.jy-info.com/img/software/soft_Second.png");
+      background-size: cover;
+    }
+
+    .content_index02 {
+      width: 100%;
+      margin-top:0.60rem;
+      padding-bottom: 0.4rem;
+      background: rgba(20,71,192,1);
+    }
+
+
+    .content_index02_content {
+      width: auto;
+      position: relative;
+      padding-bottom: 2.26rem;
+      left: 45%;
+
+    }
+
+    .content_index03_content {
+      width: 50.2%;
+      font-family: Microsoft YaHei,sans-serif;
+      margin-bottom: 0.1rem;
+      display: block;
+
+    }
+
+    .content_index03_content .link-right {
+      width: 4.00rem;
+      height: 0.30rem;
+      font-size: 0.01rem;
+      border: none;
+      margin-top: 0.34rem;
+      margin-bottom: 0;
+      padding: 0;
+      font-family: Microsoft YaHei,sans-serif;
+      vertical-align: middle;
+      font-weight: 200;
+      display: inline-block;
+      color: rgba(255,255,255,1);
+      margin-left: 0.10rem
+    }
+
+    .query{
+      width: 2.40rem;
+      height: 0.70rem;
+      margin-top: 3.04rem;
+      margin-left: 0.35rem;
+      font-size: 0.16rem;
+      font-family: Microsoft YaHei,sans-serif;
+      font-weight: 500;
+      color: rgba(255,255,255,1);
+      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
+      border-radius: 0.30rem;
+      border: none;
+    }
+
+    .develop{
+      width: 81.92%;
+      height: 10.20rem;
+      background: rgba(255,255,255,1);
+      margin: 0.90rem auto 0 auto;
+      box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
+      padding: 0.40rem 0 0 0.40rem;
+    }
+
+  .develop_issue{
+    width: 100%;
+    height: 1.32rem;
+    margin-bottom: 0.6rem;
+    padding-right: 0.1rem;
+  }
+
+  .transfrom_left{
+    width: 0.80rem;
+    height: 0.80rem;
+    border-radius: 50%;
+    background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
+    background-size: cover;
+    top: 33.55rem;
+    left: 10.1%;
+    border: none;
+    position: absolute;
+  }
+
+    .transfrom_right {
+      width: 0.80rem;
+      height: 0.80rem;
+      border-radius: 50%;
+      background-image: url("https://www.jy-info.com/img/software/arrow-left.png");
+      background-size: cover;
+      transform: rotateY(180deg); /* 垂直镜像翻转 */
+      top: 33.55rem;
+      left: 83.4%;
+      position: absolute;
+      border: none;
+    }
+
+    .soft_service{
+      width: 76.92%;
+      height: 5.80rem;
+      margin-left: 1.6rem;
+      margin-top: 0.60rem;
+      margin-bottom: 5.4rem;
+    }
+
+    .soft_design {
+      width: 46.86%;
+      height: 5.10rem;
+      background: rgba(255,255,255,1);
+      box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
+      float: left;
+      margin-right: 0.29rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .soft_design > img {
+      width: 2.44rem;
+      height: 1.98rem;
+      margin:0.30rem 0.94rem 0.19rem;
+    }
+
+    .soft_design_name {
+      width: 100%;
+      height: 0.27rem;
+      font-size: 0.26rem;
+      font-family: Microsoft YaHei,sans-serif;
+      font-weight: 400;
+      text-align: center;
+      display: inline-block;
+      padding: 0 0 ;
+      margin-bottom:0.27rem;
+      vertical-align: bottom;
+      color: rgba(44,46,51,1);
+
+    }
+
+    .soft_design_content {
+      width: 100%;
+      height: 0.5rem;
+      font-size: 0.06rem !important;
+      font-family: Microsoft YaHei,sans-serif;
+      font-weight: 400;
+      color: rgba(90,94,102,1);
+      text-align: left;
+
+      display: inline;
+
+    }
+
+    .content_index04 {
+      width: 8.73rem;
+      height: 0.70rem;
+      margin: 1.20rem auto 0rem;
+    }
+
+    /*严控流程 高质量服务*/
+    .process_content {
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 8.80rem;
+    }
+    .process_top_outline {
+      margin-top: 0.80rem;
+      margin-left: 2.60rem;
+
+    }
+    .process_top {
+
+      width: 3.20rem;
+      margin-right: 0.40rem;
+      margin-bottom: 0.5rem;
+      float: left;
+    }
+
+    .process_below_outline {
+      background-color: transparent;
+      margin-left: 2.60rem;
+    }
+
+    .process_below {
+      width: 3.20rem;
+
+
+      margin-right: 0.40rem;
+      margin-bottom: 0.5rem;
+      float: left;
+    }
+
+
+    .grapic  /deep/ .hexagon_despo_content {
+      font-size: 0.16rem;
+    }
+
+    .form_title{
+      top: 0.42rem;
+      vertical-align: central;
+      width: 100%;
+
+      position: absolute;
+      font-size: 0.26rem;
+      font-family: Microsoft YaHei,sans-serif;
+      font-weight: 300;
+      color: rgba(44,46,51,1);
+      margin-bottom: 0.5rem;
+    }
+
+    .submit_report_title_second{
+      position: relative;
+
+      margin-left: 4.8%;
+      text-indent: 0.7rem;
+    }
+
+    .form_content{
+      width: 98.6%;
+      top: 1.72rem;
+      position: absolute;
+      margin-top: 1.2rem;
+      padding-left: unset !important;
+    }
+
+    .submit_report{
+      width: 90.91%;
+      height: 9.70rem;
+      top: 7.65rem;
+      padding-left: unset;
+      left: 4.5%;
+      background: rgba(255,255,255,1);
+
+      box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
+      position: relative;
+    }
+
+
   }
 
 </style>
