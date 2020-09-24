@@ -817,8 +817,8 @@ console.log(res.data)
     }
 
     .erroricon {
-      width: 35.3%;
-      height: 3.92rem;
+      width:43.3%;
+      height: 4.82rem;
       left: 5.6%;
       top: 8.29rem;
       position: absolute;
@@ -838,7 +838,7 @@ console.log(res.data)
       width: auto;
       position: relative;
       padding-bottom: 2.26rem;
-      left: 52%;
+      left: 60%;
 
     }
 
@@ -870,7 +870,7 @@ console.log(res.data)
       width: 2.40rem;
       height: 0.70rem;
       margin-top: 3.04rem;
-      margin-left: 0.6rem;
+      margin-left: 1.5rem;
       font-size: 0.26rem;
       font-family: Microsoft YaHei,sans-serif;
       font-weight: 500;
@@ -932,7 +932,7 @@ console.log(res.data)
 
     .soft_design {
       width: 46.86%;
-      height: 4.00rem;
+      height: 4.30rem;
       background: rgba(255,255,255,1);
       box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
       float: left;
@@ -989,7 +989,6 @@ console.log(res.data)
 
     }
     .process_top {
-
       width: 4.0rem;
       height: 3.5rem;
       margin-right: 0.40rem;
@@ -1000,7 +999,6 @@ console.log(res.data)
     .process_below_outline {
       background-color: transparent;
       margin-left: 2.00rem;
-
     }
 
     .process_below {
@@ -1034,7 +1032,6 @@ console.log(res.data)
 
     .submit_report_title_second{
       position: relative;
-
       margin-left: 4.8%;
       text-indent: 0.7rem;
     }
@@ -1054,11 +1051,9 @@ console.log(res.data)
       padding-left: unset;
       left: 4.5%;
       background: rgba(255,255,255,1);
-
       box-shadow: 0 0.10rem 0.24rem 0 rgba(29,36,85,0.1);
       position: relative;
     }
-
 
   }
 
