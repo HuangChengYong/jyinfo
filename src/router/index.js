@@ -37,6 +37,18 @@ const router = new Router({
       name: 'Apply',
       component: () => import('../components/soft/apply')
     },
+    /* 成功案例 */
+    {
+      path: '/cases',
+      name: 'Cases',
+      component: () => import('../components/soft/SuccessCase')
+    },
+    /* 关于我们 */
+    {
+      path: '/aboutUs',
+      name: 'AboutUs',
+      component: () => import('../components/aboutUs/aboutUs')
+    },
     /*聊天室*/
     {
       path: '/chat',

@@ -32,10 +32,10 @@
               </div>
             </li>
             <li class="nav_li">
-              <a>成功案例</a>
+              <router-link to="/cases">成功案例</router-link>
             </li>
             <li class="nav_li">
-              <a>关于我们</a>
+              <router-link to="/aboutUs">关于我们</router-link>
             </li>
             <li class="nav_li">
               <router-link to="/recruitment">企业招聘</router-link>
