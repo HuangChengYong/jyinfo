@@ -330,22 +330,6 @@ console.log(res.data)
 
   }
 
-  /* @media (min-width: 1200px) and (max-width: 979px)*/
-  @media (min-width: 1200px){
-    .query {
-      width: 2.40rem;
-      height: 0.60rem;
-      margin-top: 2.84rem;
-      margin-left: 0.80rem;
-      font-size: 0.26rem;
-      font-family: Microsoft YaHei,sans-serif;
-      font-weight: 500;
-      color: rgba(255,255,255,1);
-      background: linear-gradient(45deg,rgba(253,175,143,1),rgba(253,125,130,1));
-      border-radius: 0.30rem;
-      border: none;
-    }
-  }
 
   @media (min-width: 1200px) {
     .query {
@@ -649,7 +633,7 @@ console.log(res.data)
     padding: 0 0;
     text-align: center;
     display: inline-block;
-    padding-left: 0.20rem;
+    padding-left: 0.1rem;
     padding-right: 0.20rem;
   }
 
@@ -733,7 +717,7 @@ console.log(res.data)
 
   .form_name {
     position: relative;
-    width: 6.10rem;
+    width: 44.18%;
     height: 0.52rem;
     margin-left: 0.60rem;
     margin-bottom: 0.30rem;

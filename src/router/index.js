@@ -37,11 +37,18 @@ const router = new Router({
       name: 'Apply',
       component: () => import('../components/soft/apply')
     },
+    /*聊天室*/
+    {
+      path: '/chat',
+      name: 'charRoom',
+      component: () => import('../components/chat/chat')
+    },
     {
       path: '/hotel',
       name: 'Hotel',
       component: () => import('../components/solution/Hotel')
-    },/* 智慧酒店解决方案 */
+    },
+    /* 智慧酒店解决方案 */
     {
       path: '/building',
       name: 'Building',
