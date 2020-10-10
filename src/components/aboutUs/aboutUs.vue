@@ -44,7 +44,7 @@
         <div class="map_up_bottom_line"></div>
       </div>
       <div class="map_view">
-
+        <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
       </div>
     </div>
 
@@ -53,6 +53,7 @@
   </div>
 
 </template>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Z0kW0tHGg3DQDLZRlWUlidEODGBcmYHu"></script>
 <script>
   import SoftwareFooter from "../public/footer";
   import TimeLine from "../aboutUs/timeline";

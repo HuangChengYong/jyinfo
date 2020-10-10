@@ -41,11 +41,11 @@
 
     </div>
     <div class="relate_year_box" style="flex:1;display:flex">
-      <div class="relate_year" style="flex:1;display:flex">2020</div>
+      <div class="relate_year" style="flex:1;display:flex" @click="milestone_case()">2020</div>
       <div class="relate_year" style="flex:1;display:flex">2019</div>
       <div class="clock_pointer"></div>
       <div class="relate_year" style="flex:1;display:flex">2017</div>
-      <div class="relate_year" style="flex:1;display:flex" >2015</div>
+      <div class="relate_year" id="he" style="flex:1;display:flex" >2015</div>
       <div class="relate_year" style="flex:1;display:flex">2013</div>
       <div class="relate_year" style="flex:1;display:flex">2012</div>
       <div class="relate_year" style="flex:1;display:flex">2011</div>
@@ -56,7 +56,33 @@
 </template>
 
 <script>
+  export default {
+    name: "timeline",
 
+    methods: {
+
+      // 点击菜单添加 .active 样式
+      milestone_case() {
+
+        let yearList = document.getElementsByClassName("relate_year");
+        alert(yearList.length)
+        let that = this;
+        for (let i = 0; i < yearList.length; i++) {
+          yearList[i].id= "yearList_noactive";
+          yearList[i].onclick= function() {
+            yearList[i].index=i
+            yearList[this.index].id= "yearList_active";
+          }
+        }
+      }
+
+    },
+    mounted() {
+
+    }
+
+
+  }
 </script>
 
 <style scoped>
@@ -126,8 +152,8 @@
     flex:1;
     margin-top: 0.1rem;
     background: linear-gradient(90deg, #122BB9, #69C2F9);
-    border-bottom: 0.04rem solid  #274CB2;;
-;
+    border-bottom: 0.04rem solid  #274CB2;
+
   }
 
 

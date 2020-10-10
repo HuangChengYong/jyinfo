@@ -115,6 +115,10 @@ export default {
       margin:0 1.18rem;
     }
 
+    .category:hover{
+      cursor: pointer;
+    }
+
     #category_active {
       color: #3D9CFD!important;
       border-bottom: 0.02rem solid #3D9CFD!important;
@@ -131,7 +135,6 @@ export default {
     .cases{
       width:100%;
       height: 10.2rem;
-      background: #DDEDFD;
       padding: 0.7rem 2.25rem 0;
       margin-bottom: 1.18rem;
     }
