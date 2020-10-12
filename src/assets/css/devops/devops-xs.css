@@ -64,8 +64,12 @@
   }
 
   /* 全方位运维方案 */
+  .all_round {
+    width: 100%;
+    height: 18.6rem;
+  }
   .all_round .all_round_content {
-    width: 8rem;
+    width: 9.48rem;
     margin: 0 auto 0.4rem;
   }
   .all_round .hexagon {
@@ -76,9 +80,9 @@
     overflow: hidden;
   }
   .all_round .all_round_content >>> .hexagon_two .hexagon_content .hexagon_span {
-    font-size: 0.18rem;
+    font-size: 0.216rem;
     letter-spacing: 0;
-    line-height: 0.2rem;
+    line-height: 0.3rem;
   }
 
 

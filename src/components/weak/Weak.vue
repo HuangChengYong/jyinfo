@@ -42,7 +42,7 @@
       <div class="title_div"></div>
       <scroll-bar :caseList="industryCaseList"/>
       <div class="more_button">
-        <button class="button" @click="getMoreCase">更多案例>></button>
+        <button class="button" @click="getMoreCase" >更多案例>></button>
       </div>
     </div>
     <!-- 解决方案 -->
@@ -57,7 +57,7 @@
           <div class="solution_content_div">
             <img class="solution_icon" src="https://www.jy-info.com/img/weak/icon_building.png" alt="icon_building" />
             <div class="content_div">智慧楼宇解决方案</div>
-            <router-link to="/building" >
+            <router-link to="/solution/building" >
               <div class="more_details">
                 <div>更多详情</div>
               </div>
@@ -72,7 +72,7 @@
           <div class="solution_content_div">
             <img class="solution_icon" src="https://www.jy-info.com/img/weak/icon_hotel.png" alt="icon_hotel" />
             <div class="content_div">智慧酒店解决方案</div>
-            <router-link to="/hotel" >
+            <router-link to="/solution/hotel" >
               <div class="more_details">
                 <div>更多详情</div>
               </div>
@@ -87,7 +87,7 @@
           <div class="solution_content_div">
             <img class="solution_icon" src="https://www.jy-info.com/img/weak/icon_hospital.png" alt="icon_hospital" />
             <div class="content_div">智慧医院解决方案</div>
-            <router-link to="/hospital" >
+            <router-link to="/solution/hospital" >
               <div class="more_details">
                 <div>更多详情</div>
               </div>
@@ -102,7 +102,7 @@
           <div class="solution_content_div">
             <img class="solution_icon" src="https://www.jy-info.com/img/weak/icon_community.png" alt="icon_community" />
             <div class="content_div">智慧社区解决方案</div>
-            <router-link to="/community" >
+            <router-link to="/solution/community" >
               <div class="more_details">
                 <div>更多详情</div>
               </div>
@@ -117,7 +117,7 @@
           <div class="solution_content_div">
             <img class="solution_icon" src="https://www.jy-info.com/img/weak/icon_park.png" alt="icon_park" />
             <div class="content_div">智慧园区解决方案</div>
-            <router-link to="/park" >
+            <router-link to="/solution/park" >
               <div class="more_details">
                 <div>更多详情</div>
               </div>

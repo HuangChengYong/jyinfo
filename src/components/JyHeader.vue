@@ -50,16 +50,25 @@
           <router-link to="/">首页</router-link>
         </li>
         <li>
-          <router-link to="/">产品&nbsp;<span class="glyphicon glyphicon-menu-down" /></router-link>
+          <a href="#">产品</a>
+        </li>
+        <li @click="changeGlyphicon($event)">
+          <a>核心业务&nbsp;<span class="glyphicon glyphicon-menu-down" /></a>
+          <div class="dropdown_phone_menu jy_nav_hidden">
+            <ul>
+              <li><router-link to="/soft">软件</router-link></li>
+              <li><router-link to="/weak">弱电</router-link></li>
+              <li><router-link to="/devops">运维</router-link></li>
+              <li><router-link to="/kylin">麒麟大数据</router-link></li>
+              <li><router-link to="/dmsca">端玛科技</router-link></li>
+            </ul>
+          </div>
         </li>
         <li>
-          <router-link to="/">核心业务&nbsp;<span class="glyphicon glyphicon-menu-down" /></router-link>
+          <router-link to="/cases">成功案例</router-link>
         </li>
         <li>
-          <router-link to="/">成功案例</router-link>
-        </li>
-        <li>
-          <router-link to="/">关于我们</router-link>
+          <router-link to="/aboutUs">关于我们</router-link>
         </li>
         <li>
           <router-link to="/recruitment">企业招聘</router-link>
@@ -76,7 +85,8 @@ export default {
   data () {
     return {
       currentMenu: 0,
-      navPhoneMenuIsShow: false
+      navPhoneMenuIsShow: false,
+      menuButtonIsShow: false,
     }
   },
   methods: {
@@ -120,6 +130,19 @@ export default {
     // 点击汉堡按钮，显示/隐藏手机导航栏
     handlePhoneMenu () {
       this.navPhoneMenuIsShow = !this.navPhoneMenuIsShow;
+    },
+    changeGlyphicon (event) {
+      if (!this.menuButtonIsShow) {
+        event.currentTarget.firstElementChild.firstElementChild.className = 'glyphicon glyphicon-menu-up';
+        event.currentTarget.lastElementChild.className = 'dropdown_phone_menu jy_nav_show';
+        this.menuButtonIsShow = true;
+      } else {
+
+        event.currentTarget.firstElementChild.firstElementChild.className = 'glyphicon glyphicon-menu-down';
+        event.currentTarget.lastElementChild.className = 'dropdown_phone_menu jy_nav_hidden';
+        this.menuButtonIsShow = false;
+      }
+
     }
   },
   created() {
@@ -322,7 +345,7 @@ ol, ul, li {
   }
   .jy_navbar > .nav_phone_list > ul > li {
     width: 100%;
-    height: 0.7rem;
+    height: auto;
     line-height: 0.7rem;
   }
   .jy_navbar > .nav_phone_list > ul > li:hover {
@@ -331,6 +354,18 @@ ol, ul, li {
   .jy_navbar > .nav_phone_list > ul > li a{
     width: 100%;
     color: #ffffff;
+  }
+
+  .jy_navbar > .nav_phone_list > ul > li > .dropdown_phone_menu > ul {
+    width: 100%;
+    height: auto;
+    background-color: #1b6d85;
+  }
+  .jy_navbar > .nav_phone_list > ul > li > .dropdown_phone_menu > ul > li {
+    width: 100%;
+    height: auto;
+  }
+  .jy_navbar > .nav_phone_list > ul > li > .dropdown_phone_menu > ul > li > a {
   }
 }
 </style>

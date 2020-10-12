@@ -56,32 +56,6 @@ const router = new Router({
       component: () => import('../components/chat/chat')
     },
     {
-      path: '/hotel',
-      name: 'Hotel',
-      component: () => import('../components/solution/Hotel')
-    },
-    /* 智慧酒店解决方案 */
-    {
-      path: '/building',
-      name: 'Building',
-      component: () => import('../components/solution/Building')
-    },/* 智慧楼宇解决问题 */
-    {
-      path: '/community',
-      name: 'Community',
-      component: () => import('../components/solution/Community')
-    },/* 智慧社区解决方案 */
-    {
-      path: '/hospital',
-      name: 'Hospital',
-      component: () => import('../components/solution/Hospital')
-    },/* 智慧医院解决方案 */
-    {
-      path: '/park',
-      name: 'Park',
-      component: () => import('../components/solution/Park')
-    },/* 智慧园区解决方案 */
-    {
       path: '/kylin',
       name: 'Kylin',
       component: () => import('../components/kylin/Kylin')
@@ -96,7 +70,11 @@ const router = new Router({
       name: 'Download',
       component: () => import('../components/soft/Download')
     },/* 端玛科技 */
-
+    {
+      path: '/solution/:param',
+      name: 'Solution',
+      component: () => import('../components/solution/Solution')
+    },/* 解决方案 */
   ]
 })
 

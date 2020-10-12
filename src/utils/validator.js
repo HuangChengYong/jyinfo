@@ -76,3 +76,17 @@ export function isvalidatemobile(phone) {
   return list
 }
 
+/* 验证图片 */
+export function isPicture(pictureStr) {
+  //判断是否是图片 - strFilter必须是小写列举
+  let strFilter=".jpeg|.gif|.jpg|.png|.bmp|.pic|.svg|"
+  if(pictureStr.indexOf(".")>-1) {
+    let p = pictureStr.lastIndexOf(".");
+    let strPostfix=pictureStr.substring(p,pictureStr.length) + '|';
+    strPostfix = strPostfix.toLowerCase();
+    if(strFilter.indexOf(strPostfix)>-1) {
+      return true;
+    }
+  }
+  return false;
+}

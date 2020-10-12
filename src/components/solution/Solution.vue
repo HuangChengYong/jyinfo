@@ -1,5 +1,5 @@
 <template>
-  <div class="hotel">
+  <div class="solution">
     <!-- 导航栏 -->
     <jy-header class="jy_header" />
     <!-- 内容 -->
@@ -8,22 +8,17 @@
       <div class="nav_content">
         <ol class="breadcrumb">
           <li><a href="#"><router-link to="/weak">弱电工程与系统集成</router-link></a></li>
-          <li class="active">智慧酒店解决方案</li>
+          <li class="active">{{ solution.title }}</li>
         </ol>
       </div>
       <!-- 标题 -->
       <div class="title_content">
-        <span class="title_font">智慧酒店解决方案</span>
+        <span class="title_font">{{ solution.title }}</span>
         <div class="title_div"></div>
       </div>
       <!-- 文字内容 -->
       <div class="text_content">
-        <p>智慧酒店通过采用数字化与网络化的技术，形成一套完善的智能化体系，实现酒店数字信息化服务。酒店智能化是一个不断丰富、发展的领域，酒店作为直接面对客人提供服务的场所，应充分的考虑个人隐私、个性化的需求，以及感受到高科技带来的舒适和便利。同时，酒店物耗、能耗、人员成本，也应考虑降到最低，创造效益。</p>
-        <div class="hotel_image">
-          <img src="https://www.jy-info.com/img/solution/hotel_solution.png" alt="智慧酒店" />
-        </div>
-        <p>甲悦信息运用先进的技术和产品，通过智能化系统展现功能，根据星级酒店的服务流程进行集成，实现星级酒店的标准化和个性化服务。</p>
-        <p>在智慧酒店领域，甲悦信息积累了丰富的项目经验，通过不断运用先进技术，形成了可实现星级酒店标准化和个性化服务的高端酒店智能化解决方案，成功运用于多个高端星级酒店。</p>
+
       </div>
     </div>
     <!-- 底部 -->
@@ -35,33 +30,78 @@
 <script>
 import JyHeader from "../JyHeader";
 import JyFooter from "../JyFooter";
+import solutionData from "../../assets/utils/solution-data";
+import {isPicture} from "../../utils/validator";
 export default {
-  name: "Hotel",
+  name: "Solution",
   components: {
     JyHeader,
     JyFooter
+  },
+  data () {
+    return {
+      solution: {}
+    }
+  },
+  methods: {
+    initContent() {
+      let text_content = document.getElementsByClassName("text_content")[0];
+      let data = this.solution;
+      let contentStr = '';
+      for(let i=0; i<data.content.length; i++) {
+        if (isPicture(data.content[i])) {// 判断是否为图片
+          contentStr += '<div class="solution_image"><img src=' + data.content[i] + ' alt=' + data.img_alt + '/></div>'
+        } else {
+          contentStr += '<p>' + data.content[i] + '</p>'
+        }
+      }
+      text_content.innerHTML = contentStr;
+    },
+  },
+  mounted() {
+    switch ( this.$route.params.param ) {
+      case 'building':
+        this.solution = solutionData.building;
+        break;
+      case 'community':
+        this.solution = solutionData.community;
+        break;
+      case 'hospital':
+        this.solution = solutionData.hospital;
+        break;
+      case 'hotel':
+        this.solution = solutionData.hotel;
+        break;
+      case 'park':
+        this.solution = solutionData.park;
+        break;
+      default:
+        this.solution = solutionData.building;
+        break;
+    }
+    this.initContent()
   }
 }
 </script>
 
 <style scoped>
-.hotel {
+.solution {
   padding: 0;
-  line-height: 1;
   width: 19.2rem;
   overflow: hidden;
 }
-.hotel .jy_header {
+.solution .jy_header {
   width: 100%;
   height: 0.7rem;
   background-color: #0D0F29 !important;
 }
-.hotel .content {
+
+.solution .content {
   width: 14rem;
   margin: 0 auto;
 }
 /* 内容——面包屑导航 */
-.hotel .content .nav_content {
+.solution .content .nav_content {
   font-size: 0.22rem;
   font-family: Microsoft YaHei, sans-serif;
   font-weight: 500;
@@ -72,7 +112,7 @@ export default {
   text-align: center;
 }
 /* 内容——标题 */
-.hotel .title_content .title_font {
+.solution .title_content .title_font {
   width: 3.27rem;
   height: 0.4rem;
   font-size: 0.4rem;
@@ -89,27 +129,27 @@ export default {
   margin: 0.26rem auto 0.57rem;
 }
 /* 内容——文字内容 */
-.hotel .content .text_content {
+.solution > .content > .text_content {
   width: 100%;
   font-size: 0.28rem;
   font-family: Microsoft YaHei,sans-serif;
   font-weight: 500;
   color: #595D66;
-  margin-bottom: 1.96rem;
+  margin-bottom:1.96rem;
 }
-.content .text_content p {
-  line-height: 0.34rem;
+.solution > .content >>> .text_content > p {
+  line-height: 0.38rem;
   letter-spacing: 0.01rem;
   margin-bottom: 0.25rem;
   text-indent: 2em;
 }
-/* 智慧酒店 */
-.content .text_content .hotel_image {
+/* 智慧楼宇 */
+.solution > .content >>> .text_content > div {
   width: 11.24rem;
-  height: 6.88rem;
-  margin: 0.15rem auto 0.43rem;
+  height: 6.7rem;
+  margin: 0.13rem auto 0.5rem;
 }
-.content .text_content .hotel_image img {
+.solution > .content >>> .text_content > div > img {
   width: 100%;
   height: 100%;
 }
@@ -135,21 +175,23 @@ export default {
 }
 
 @media screen and (max-width: 768px){
-  .hotel {
+  .solution {
     width: 100%;
   }
 
-  .hotel .content {
+  .solution >>> .content {
     width: 80%;
   }
 
-  .content .text_content .hotel_image {
+  .solution .content >>> .text_content p {
+    line-height: 0.62rem;
+  }
+
+  .solution .content >>> .text_content div {
     width: 100%;
     height: 100%;
   }
 
-  .content .text_content p {
-    line-height: 0.66rem;
-  }
+
 }
 </style>
