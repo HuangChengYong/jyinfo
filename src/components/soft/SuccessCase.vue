@@ -48,7 +48,7 @@ export default {
         categoryList[i].onclick= function() {
           categoryList[i].index=i
           categoryList[this.index].id= "category_active";
-
+          that.caseOps = that.cases[this.index]
         }
       }
     }
