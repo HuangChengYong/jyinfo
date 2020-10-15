@@ -7,8 +7,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Weak',
-      component: () => import('../components/weak/Weak')
+      name: 'Soft',
+      component: () => import('../components/soft/Software')
     },
     {
       path: '/devops',
@@ -52,8 +52,8 @@ const router = new Router({
     /*聊天室*/
     {
       path: '/chat',
-      name: 'charRoom',
-      component: () => import('../components/chat/chat')
+      name: 'SingleChat',
+      component: () => import('../components/chat/SingleChat')
     },
     {
       path: '/kylin',
@@ -80,8 +80,8 @@ const router = new Router({
 
 
 /* 路由跳转之后，重置x和y轴的滚动条为0 */
-router.afterEach((to, from, next) => {
-  window.scrollTo(0, 0)
+router.afterEach(() => {
+  window.scrollX = 0;
 })
 
 /*router.beforeEach((to, from, next) => {

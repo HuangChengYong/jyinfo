@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import SockJs from 'sockjs-client';
+import Stomp from 'stompjs';
   export default {
     name: "charRoom",
     data() {

@@ -7,11 +7,6 @@
 <script>
 export default {
   name: 'App',
-  mounted() {
-    window.onresize = () => {
-      window.location.reload()
-    };
-  }
 }
 /* 禁止IOS端缩放页面 */
 window.onload = function() {
